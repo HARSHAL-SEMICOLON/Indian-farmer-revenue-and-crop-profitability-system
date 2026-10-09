@@ -1,0 +1,158 @@
+table fact_weather_state
+	lineageTag: cb1aecf4-2be1-41d5-a123-337aad60cab4
+
+	column state_weather_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: b3d0d816-9928-4694-b30e-21669fe851d2
+		summarizeBy: none
+		sourceColumn: state_weather_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: f44a5b2d-7d6e-4956-b192-3a96d1147672
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1ac45a72-008f-4c30-9d69-168550eef889
+		summarizeBy: sum
+		sourceColumn: jjas_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column rabi_rain_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ac3fd7fd-6e0f-44fb-a86a-896df4c5056c
+		summarizeBy: sum
+		sourceColumn: rabi_rain_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column annual_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 97d0f0bc-5ab3-4594-943f-57d0072e7fa1
+		summarizeBy: sum
+		sourceColumn: annual_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_normal_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: bd60898d-422e-4abf-b5bc-31b13a6e1f93
+		summarizeBy: sum
+		sourceColumn: jjas_normal_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column rabi_rain_normal_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7fa0afc1-982a-4e40-9d7d-5ca4bdbfd8e5
+		summarizeBy: sum
+		sourceColumn: rabi_rain_normal_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column annual_normal_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2f470fd4-14de-43ef-877d-108bac94e667
+		summarizeBy: sum
+		sourceColumn: annual_normal_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: aa507fe9-5f26-447c-802a-21d790c0b7c3
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_subdivisions
+		dataType: int64
+		formatString: 0
+		lineageTag: 4ef373c1-930c-401b-acab-71d67f00146d
+		summarizeBy: none
+		sourceColumn: n_subdivisions
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_dep_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 01072de6-8fb2-4df0-8127-1373777fb74a
+		summarizeBy: sum
+		sourceColumn: jjas_dep_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column rabi_rain_dep_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 0127a09c-6590-4cb5-b0af-9a6431cb4609
+		summarizeBy: sum
+		sourceColumn: rabi_rain_dep_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column annual_dep_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ace5ebf2-f24a-456b-ada7-e16ed82a9fe2
+		summarizeBy: sum
+		sourceColumn: annual_dep_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_category
+		dataType: string
+		lineageTag: e0172429-638e-4710-bce7-668bd6a4092e
+		summarizeBy: none
+		sourceColumn: jjas_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column rainfall_basis
+		dataType: string
+		lineageTag: aed7325a-2748-43e1-b134-3915f7bdb162
+		summarizeBy: none
+		sourceColumn: rainfall_basis
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 9cbee41a-1e1b-4f69-b16c-3cae536bb212
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_weather_state = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_weather_state.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"state_weather_id", Int64.Type}, {"crop_year", Int64.Type}, {"jjas_mm", type number}, {"rabi_rain_mm", type number}, {"annual_mm", type number}, {"jjas_normal_mm", type number}, {"rabi_rain_normal_mm", type number}, {"annual_normal_mm", type number}, {"state_name", type text}, {"n_subdivisions", Int64.Type}, {"jjas_dep_pct", type number}, {"rabi_rain_dep_pct", type number}, {"annual_dep_pct", type number}, {"jjas_category", type text}, {"rainfall_basis", type text}, {"state_id", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

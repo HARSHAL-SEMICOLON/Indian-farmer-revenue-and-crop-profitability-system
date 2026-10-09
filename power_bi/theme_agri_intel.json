@@ -1,0 +1,28 @@
+{
+  "name": "Agri Revenue Intelligence",
+  "dataColors": ["#2E7D4F", "#C9822B", "#3A6EA5", "#8E5BA8", "#B5473A", "#5C9E9B", "#D4B43C", "#6B7A8F",
+                 "#86B05A", "#A8657E", "#4F8FBF", "#9C7A4A"],
+  "background": "#FAF8F3",
+  "foreground": "#1F2A24",
+  "tableAccent": "#2E7D4F",
+  "good": "#2E7D4F",
+  "neutral": "#C9822B",
+  "bad": "#B5473A",
+  "maximum": "#1F5C3A",
+  "center": "#E9E3D3",
+  "minimum": "#B5473A",
+  "textClasses": {
+    "title":   {"fontFace": "Segoe UI Semibold", "fontSize": 13, "color": "#1F2A24"},
+    "header":  {"fontFace": "Segoe UI Semibold", "fontSize": 11, "color": "#1F2A24"},
+    "label":   {"fontFace": "Segoe UI", "fontSize": 10, "color": "#4A5550"},
+    "callout": {"fontFace": "Segoe UI Light", "fontSize": 26, "color": "#1F2A24"}
+  },
+  "visualStyles": {
+    "*": {"*": {
+      "background": [{"show": true, "color": {"solid": {"color": "#FFFFFF"}}, "transparency": 0}],
+      "border": [{"show": true, "color": {"solid": {"color": "#E3DED2"}}, "radius": 8}],
+      "title": [{"show": true, "fontColor": {"solid": {"color": "#1F2A24"}}, "fontSize": 11}]
+    }},
+    "page": {"*": {"background": [{"color": {"solid": {"color": "#FAF8F3"}}, "transparency": 0}]}}
+  }
+}

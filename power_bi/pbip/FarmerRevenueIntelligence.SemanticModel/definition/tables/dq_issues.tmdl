@@ -1,0 +1,66 @@
+table dq_issues
+	lineageTag: e0437714-0aa4-49b8-ab76-cf1d15423fd8
+
+	column issue_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 8c39ad18-a93d-4b23-8790-958318ddd026
+		summarizeBy: none
+		sourceColumn: issue_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column domain
+		dataType: string
+		lineageTag: e87ece6d-21ad-4a71-b8b8-b2c975fdf0d4
+		summarizeBy: none
+		sourceColumn: domain
+
+		annotation SummarizationSetBy = Automatic
+
+	column issue
+		dataType: string
+		lineageTag: 72df0fb3-6209-4095-8939-08b63e158b90
+		summarizeBy: none
+		sourceColumn: issue
+
+		annotation SummarizationSetBy = Automatic
+
+	column action
+		dataType: string
+		lineageTag: 4ca74e5e-9d99-4f11-8304-eaaf1145ea20
+		summarizeBy: none
+		sourceColumn: action
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_rows
+		dataType: int64
+		formatString: 0
+		lineageTag: 112657f9-0668-4f38-a8f0-ee68b629aa99
+		summarizeBy: none
+		sourceColumn: n_rows
+
+		annotation SummarizationSetBy = Automatic
+
+	column detail
+		dataType: string
+		lineageTag: 0c3067ec-135d-4256-afc9-5c552d6da0fa
+		summarizeBy: none
+		sourceColumn: detail
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dq_issues = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dq_issues.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"issue_id", Int64.Type}, {"domain", type text}, {"issue", type text}, {"action", type text}, {"n_rows", Int64.Type}, {"detail", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

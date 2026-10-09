@@ -1,0 +1,106 @@
+table fact_production
+	lineageTag: dbc4cdee-8a3b-4b10-b37b-6d7a564b1cd2
+
+	column production_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 38709b1e-0fea-4568-8eaf-8a58ff0c090d
+		summarizeBy: none
+		sourceColumn: production_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: da8baf66-c1ad-45ff-bf09-cc2846d977e3
+		summarizeBy: none
+		sourceColumn: location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: e10c42c6-d2a6-4b9c-9d34-3fbbf0d020e6
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1960c3b9-18ca-4785-8c55-c3fd4e995842
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column season
+		dataType: string
+		lineageTag: d29b4182-a6b0-4824-b1bf-6050dd805805
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c196d2f3-db28-4245-911c-90c31323e584
+		summarizeBy: sum
+		sourceColumn: area_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_apy_unit
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b3f40c43-c611-43fa-8615-3ba0791c09a7
+		summarizeBy: sum
+		sourceColumn: production_apy_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_price_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7a907904-e545-4d65-97e9-cb3e8b79ccd3
+		summarizeBy: sum
+		sourceColumn: production_price_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_apy_unit_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 84a43f42-c601-457c-b51f-159c168493c1
+		summarizeBy: sum
+		sourceColumn: yield_apy_unit_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column dq_flag
+		dataType: string
+		lineageTag: a8183b6a-a243-4e07-b715-eee1e0edbef3
+		summarizeBy: none
+		sourceColumn: dq_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_production = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_production.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"production_id", Int64.Type}, {"location_id", Int64.Type}, {"crop_id", Int64.Type}, {"crop_year", Int64.Type}, {"season", type text}, {"area_ha", type number}, {"production_apy_unit", type number}, {"production_price_qtl", type number}, {"yield_apy_unit_per_ha", type number}, {"dq_flag", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

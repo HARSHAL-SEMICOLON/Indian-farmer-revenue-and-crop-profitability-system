@@ -1,0 +1,95 @@
+table agg_q04b_value_growth_decomposition
+	lineageTag: 194fd82c-9453-4037-82cc-b1f4df96edd3
+
+	column crop_name
+		dataType: string
+		lineageTag: f2c8c877-3ed5-4f45-b7cf-d81134475fb2
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column value_growth_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f6a9e0e4-b03b-4143-b5c2-2d644a792d8a
+		summarizeBy: sum
+		sourceColumn: value_growth_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_contribution_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 96fc1c80-809a-4883-8a7e-439cee782daf
+		summarizeBy: sum
+		sourceColumn: area_contribution_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_contribution_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2fd427f9-e6be-4f16-9013-07a45c7a5414
+		summarizeBy: sum
+		sourceColumn: yield_contribution_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_msp_contribution_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: bc32d9c6-9076-421c-9955-bc053990c92e
+		summarizeBy: sum
+		sourceColumn: price_msp_contribution_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_cagr_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e9e307ba-8aa8-478e-bdd1-1ca1a8304069
+		summarizeBy: sum
+		sourceColumn: production_cagr_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_cagr_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 42c4440c-dec4-4284-82d0-585887e118b8
+		summarizeBy: sum
+		sourceColumn: yield_cagr_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_cagr_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 24f6af4c-de7a-4061-aacb-824b33c90214
+		summarizeBy: sum
+		sourceColumn: area_cagr_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_cagr_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7622d8bf-b387-43e3-a00c-9ba6526b45c2
+		summarizeBy: sum
+		sourceColumn: msp_cagr_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q04b_value_growth_decomposition = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q04b_value_growth_decomposition.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_name", type text}, {"value_growth_pct", type number}, {"area_contribution_pct", type number}, {"yield_contribution_pct", type number}, {"price_msp_contribution_pct", type number}, {"production_cagr_pct", type number}, {"yield_cagr_pct", type number}, {"area_cagr_pct", type number}, {"msp_cagr_pct", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,19 @@
+crop_name,price_form,quotes,markets,median_daily_cross_market_cv_pct,p25,median,p75,cheapest_state,cheapest_state_median,dearest_state,dearest_state_median
+Potato,Potato,13860,924,68.3,900.0,1800.0,3250.0,Uttar Pradesh,600.0,Tamil Nadu,3300.0
+Rice,Milled rice,2196,247,38.5,3220.0,3800.0,4900.0,Uttar Pradesh,2600.0,Assam,7500.0
+Jowar,Jowar (mixed varieties),851,166,37.8,2600.0,3728.0,5515.0,Karnataka,2600.0,Gujarat,5882.5
+Onion,Onion,14230,921,29.6,3000.0,3900.0,5250.0,Uttar Pradesh,2100.0,Manipur,5750.0
+Urad,Urad (whole),911,169,23.3,7550.0,8300.0,9500.0,Rajasthan,6876.0,Kerala,13300.0
+Maize,Maize,3460,470,22.9,2000.0,2300.0,2416.75,Uttarakhand,1500.0,West Bengal,2550.0
+Moong,Moong (whole),1686,309,20.9,6750.0,7230.0,8750.0,Rajasthan,6690.0,Kerala,12300.0
+Masoor,Masur (whole),518,75,20.1,6200.0,6755.5,7764.0,Madhya Pradesh,6400.0,Assam,8700.0
+Rice,Paddy (common),5535,535,19.2,2340.0,2390.0,2550.0,Chhattisgarh,2000.0,Maharashtra,3143.0
+Arhar/Tur,Tur (whole),1060,225,18.7,6800.0,7589.5,8125.7474999999995,Gujarat,6732.5,Kerala,12600.0
+Bajra,Bajra,1137,199,18.5,2150.0,2337.0,2500.0,Uttar Pradesh,1973.77,Tamil Nadu,4235.0
+Sesamum,Sesamum,795,89,18.3,10737.5,11505.0,12500.0,Andhra Pradesh,9500.0,Karnataka,12550.0
+Soyabean,Soyabean,2528,310,18.1,5815.75,6500.0,7070.0,Karnataka,5824.0,Tamil Nadu,9500.0
+Groundnut,Groundnut in shell,3010,214,14.3,6500.0,7000.0,7500.0,Gujarat,6625.0,Madhya Pradesh,7626.0
+Gram,Gram (whole),2213,363,12.0,5750.0,6000.0,6215.0,Rajasthan,5713.5,Kerala,8800.0
+Cotton,Kapas (seed cotton),909,100,9.4,7950.0,8500.0,9250.0,Andhra Pradesh,8000.0,Karnataka,9500.0
+Wheat,Wheat grain,8759,819,9.0,2490.0,2570.0,2650.0,Chhattisgarh,2457.5,Karnataka,2800.0
+Rapeseed & Mustard,Mustard seed,1557,293,8.9,7000.0,7400.0,7600.0,West Bengal,6400.0,Rajasthan,7577.5

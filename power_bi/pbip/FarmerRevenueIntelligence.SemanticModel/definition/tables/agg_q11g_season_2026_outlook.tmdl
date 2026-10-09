@@ -1,0 +1,129 @@
+table agg_q11g_season_2026_outlook
+	lineageTag: 3df99145-9faa-46a2-ac48-99186981daa0
+
+	column crop_name
+		dataType: string
+		lineageTag: 6e791e50-e5a6-4fca-8ab6-b84fbf102002
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_form
+		dataType: string
+		lineageTag: ac83ef17-6ea5-4010-abf8-2a03451d85e0
+		summarizeBy: none
+		sourceColumn: price_form
+
+		annotation SummarizationSetBy = Automatic
+
+	column quotes
+		dataType: int64
+		formatString: 0
+		lineageTag: ac452016-c2a7-49a7-9863-4fe2a9b8bf90
+		summarizeBy: none
+		sourceColumn: quotes
+
+		annotation SummarizationSetBy = Automatic
+
+	column markets
+		dataType: int64
+		formatString: 0
+		lineageTag: 42c5498c-ea8a-4c16-b085-8798059fc8fc
+		summarizeBy: none
+		sourceColumn: markets
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_current
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ffc6b246-6d15-4ec5-81af-ae3cb2832faa
+		summarizeBy: sum
+		sourceColumn: msp_current
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_next
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9dec8c01-5fa3-42c3-a056-e3a99e08fa29
+		summarizeBy: sum
+		sourceColumn: msp_next
+
+		annotation SummarizationSetBy = Automatic
+
+	column a2fl_cost_next
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 44df9c47-d658-489f-8a18-d378fdb19588
+		summarizeBy: sum
+		sourceColumn: a2fl_cost_next
+
+		annotation SummarizationSetBy = Automatic
+
+	column median_modal
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 071ca8d9-f191-414a-95ad-f55c999dcf20
+		summarizeBy: sum
+		sourceColumn: median_modal
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_below_current_msp
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 3b8e17d2-a942-4256-b2ba-18c5034440f9
+		summarizeBy: sum
+		sourceColumn: pct_below_current_msp
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_below_next_msp
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 829c4133-08fd-4eaf-9ab7-093fae38e754
+		summarizeBy: sum
+		sourceColumn: pct_below_next_msp
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_next_source
+		dataType: string
+		lineageTag: a18d21df-58d1-40c3-b0e0-bb66950c0d65
+		summarizeBy: none
+		sourceColumn: msp_next_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_hike_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a474f54b-a180-4ab5-a198-a1313d3cdc62
+		summarizeBy: sum
+		sourceColumn: msp_hike_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column median_modal_vs_next_msp_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5aa723c7-1129-4bb7-b97f-92fa0765f3f5
+		summarizeBy: sum
+		sourceColumn: median_modal_vs_next_msp_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q11g_season_2026_outlook = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q11g_season_2026_outlook.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_name", type text}, {"price_form", type text}, {"quotes", Int64.Type}, {"markets", Int64.Type}, {"msp_current", type number}, {"msp_next", type number}, {"a2fl_cost_next", type number}, {"median_modal", type number}, {"pct_below_current_msp", type number}, {"pct_below_next_msp", type number}, {"msp_next_source", type text}, {"msp_hike_pct", type number}, {"median_modal_vs_next_msp_pct", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

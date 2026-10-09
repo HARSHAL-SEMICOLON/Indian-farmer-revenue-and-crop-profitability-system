@@ -1,0 +1,27 @@
+crop_name,state_years,pearson_r,yield_pp_per_10pct_rain,r_rank
+Groundnut,203,0.445,4.04,1
+Cotton,168,0.371,4.69,2
+Bajra,182,0.339,2.8,3
+Jowar,168,0.304,2.59,4
+Soyabean,138,0.278,3.95,5
+Arhar/Tur,212,0.267,2.28,6
+Moong,244,0.259,2.9,7
+Nigerseed,104,0.241,2.57,8
+Turmeric,80,0.232,2.32,9
+Barley,138,0.224,0.47,10
+Gram,206,0.218,0.61,11
+Sesamum,240,0.214,1.95,12
+Urad,272,0.194,1.84,13
+Rice,546,0.188,1.28,14
+Safflower,49,0.185,0.91,15
+Sunflower,92,0.171,1.41,16
+Onion,132,0.158,0.74,17
+Ragi,180,0.149,0.96,18
+Dry Chillies,145,0.144,1.09,19
+Wheat,289,0.132,0.32,20
+Maize,435,0.111,1.09,21
+Potato,207,0.061,0.18,22
+Jute,57,0.046,0.35,23
+Rapeseed & Mustard,266,0.036,0.09,24
+Masoor,122,0.019,0.05,25
+Sugarcane,269,-0.042,-4.77,26

@@ -1,0 +1,149 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "msp",
+  "position": {
+    "x": 784,
+    "y": 436,
+    "z": 11000,
+    "width": 480,
+    "height": 276,
+    "tabOrder": 11000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_msp"
+                    }
+                  },
+                  "Property": "msp_key"
+                }
+              },
+              "queryRef": "fact_msp.msp_key",
+              "nativeQueryRef": "msp_key"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_msp"
+                    }
+                  },
+                  "Property": "crop_year_label"
+                }
+              },
+              "queryRef": "fact_msp.crop_year_label",
+              "nativeQueryRef": "crop_year_label"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fact_msp"
+                        }
+                      },
+                      "Property": "msp_effective"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fact_msp.msp_effective)",
+              "nativeQueryRef": "Sum of msp_effective"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_msp"
+                    }
+                  },
+                  "Property": "verification"
+                }
+              },
+              "queryRef": "fact_msp.verification",
+              "nativeQueryRef": "verification"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_msp"
+                    }
+                  },
+                  "Property": "source_id"
+                }
+              },
+              "queryRef": "fact_msp.source_id",
+              "nativeQueryRef": "source_id"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'MSP provenance'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

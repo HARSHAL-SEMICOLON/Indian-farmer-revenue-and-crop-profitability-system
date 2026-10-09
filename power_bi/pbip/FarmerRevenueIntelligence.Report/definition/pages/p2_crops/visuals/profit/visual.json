@@ -1,0 +1,280 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "profit",
+  "position": {
+    "x": 16,
+    "y": 418,
+    "z": 7000,
+    "width": 760,
+    "height": 294,
+    "tabOrder": 7000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_crop"
+                    }
+                  },
+                  "Property": "crop_name"
+                }
+              },
+              "queryRef": "dim_crop.crop_name",
+              "nativeQueryRef": "crop_name"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Gross Value @ MSP per ha (Rs)"
+                }
+              },
+              "queryRef": "_Measures.Gross Value @ MSP per ha (Rs)",
+              "nativeQueryRef": "Gross Value @ MSP per ha (Rs)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "A2+FL Cost per ha (Rs)"
+                }
+              },
+              "queryRef": "_Measures.A2+FL Cost per ha (Rs)",
+              "nativeQueryRef": "A2+FL Cost per ha (Rs)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "C2 Cost per ha (Rs)"
+                }
+              },
+              "queryRef": "_Measures.C2 Cost per ha (Rs)",
+              "nativeQueryRef": "C2 Cost per ha (Rs)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Est. Profit over A2+FL per ha (Rs)"
+                }
+              },
+              "queryRef": "_Measures.Est. Profit over A2+FL per ha (Rs)",
+              "nativeQueryRef": "Est. Profit over A2+FL per ha (Rs)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Est. Profit over C2 per ha (Rs)"
+                }
+              },
+              "queryRef": "_Measures.Est. Profit over C2 per ha (Rs)",
+              "nativeQueryRef": "Est. Profit over C2 per ha (Rs)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Est. Profit over C2 per acre (Rs)"
+                }
+              },
+              "queryRef": "_Measures.Est. Profit over C2 per acre (Rs)",
+              "nativeQueryRef": "Est. Profit over C2 per acre (Rs)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "State-years with C2 Loss %"
+                }
+              },
+              "queryRef": "_Measures.State-years with C2 Loss %",
+              "nativeQueryRef": "State-years with C2 Loss %"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "_Measures"
+                  }
+                },
+                "Property": "Est. Profit over C2 per ha (Rs)"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Q2 Estimated profit per ha where DES cost data exist (2008-09 to 2013-14, surveyed states)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fCost",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_year"
+              }
+            },
+            "Property": "crop_year"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "t",
+              "Entity": "dim_year",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "And": {
+                  "Left": {
+                    "Comparison": {
+                      "ComparisonKind": 2,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "t"
+                            }
+                          },
+                          "Property": "crop_year"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "2008L"
+                        }
+                      }
+                    }
+                  },
+                  "Right": {
+                    "Comparison": {
+                      "ComparisonKind": 4,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "t"
+                            }
+                          },
+                          "Property": "crop_year"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "2013L"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

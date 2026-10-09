@@ -1,0 +1,486 @@
+state_name,market_name,crop_name,price_form,trading_days,mean_modal,cv_pct,max_min_ratio
+Tamil Nadu,Keelpennathur(Uzhavar Sandhai ),Onion,Onion,32,4227,36.0,2.6
+Rajasthan,Sriganganagar (F&V) Apmc,Onion,Onion,30,3330,34.7,2.78
+Tamil Nadu,Chinnamanur(Uzhavar Sandhai ),Potato,Potato,38,3866,33.2,2.32
+Kerala,Chengannur Market,Onion,Onion,30,6055,33.1,3.33
+Kerala,Palakkad Market,Onion,Onion,30,6987,33.0,3.14
+Uttar Pradesh,Varanasi Apmc,Onion,Onion,31,2753,32.6,2.23
+Uttarakhand,Haldwani Apmc,Onion,Onion,30,2687,32.2,2.71
+Tamil Nadu,Tirupatthur(Uzhavar Sandhai ),Onion,Onion,38,5026,31.8,2.3
+Tamil Nadu,Devakottai (Uzhavar Sandhai ),Onion,Onion,38,4832,31.6,2.44
+Tamil Nadu,Theni(Uzhavar Sandhai ),Potato,Potato,35,3154,31.0,2.12
+Tamil Nadu,Mayiladuthurai(Uzhavar Sandhai ),Onion,Onion,39,3951,30.9,2.36
+Tamil Nadu,Sirkali(Uzhavar Sandhai ),Onion,Onion,38,4329,30.1,2.09
+Odisha,Sargipali Apmc,Onion,Onion,32,3903,29.7,2.12
+Tamil Nadu,Athur(Uzhavar Sandhai ),Potato,Potato,38,3914,29.6,1.94
+Punjab,Quadian Apmc,Potato,Potato,35,697,28.8,1.8
+Tamil Nadu,Melur(Uzhavar Sandhai ),Onion,Onion,39,5017,28.7,2.5
+Madhya Pradesh,Bhopal Apmc,Onion,Onion,30,2801,27.4,2.44
+Uttar Pradesh,Kanpur(Grain) Apmc,Onion,Onion,33,2830,27.4,1.94
+Tamil Nadu,Edapadi (Uzhavar Sandhai ),Potato,Potato,38,3272,27.1,2.15
+Tamil Nadu,Nanganallur(Uzhavar Sandhai ),Onion,Onion,33,4538,26.9,1.77
+Tamil Nadu,Perambakkam(Uzhavar Sandhai ),Onion,Onion,35,4257,26.0,2.4
+Haryana,Hansi Apmc,Onion,Onion,35,3814,25.9,1.82
+Tamil Nadu,Kumarapalayam(Uzhavar Sandhai ),Onion,Onion,37,3650,25.9,1.98
+Tamil Nadu,Rasipuram(Uzhavar Sandhai ),Onion,Onion,37,5009,25.8,2.29
+Punjab,Tanda Urmur Apmc,Onion,Onion,34,3918,25.7,2.08
+Tamil Nadu,Natrampalli(Uzhavar Sandhai ),Onion,Onion,38,4533,25.5,2.36
+Tamil Nadu,Krishnagiri(Uzhavar Sandhai ),Onion,Onion,39,4654,25.5,2.08
+Bihar,Raxaul Apmc,Onion,Onion,33,3548,25.4,1.76
+Tamil Nadu,Tirukattupalli(Uzhavar Sandhai ),Onion,Onion,38,5207,25.2,2.8
+Tamil Nadu,Thalavaipuram(Uzhavar Sandhai ),Onion,Onion,39,4950,24.9,2.22
+Tamil Nadu,Dindigul(Uzhavar Sandhai ),Onion,Onion,37,4923,24.9,1.86
+Tamil Nadu,Gobichettipalayam(Uzhavar Sandhai ),Onion,Onion,37,5096,24.5,1.8
+Tamil Nadu,Gandhigramam(Uzhavar Sandhai),Onion,Onion,38,5017,24.4,1.79
+Tamil Nadu,Aruppukottai(Uzhavar Sandhai ),Onion,Onion,38,5007,24.4,1.93
+Tamil Nadu,Tiruppur (North) (Uzhavar Sandhai ),Onion,Onion,38,4534,24.3,1.77
+Tamil Nadu,Vandavasi(Uzhavar Sandhai ),Onion,Onion,39,4529,24.2,2.27
+Tamil Nadu,Vazhapadi(Uzhavar Sandhai),Onion,Onion,37,4900,24.1,1.79
+Tripura,Dasda Apmc,Onion,Onion,32,3939,24.1,1.91
+Tamil Nadu,Vadavalli(Uzhavar Sandhai ),Onion,Onion,39,4540,24.0,1.91
+Tamil Nadu,Ranipettai(Uzhavar Sandhai ),Onion,Onion,37,4785,23.9,2.33
+Tamil Nadu,Ammapet(Uzhavar Sandhai ),Potato,Potato,38,3863,23.9,1.87
+Tamil Nadu,Devakottai (Uzhavar Sandhai ),Potato,Potato,37,4605,23.9,2.0
+Tamil Nadu,Pollachi(Uzhavar Sandhai ),Onion,Onion,39,4859,23.9,2.22
+Tamil Nadu,Paramathivelur(Uzhavar Sandhai ),Onion,Onion,37,4951,23.8,2.03
+Tamil Nadu,Harur(Uzhavar Sandhai ),Onion,Onion,38,4576,23.7,1.92
+Tamil Nadu,Paruthipattu(Uzhavar Sandhai ),Onion,Onion,31,4210,23.7,2.4
+Tamil Nadu,Kurichi(Uzhavar Sandhai ),Onion,Onion,39,4646,23.7,1.94
+Tamil Nadu,Edapadi (Uzhavar Sandhai ),Onion,Onion,38,5113,23.6,1.93
+Punjab,Lalru Apmc,Onion,Onion,30,3617,23.6,1.88
+Tamil Nadu,Kumbakonam (Uzhavar Sandhai ),Onion,Onion,38,5555,23.5,2.0
+Tamil Nadu,Sankarankoil(Uzhavar Sandhai ),Onion,Onion,36,4771,23.5,1.92
+Tamil Nadu,Kariyapatti(Uzhavar Sandhai ),Onion,Onion,37,5007,23.5,1.8
+Tamil Nadu,Rspuram(Uzhavar Sandhai ),Onion,Onion,38,4568,23.5,1.94
+Tamil Nadu,Cuddalore(Uzhavar Sandhai ),Onion,Onion,38,4937,23.5,2.17
+Tamil Nadu,Tirupatthur(Uzhavar Sandhai ),Potato,Potato,38,4597,23.4,1.91
+Tamil Nadu,Usilampatti(Uzhavar Sandhai ),Onion,Onion,37,5372,23.2,2.5
+Tamil Nadu,Singanallur(Uzhavar Sandhai ),Onion,Onion,39,4644,23.2,1.94
+Tamil Nadu,Sulur(Uzhavar Sandhai ),Onion,Onion,36,4651,23.2,1.94
+Tamil Nadu,Palanganatham(Uzhavar Sandhai ),Onion,Onion,39,4846,23.2,1.86
+Tamil Nadu,Sundarapuram(Uzhavar Sandhai ),Onion,Onion,37,4686,23.2,1.94
+Tamil Nadu,Rajapalayam(Uzhavar Sandhai ),Onion,Onion,39,5154,23.2,1.93
+Tamil Nadu,Chokkikulam(Uzhavar Sandhai ),Onion,Onion,39,4910,23.2,1.93
+West Bengal,Bishnupur(Bankura) Apmc,Onion,Onion,33,3961,23.1,1.79
+Tamil Nadu,Thuraiyur Apmc,Onion,Onion,38,4868,23.1,1.86
+Himachal Pradesh,Smy Palampur,Onion,Onion,30,4377,22.9,1.72
+Tamil Nadu,Ajattihalli(Uzhavar Sandhai ),Onion,Onion,38,4847,22.9,1.75
+Tamil Nadu,Chinnalapatti(Uzhavar Sandhai ),Onion,Onion,38,5074,22.9,1.8
+Tamil Nadu,Devaram(Uzhavar Sandhai ),Onion,Onion,37,5003,22.9,1.71
+Tamil Nadu,Mettur(Uzhavar Sandhai ),Onion,Onion,38,5072,22.9,1.93
+Tamil Nadu,Dharmapuri(Uzhavar Sandhai ),Onion,Onion,39,5021,22.9,1.73
+Tamil Nadu,Periyakulam(Uzhavar Sandhai ),Onion,Onion,39,4932,22.8,1.8
+Tamil Nadu,Thathakapatti(Uzhavar Sandhai ),Onion,Onion,39,4986,22.8,1.83
+Tamil Nadu,Anaiyur(Uzhavar Sandhai ),Onion,Onion,39,5190,22.8,1.93
+Tamil Nadu,Muthupettai(Uzhavar Sandhai ),Onion,Onion,36,4639,22.8,1.67
+Tamil Nadu,Palani(Uzhavar Sandhai ),Onion,Onion,33,4970,22.7,1.93
+Tamil Nadu,Elampillai(Uzhavar Sandhai ),Onion,Onion,38,5075,22.6,1.83
+Tamil Nadu,Andipatti(Uzhavar Sandhai ),Onion,Onion,38,4913,22.6,1.75
+Tamil Nadu,Jalagandapuram(Uzhavar Sandhai ),Onion,Onion,38,5180,22.5,1.8
+Tamil Nadu,Mettupalayam(Uzhavar Sandhai ),Onion,Onion,39,4963,22.4,1.85
+Tamil Nadu,Cheyyar(Uzhavar Sandhai ),Onion,Onion,38,4537,22.4,2.18
+Tamil Nadu,Dharapuram(Uzhavar Sandhai ),Onion,Onion,37,5143,22.4,1.93
+Tamil Nadu,Bodinayakanur(Uzhavar Sandhai ),Onion,Onion,39,5113,22.3,1.74
+Odisha,Hindol Apmc,Onion,Onion,37,4038,22.3,1.96
+Tamil Nadu,Ngo Colony(Uzhavar Sandhai ),Onion,Onion,32,4678,22.3,1.87
+Tamil Nadu,Perambalur(Uzhavar Sandhai ),Onion,Onion,38,5667,22.3,1.78
+West Bengal,Siliguri Apmc,Onion,Onion,30,3837,22.3,1.76
+Tamil Nadu,Kulithalai(Uzhavar Sandhai ),Onion,Onion,39,4991,22.2,1.8
+Tamil Nadu,Kambam(Uzhavar Sandhai ),Onion,Onion,38,4926,22.2,1.78
+Telangana,Siddipet(Rythu Bazar),Onion,Onion,31,3852,22.2,1.67
+Tamil Nadu,Myladi(Uzhavar Sandhai ),Onion,Onion,36,5399,22.1,2.0
+Tamil Nadu,Sooramangalam(Uzhavar Sandhai ),Onion,Onion,38,4938,22.1,1.74
+Tamil Nadu,Kknagar(Uzhavar Sandhai ),Onion,Onion,37,5384,22.0,1.89
+Tamil Nadu,Namakkal(Uzhavar Sandhai ),Onion,Onion,37,4945,22.0,1.82
+Tamil Nadu,Palacode(Uzhavar Sandhai ),Onion,Onion,37,4989,22.0,1.75
+Tamil Nadu,Karur(Uzhavar Sandhai ),Onion,Onion,39,5083,22.0,1.67
+Tamil Nadu,Mannargudi Ii(Uzhavar Sandhai ),Onion,Onion,37,5265,22.0,2.06
+Tamil Nadu,Theni(Uzhavar Sandhai ),Onion,Onion,38,4799,21.9,1.71
+Tamil Nadu,Virudhunagar(Uzhavar Sandhai ),Onion,Onion,34,4785,21.9,1.99
+Tamil Nadu,Arani(Uzhavar Sandhai ),Onion,Onion,39,4647,21.9,1.92
+Tamil Nadu,Tiruvallur(Uzhavar Sandhai ),Onion,Onion,31,4565,21.9,1.71
+Tamil Nadu,Thanjavur(Uzhavar Sandhai ),Onion,Onion,31,5010,21.8,1.79
+Tamil Nadu,Srivilliputhur(Uzhavar Sandhai ),Onion,Onion,39,4705,21.8,1.73
+Tamil Nadu,Chinnamanur(Uzhavar Sandhai ),Onion,Onion,37,5246,21.8,1.74
+Tamil Nadu,Padappai(Uzhavar Sandhai ),Onion,Onion,36,4526,21.8,1.81
+Tamil Nadu,Kahithapattarai(Uzhavar Sandhai ),Onion,Onion,38,5121,21.7,1.89
+Tamil Nadu,Vellore Apmc,Onion,Onion,37,4807,21.7,1.71
+Tamil Nadu,Medavakkam(Uzhavar Sandhai ),Onion,Onion,32,5031,21.7,1.75
+Tamil Nadu,Mannargudi I(Uzhavar Sandhai ),Onion,Onion,36,5281,21.6,2.06
+Tamil Nadu,Ammapet(Uzhavar Sandhai ),Onion,Onion,39,5058,21.5,1.69
+Tamil Nadu,Palayamkottai(Uzhavar Sandhai ),Onion,Onion,36,4808,21.5,1.73
+Tamil Nadu,Arcot(Uzhavar Sandhai ),Onion,Onion,37,4696,21.4,1.9
+Tamil Nadu,Denkanikottai(Uzhavar Sandhai ),Onion,Onion,39,4923,21.4,1.79
+Tamil Nadu,Kancheepuram(Uzhavar Sandhai ),Onion,Onion,35,4507,21.3,1.76
+Tamil Nadu,Perundurai(Uzhavar Sandhai ),Onion,Onion,37,5100,21.3,1.75
+Tamil Nadu,Karimangalam(Uzhavar Sandhai),Onion,Onion,39,4865,21.2,1.69
+Tamil Nadu,Sankarapuram(Uzhavar Sandhai ),Onion,Onion,39,5205,21.2,1.75
+Tamil Nadu,Hosur(Uzhavar Sandhai ),Onion,Onion,38,4993,21.2,1.67
+Tamil Nadu,Pattukottai(Uzhavar Sandhai ),Onion,Onion,38,4682,21.2,1.71
+Tamil Nadu,Lalgudi(Uzhavar Sandhai ),Onion,Onion,37,5109,21.2,2.06
+Tamil Nadu,Kallakurichi(Uzhavar Sandhai ),Onion,Onion,38,5250,21.1,1.75
+Tamil Nadu,Polur(Uzhavar Sandhai ),Onion,Onion,37,4561,21.1,1.77
+Tamil Nadu,Pennagaram(Uzhavar Sandhai ),Onion,Onion,38,5058,21.1,1.67
+Tamil Nadu,Thirumangalam(Uzhavar Sandhai ),Onion,Onion,38,5458,21.1,1.73
+Tamil Nadu,Kundrathur(Uzhavar Sandhai ),Onion,Onion,38,4053,21.0,1.69
+Tamil Nadu,Sampath Nagar(Uzhavar Sandhai ),Onion,Onion,38,5346,21.0,1.66
+Tamil Nadu,Vedasanthur(Uzhavar Sandhai ),Onion,Onion,33,4853,20.9,1.86
+Tamil Nadu,Jameenrayapettai(Uzhavar Sandhai ),Onion,Onion,36,4806,20.9,1.73
+Tamil Nadu,Vadalur(Uzhavar Sandhai ),Onion,Onion,39,4590,20.9,1.86
+Tamil Nadu,Tiruvannamalai(Uzhavar Sandhai ),Onion,Onion,37,4934,20.8,1.79
+Tamil Nadu,Sathiyamagalam(Uzhavar Sandhai ),Onion,Onion,39,4851,20.8,2.0
+Tamil Nadu,Melapalayam(Uzhavar Sandhai ),Onion,Onion,32,4520,20.8,1.61
+Tamil Nadu,Kulithalai(Uzhavar Sandhai ),Potato,Potato,32,5195,20.7,2.45
+Tamil Nadu,Avallapalli(Uzhavar Sandhai ),Onion,Onion,38,5039,20.7,1.67
+Tamil Nadu,Pallavaram(Uzhavar Sandhai ),Onion,Onion,34,4762,20.7,1.86
+Tamil Nadu,Musiri(Uzhavar Sandhai ),Onion,Onion,38,5083,20.7,1.86
+Tamil Nadu,Anna Nagar(Uzhavar Sandhai ),Onion,Onion,39,5613,20.5,1.85
+Tamil Nadu,Guduvancheri(Uzhavar Sandhai ),Onion,Onion,37,4750,20.5,1.73
+Tamil Nadu,Ulundurpettai Apmc,Onion,Onion,37,4797,20.5,1.5
+Tamil Nadu,Katpadi (Uzhavar Sandhai ),Onion,Onion,36,5272,20.4,1.69
+Tamil Nadu,Tiruthani(Uzhavar Sandhai ),Onion,Onion,33,4318,20.4,2.0
+Tamil Nadu,Tenkasi(Uzhavar Sandhai ),Onion,Onion,33,4402,20.4,1.69
+Tamil Nadu,Udumalpet Apmc,Onion,Onion,36,5358,20.3,1.73
+Tamil Nadu,Sunguvarchatram(Uzhavar Sandhai ),Onion,Onion,39,4032,20.3,1.69
+Tamil Nadu,Thalavadi(Uzhavar Sandhai ),Onion,Onion,38,4876,20.3,1.88
+Tamil Nadu,Tindivanam Apmc,Onion,Onion,37,4443,20.2,1.87
+Tamil Nadu,Nagapattinam(Uzhavar Sandhai ),Onion,Onion,39,3271,20.2,2.23
+Tamil Nadu,Lalgudi(Uzhavar Sandhai ),Potato,Potato,37,3205,20.1,2.0
+Tamil Nadu,Perampet(Uzhavar Sandhai),Onion,Onion,38,4630,20.0,1.85
+Tamil Nadu,Kangayam(Uzhavar Sandhai ),Onion,Onion,37,4132,20.0,1.67
+Tamil Nadu,Hasthampatti(Uzhavar Sandhai ),Onion,Onion,37,5041,19.9,1.64
+Tamil Nadu,Manachanallur(Uzhavar Sandhai ),Onion,Onion,38,5030,19.8,2.0
+Tamil Nadu,Sivagangai (Uzhavar Sandhai ),Onion,Onion,38,5379,19.7,1.84
+Tamil Nadu,Athur(Uzhavar Sandhai ),Onion,Onion,37,5107,19.6,1.66
+Tamil Nadu,Jeyankondam (Uzhavar Sandhai ),Onion,Onion,37,4614,19.6,1.74
+Tamil Nadu,Thammampatti (Uzhavar Sandhai ),Onion,Onion,39,5122,19.5,1.62
+Tamil Nadu,Sivakasi(Uzhavar Sandhai ),Onion,Onion,36,4806,19.5,1.73
+Tamil Nadu,Pallikonda(Uzhavar Sandhai),Onion,Onion,35,4690,19.5,1.77
+Tamil Nadu,Gudalur(Uzhavar Sandhai ),Onion,Onion,38,5299,19.4,2.06
+Tamil Nadu,Chengam(Uzhavar Sandhai ),Onion,Onion,39,4541,19.2,1.57
+Tamil Nadu,Thiruverumbur(Uzhavar Sandhai ),Onion,Onion,37,4974,19.2,2.0
+Tamil Nadu,Gudiyatham(Uzhavar Sandhai ),Onion,Onion,36,4819,19.0,1.85
+Tamil Nadu,Coonoor(Uzhavar Sandhai ),Onion,Onion,38,5317,19.0,1.66
+Tamil Nadu,Villupuram(Uzhavar Sandhai ),Onion,Onion,34,5051,19.0,1.6
+West Bengal,Karsiyang(Matigara) Apmc,Onion,Onion,36,5014,18.9,1.54
+Tamil Nadu,Tiruchengode Apmc,Onion,Onion,37,5034,18.9,2.16
+Tamil Nadu,Pudukottai(Uzhavar Sandhai ),Onion,Onion,38,5704,18.9,1.72
+Tamil Nadu,Needamangalam(Uzhavar Sandhai ),Onion,Onion,37,4503,18.8,1.82
+Tamil Nadu,Virudhunagar(Uzhavar Sandhai ),Potato,Potato,30,3827,18.8,1.73
+Tamil Nadu,Udhagamandalam(Uzhavar Sandhai ),Onion,Onion,38,5176,18.7,1.77
+Tamil Nadu,Viruthachalam(Uzhavar Sandhai ),Onion,Onion,39,4487,18.4,1.57
+Tamil Nadu,Kovilpatti(Uzhavar Sandhai ),Onion,Onion,38,5550,18.4,1.82
+Tamil Nadu,Sivakasi(Uzhavar Sandhai ),Potato,Potato,37,3176,18.4,1.73
+Tamil Nadu,Thirupathur Apmc,Onion,Onion,36,4828,18.4,1.76
+Tamil Nadu,Karaikudi(Uzhavar Sandhai ),Onion,Onion,39,5467,18.4,1.85
+Tamil Nadu,Karambakkudi(Uzhavar Sandhai ),Onion,Onion,38,5237,18.2,1.8
+Tamil Nadu,Vadaseri Apmc,Onion,Onion,39,5588,17.9,1.71
+Tamil Nadu,Katpadi (Uzhavar Sandhai ),Potato,Potato,36,3182,17.9,2.4
+Tamil Nadu,Ariyalur(Uzhavar Sandhai),Onion,Onion,37,4466,17.3,1.67
+Tamil Nadu,Viralimalai(Uzhavar Sandhai ),Onion,Onion,38,5520,17.2,2.0
+Tamil Nadu,Panruti(Uzhavar Sandhai ),Onion,Onion,37,4432,17.1,1.64
+Tamil Nadu,Manapparai(Uzhavar Sandhai ),Onion,Onion,39,4885,17.0,1.71
+Tamil Nadu,Mohanur(Uzhavar Sandhai ),Onion,Onion,39,5137,17.0,1.56
+Tamil Nadu,Aranthangi(Uzhavar Sandhai ),Onion,Onion,38,5507,17.0,2.0
+Madhya Pradesh,Sendhwa(F&V) Apmc,Onion,Onion,31,1116,17.0,1.89
+Punjab,Doraha Apmc,Onion,Onion,30,3503,17.0,1.54
+Tamil Nadu,Gandarvakottai(Uzhavar Sandhai ),Onion,Onion,38,5534,16.7,1.5
+Telangana,"Saroornagar,Rbz",Onion,Onion,35,3729,16.6,1.67
+Tamil Nadu,Singampunari(Uzhavar Sandhai ),Onion,Onion,37,4557,16.6,1.46
+Tamil Nadu,Kaveripattinam(Uzhavar Sandhai ),Onion,Onion,38,4408,16.2,1.57
+Uttarakhand,Haldwani Apmc,Potato,Potato,30,1113,15.8,1.88
+Punjab,Tanda Urmur Apmc,Potato,Potato,35,1277,15.8,1.64
+Tamil Nadu,Gingee(Uzhavar Sandhai ),Onion,Onion,38,4803,15.7,1.47
+Tamil Nadu,Rspuram(Uzhavar Sandhai ),Potato,Potato,37,6154,15.5,1.76
+Tamil Nadu,Alangudi(Uzhavar Sandhai ),Onion,Onion,37,5523,15.4,1.5
+Tamil Nadu,Vandavasi(Uzhavar Sandhai ),Potato,Potato,38,3342,15.4,1.77
+Tamil Nadu,Ramanathapuram(Uzhavar Sandhai ),Onion,Onion,34,5274,15.3,1.59
+Tamil Nadu,Dindigul(Uzhavar Sandhai ),Potato,Potato,37,4682,15.2,1.57
+Tamil Nadu,Chidambaram(Uzhavar Sandhai ),Onion,Onion,39,4397,15.1,1.57
+Tamil Nadu,Arani(Uzhavar Sandhai ),Potato,Potato,39,3291,15.0,1.75
+Madhya Pradesh,Dhamnod Apmc,Maize,Maize,30,2040,15.0,1.54
+Telangana,"Vanasthalipuram,Rbz",Onion,Onion,32,3675,14.9,1.47
+Tamil Nadu,Hasthampatti(Uzhavar Sandhai ),Potato,Potato,38,4504,14.9,1.85
+Tamil Nadu,Myladi(Uzhavar Sandhai ),Potato,Potato,37,3326,14.9,2.09
+Tamil Nadu,Polur(Uzhavar Sandhai ),Potato,Potato,37,3285,14.8,1.73
+Tamil Nadu,Cheyyar(Uzhavar Sandhai ),Potato,Potato,36,3303,14.5,1.75
+Tamil Nadu,Thanjavur(Uzhavar Sandhai ),Potato,Potato,32,3247,14.3,1.57
+Tamil Nadu,Elampillai(Uzhavar Sandhai ),Potato,Potato,37,2841,14.2,1.7
+Tamil Nadu,Arcot(Uzhavar Sandhai ),Groundnut,Groundnut in shell,34,6882,14.2,1.33
+Tamil Nadu,Karaikudi(Uzhavar Sandhai ),Potato,Potato,37,5707,14.2,2.09
+Punjab,Raikot Apmc,Onion,Onion,31,3445,14.1,1.56
+Tamil Nadu,Vadavalli(Uzhavar Sandhai ),Potato,Potato,39,5817,14.0,1.63
+Tamil Nadu,Palanganatham(Uzhavar Sandhai ),Soyabean,Soyabean,32,9595,14.0,3.18
+Tamil Nadu,Paramakudi(Uzhavar Sandhai ),Onion,Onion,38,4980,13.9,1.52
+Tamil Nadu,Chengam(Uzhavar Sandhai ),Potato,Potato,39,3218,13.9,1.38
+Tamil Nadu,Sathur(Uzhavar Sandhai ),Onion,Onion,34,4235,13.7,1.47
+Telangana,Rythu Bazar Mehdipatnam,Onion,Onion,33,3658,13.6,1.5
+Tamil Nadu,Tiruppur (South) (Uzhavar Sandhai ),Onion,Onion,30,3930,13.6,1.59
+Tamil Nadu,Ponnamaravathi(Uzhavar Sandhai),Onion,Onion,36,5438,13.6,1.42
+Tamil Nadu,Vellore Apmc,Potato,Potato,37,2681,13.4,1.59
+Uttarakhand,Gadarpur Apmc,Rice,Milled rice,34,3480,13.1,1.65
+Rajasthan,Sriganganagar (F&V) Apmc,Potato,Potato,30,1000,13.1,1.62
+Tamil Nadu,Vedaranyam(Uzhavar Sandhai),Onion,Onion,36,3589,13.0,1.73
+Tamil Nadu,Kahithapattarai(Uzhavar Sandhai ),Potato,Potato,36,2417,13.0,1.7
+Tamil Nadu,Tiruppur (South) (Uzhavar Sandhai ),Potato,Potato,39,5103,12.7,1.44
+Andhra Pradesh,Kothabommali Apmc,Rice,Paddy (common),30,2940,12.6,1.52
+Tamil Nadu,Singanallur(Uzhavar Sandhai ),Potato,Potato,39,6044,12.4,1.69
+Tamil Nadu,Dharapuram(Uzhavar Sandhai ),Potato,Potato,39,6265,12.4,1.55
+Tamil Nadu,Anaiyur(Uzhavar Sandhai ),Potato,Potato,36,5143,12.2,1.67
+Tamil Nadu,Sulur(Uzhavar Sandhai ),Potato,Potato,37,6105,12.2,1.72
+West Bengal,Bishnupur(Bankura) Apmc,Rice,Milled rice,32,4263,12.2,1.33
+Tamil Nadu,Sundarapuram(Uzhavar Sandhai ),Potato,Potato,37,6438,12.2,1.63
+Tamil Nadu,Chinnalapatti(Uzhavar Sandhai ),Potato,Potato,38,4678,12.1,1.57
+Tamil Nadu,Anna Nagar(Uzhavar Sandhai ),Potato,Potato,38,6201,11.8,1.62
+Tamil Nadu,Tuticorin(Uzhavar Sandhai ),Onion,Onion,32,4898,11.7,1.29
+Tamil Nadu,Kancheepuram(Uzhavar Sandhai ),Potato,Potato,36,2926,11.5,1.44
+Tamil Nadu,Gandarvakottai(Uzhavar Sandhai ),Potato,Potato,36,5660,11.4,1.5
+Tamil Nadu,Cuddalore(Uzhavar Sandhai ),Potato,Potato,38,3700,11.1,1.33
+Tamil Nadu,Panruti(Uzhavar Sandhai ),Potato,Potato,38,3763,11.0,1.33
+Tamil Nadu,Kovilpatti(Uzhavar Sandhai ),Potato,Potato,38,3559,11.0,1.46
+Tamil Nadu,Kumarapalayam(Uzhavar Sandhai ),Potato,Potato,39,3133,10.9,1.42
+Uttarakhand,Roorkee Apmc,Onion,Onion,38,3308,10.9,1.33
+Tamil Nadu,Karur(Uzhavar Sandhai ),Potato,Potato,39,5955,10.8,1.63
+Tamil Nadu,Tiruthani(Uzhavar Sandhai ),Potato,Potato,31,3806,10.6,1.33
+Tamil Nadu,Udumalpet Apmc,Potato,Potato,39,3806,10.4,1.38
+Tamil Nadu,Sampath Nagar(Uzhavar Sandhai ),Potato,Potato,38,4363,10.4,1.28
+Himachal Pradesh,Smy Palampur,Potato,Potato,30,1740,10.4,1.4
+Tamil Nadu,Hosur(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,8487,10.3,1.27
+Tamil Nadu,Gudalur(Uzhavar Sandhai ),Potato,Potato,38,5184,10.3,1.47
+Tamil Nadu,Ranipettai(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,6500,10.2,1.36
+Kerala,Palakkad Market,Potato,Potato,30,3923,10.2,1.47
+Telangana,Siddipet(Rythu Bazar),Potato,Potato,31,1994,10.2,1.67
+Tamil Nadu,Villupuram(Uzhavar Sandhai ),Potato,Potato,33,3742,10.1,1.29
+Tamil Nadu,Jalagandapuram(Uzhavar Sandhai ),Potato,Potato,38,2755,10.1,1.66
+Tamil Nadu,Thuraiyur Apmc,Potato,Potato,36,2835,9.9,1.7
+Himachal Pradesh,Smy Jaisinghpur,Potato,Potato,30,1935,9.9,1.5
+Tamil Nadu,Ranipettai(Uzhavar Sandhai ),Potato,Potato,37,2984,9.9,1.4
+Tamil Nadu,Chokkikulam(Uzhavar Sandhai ),Potato,Potato,39,4381,9.8,1.42
+Haryana,Gurgaon Apmc,Potato,Potato,30,853,9.7,1.43
+Tamil Nadu,Pudukottai(Uzhavar Sandhai ),Potato,Potato,39,6282,9.7,1.36
+Tamil Nadu,Kallakurichi(Uzhavar Sandhai ),Potato,Potato,38,3632,9.6,1.67
+Punjab,Lalru Apmc,Potato,Potato,31,932,9.5,1.38
+Tamil Nadu,Palanganatham(Uzhavar Sandhai ),Potato,Potato,38,5376,9.4,1.39
+Tamil Nadu,Tiruvannamalai(Uzhavar Sandhai ),Potato,Potato,37,3404,9.3,1.38
+Tamil Nadu,Paramathivelur(Uzhavar Sandhai ),Potato,Potato,36,2828,9.2,1.5
+Tamil Nadu,Tirukattupalli(Uzhavar Sandhai ),Potato,Potato,39,3108,9.2,1.43
+Tamil Nadu,Rajapalayam(Uzhavar Sandhai ),Potato,Potato,39,2862,9.1,1.44
+Tamil Nadu,Vadaseri Apmc,Potato,Potato,39,3424,9.1,1.4
+Tamil Nadu,Tiruvannamalai(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,8042,9.1,1.2
+Tamil Nadu,Gudiyatham(Uzhavar Sandhai ),Potato,Potato,36,3158,9.1,1.27
+Tamil Nadu,Thirupathur Apmc,Potato,Potato,37,3081,9.0,1.33
+Tamil Nadu,Pallikonda(Uzhavar Sandhai),Potato,Potato,37,2914,9.0,1.46
+Tamil Nadu,Vedaranyam(Uzhavar Sandhai),Potato,Potato,36,3596,9.0,1.57
+Tamil Nadu,Alangudi(Uzhavar Sandhai ),Potato,Potato,37,6338,8.9,1.36
+Tamil Nadu,Udhagamandalam(Uzhavar Sandhai ),Potato,Potato,37,5230,8.6,1.35
+Tamil Nadu,Coonoor(Uzhavar Sandhai ),Potato,Potato,36,5396,8.5,1.32
+Tamil Nadu,Nagapattinam(Uzhavar Sandhai ),Potato,Potato,38,3891,8.5,1.56
+Tamil Nadu,Sivagangai (Uzhavar Sandhai ),Potato,Potato,37,5716,8.4,1.31
+Tamil Nadu,Vadalur(Uzhavar Sandhai ),Potato,Potato,39,3801,8.4,1.29
+Tamil Nadu,Anna Nagar(Uzhavar Sandhai ),Groundnut,Groundnut in shell,37,7324,8.4,1.23
+Tamil Nadu,Polur(Uzhavar Sandhai ),Groundnut,Groundnut in shell,35,5614,8.4,1.36
+Tamil Nadu,Sunguvarchatram(Uzhavar Sandhai ),Potato,Potato,39,2763,8.2,1.5
+Tamil Nadu,Perundurai(Uzhavar Sandhai ),Potato,Potato,39,3346,8.2,1.36
+Tamil Nadu,Kahithapattarai(Uzhavar Sandhai ),Groundnut,Groundnut in shell,33,7621,8.2,1.38
+Tamil Nadu,Singampunari(Uzhavar Sandhai ),Potato,Potato,39,5667,8.1,1.31
+Odisha,Sargipali Apmc,Potato,Potato,32,1128,7.9,1.4
+Telangana,"Vanasthalipuram,Rbz",Potato,Potato,33,1718,7.8,1.4
+Tamil Nadu,Sooramangalam(Uzhavar Sandhai ),Potato,Potato,38,6136,7.8,1.23
+Telangana,"Saroornagar,Rbz",Potato,Potato,35,1717,7.8,1.4
+Tamil Nadu,Pudukottai(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,5849,7.8,1.18
+Tamil Nadu,Nagapattinam(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,5395,7.7,1.32
+Tamil Nadu,Thalavaipuram(Uzhavar Sandhai ),Potato,Potato,39,2817,7.7,1.44
+Tamil Nadu,Mettupalayam(Uzhavar Sandhai ),Potato,Potato,37,5097,7.5,1.33
+Tamil Nadu,Kariyapatti(Uzhavar Sandhai ),Potato,Potato,37,3291,7.5,1.46
+Tamil Nadu,Andipatti(Uzhavar Sandhai ),Potato,Potato,38,2578,7.5,1.68
+Uttar Pradesh,Mathura Apmc,Potato,Potato,37,618,7.5,1.38
+Tamil Nadu,Gandhigramam(Uzhavar Sandhai),Potato,Potato,38,5007,7.5,1.41
+Tamil Nadu,Anaiyur(Uzhavar Sandhai ),Soyabean,Soyabean,32,9836,7.4,1.47
+Tamil Nadu,Pallavaram(Uzhavar Sandhai ),Groundnut,Groundnut in shell,34,9118,7.3,1.27
+Telangana,Rythu Bazar Mehdipatnam,Potato,Potato,33,1705,7.3,1.4
+Tamil Nadu,Tamarainagar(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,7732,7.2,1.38
+Tamil Nadu,Chokkikulam(Uzhavar Sandhai ),Soyabean,Soyabean,31,9815,7.1,1.4
+Tamil Nadu,Tiruppur (North) (Uzhavar Sandhai ),Potato,Potato,37,5514,7.1,1.79
+Tamil Nadu,Perambalur(Uzhavar Sandhai ),Potato,Potato,38,2979,7.0,1.52
+Tamil Nadu,Muthupettai(Uzhavar Sandhai ),Potato,Potato,37,3084,6.9,1.35
+Tripura,Dasda Apmc,Potato,Potato,33,1388,6.8,1.33
+Tamil Nadu,Andipatti(Uzhavar Sandhai ),Soyabean,Soyabean,34,9507,6.8,1.32
+Tamil Nadu,Paramakudi(Uzhavar Sandhai ),Soyabean,Soyabean,36,9535,6.8,1.24
+Tamil Nadu,Gingee(Uzhavar Sandhai ),Potato,Potato,39,3756,6.7,1.14
+Odisha,Hindol Apmc,Potato,Potato,37,1427,6.7,1.45
+Uttar Pradesh,Sirsaganj Apmc,Maize,Maize,32,2186,6.7,1.23
+West Bengal,Bishnupur(Bankura) Apmc,Potato,Potato,33,656,6.6,1.26
+Tamil Nadu,Kknagar(Uzhavar Sandhai ),Groundnut,Groundnut in shell,37,7568,6.6,1.14
+Tamil Nadu,Mettur(Uzhavar Sandhai ),Potato,Potato,37,4078,6.5,1.29
+Tamil Nadu,Periyakulam(Uzhavar Sandhai ),Potato,Potato,39,2642,6.5,1.35
+Tamil Nadu,Sathur(Uzhavar Sandhai ),Potato,Potato,34,3691,6.5,1.36
+Tamil Nadu,Tuticorin(Uzhavar Sandhai ),Potato,Potato,33,3189,6.5,1.36
+Tamil Nadu,Ramanathapuram(Uzhavar Sandhai ),Potato,Potato,35,4961,6.4,1.26
+Tamil Nadu,Padappai(Uzhavar Sandhai ),Potato,Potato,35,3101,6.4,1.35
+Tamil Nadu,Jameenrayapettai(Uzhavar Sandhai ),Groundnut,Groundnut in shell,34,9294,6.2,1.27
+Uttar Pradesh,Gangoh Apmc,Rice,Paddy (common),30,3615,6.2,1.27
+Uttar Pradesh,Buland Shahr Apmc,Potato,Potato,33,788,6.2,1.33
+Tamil Nadu,Vellore Apmc,Groundnut,Groundnut in shell,36,7743,6.1,1.31
+Tamil Nadu,Krishnagiri(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,6849,6.1,1.16
+Tamil Nadu,Arcot(Uzhavar Sandhai ),Potato,Potato,37,2943,6.1,1.4
+Tamil Nadu,Aruppukottai(Uzhavar Sandhai ),Potato,Potato,39,3282,6.1,1.38
+Tamil Nadu,Manapparai(Uzhavar Sandhai ),Potato,Potato,38,3079,6.0,1.17
+Tamil Nadu,Thiruverumbur(Uzhavar Sandhai ),Potato,Potato,38,3079,6.0,1.17
+Tamil Nadu,Sathiyamagalam(Uzhavar Sandhai ),Potato,Potato,38,3761,6.0,1.44
+West Bengal,Khatra Apmc,Potato,Potato,33,673,5.9,1.23
+Tamil Nadu,Palayamkottai(Uzhavar Sandhai ),Potato,Potato,34,2547,5.8,1.26
+Tamil Nadu,Kambam(Uzhavar Sandhai ),Potato,Potato,39,2631,5.8,1.2
+Tamil Nadu,Palani(Uzhavar Sandhai ),Potato,Potato,33,3642,5.8,1.29
+Andhra Pradesh,Kondapi Apmc,Gram,Gram (whole),32,5584,5.7,1.23
+Tamil Nadu,Pollachi(Uzhavar Sandhai ),Potato,Potato,38,5151,5.7,1.24
+Andhra Pradesh,Maddipadu Apmc,Rice,Paddy (common),33,2682,5.6,1.14
+Tamil Nadu,Melapalayam(Uzhavar Sandhai ),Potato,Potato,31,2518,5.6,1.32
+Tamil Nadu,Anaiyur(Uzhavar Sandhai ),Groundnut,Groundnut in shell,35,7286,5.6,1.15
+Madhya Pradesh,Umariya Apmc,Wheat,Wheat grain,30,2335,5.6,1.34
+Tamil Nadu,Chokkikulam(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,7306,5.5,1.15
+Tamil Nadu,Srivilliputhur(Uzhavar Sandhai ),Potato,Potato,39,2801,5.5,1.18
+Andhra Pradesh,Maddipadu Apmc,Bajra,Bajra,30,2685,5.5,1.18
+Tamil Nadu,Gobichettipalayam(Uzhavar Sandhai ),Potato,Potato,38,3627,5.5,1.23
+Tamil Nadu,Devaram(Uzhavar Sandhai ),Potato,Potato,36,2675,5.4,1.2
+Tamil Nadu,Theni(Uzhavar Sandhai ),Soyabean,Soyabean,33,9530,5.4,1.26
+Kerala,Palakkad Market,Gram,Gram (whole),30,8933,5.4,1.16
+Tamil Nadu,Bodinayakanur(Uzhavar Sandhai ),Potato,Potato,38,2684,5.4,1.2
+Tamil Nadu,Nanganallur(Uzhavar Sandhai ),Potato,Potato,33,3659,5.4,1.15
+Tamil Nadu,Melur(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,7316,5.4,1.15
+Gujarat,Gondal(Veg.Market Gondal) Apmc,Potato,Potato,33,1007,5.3,1.38
+Punjab,Quadian Apmc,Onion,Onion,35,3396,5.3,1.44
+Tamil Nadu,Kundrathur(Uzhavar Sandhai ),Potato,Potato,39,2728,5.3,1.2
+Tamil Nadu,Hosur(Uzhavar Sandhai ),Potato,Potato,38,2250,5.2,1.57
+Kerala,Palakkad Market,Urad,Urad (whole),30,13283,5.2,1.26
+Tamil Nadu,Denkanikottai(Uzhavar Sandhai ),Potato,Potato,38,2224,5.1,1.29
+West Bengal,Siliguri Apmc,Potato,Potato,34,649,5.1,1.2
+Tamil Nadu,Mettupalayam(Uzhavar Sandhai ),Groundnut,Groundnut in shell,39,7692,5.0,1.13
+Tamil Nadu,Ngo Colony(Uzhavar Sandhai ),Potato,Potato,32,2425,5.0,1.25
+Tamil Nadu,Sankarapuram(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,6868,5.0,1.17
+Tamil Nadu,Avallapalli(Uzhavar Sandhai ),Potato,Potato,39,2224,5.0,1.29
+Tamil Nadu,Thathakapatti(Uzhavar Sandhai ),Potato,Potato,39,4631,5.0,1.26
+Tamil Nadu,Kallakurichi(Uzhavar Sandhai ),Groundnut,Groundnut in shell,37,6865,5.0,1.17
+Madhya Pradesh,Indore Apmc,Wheat,Wheat grain,31,2769,4.9,1.21
+Punjab,Rayya Apmc,Onion,Onion,30,1427,4.9,1.36
+Tamil Nadu,Manachanallur(Uzhavar Sandhai ),Potato,Potato,38,2983,4.9,1.26
+Tamil Nadu,Pennagaram(Uzhavar Sandhai ),Potato,Potato,37,3323,4.8,1.17
+Tamil Nadu,Paramakudi(Uzhavar Sandhai ),Potato,Potato,36,4918,4.8,1.13
+Haryana,Hansi Apmc,Potato,Potato,37,1011,4.5,1.2
+Tamil Nadu,Vazhapadi(Uzhavar Sandhai),Potato,Potato,37,3204,4.5,1.2
+Uttar Pradesh,Kanpur(Grain) Apmc,Wheat,Wheat grain,35,2540,4.5,1.16
+Tamil Nadu,Katpadi (Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,7847,4.5,1.14
+Tamil Nadu,Perampet(Uzhavar Sandhai),Groundnut,Groundnut in shell,38,7520,4.5,1.19
+Kerala,Palakkad Market,Moong,Moong (whole),30,12414,4.4,1.2
+Punjab,Raikot Apmc,Potato,Potato,31,640,4.4,1.17
+Tamil Nadu,Ramanathapuram(Uzhavar Sandhai ),Soyabean,Soyabean,35,8907,4.4,1.16
+Tamil Nadu,Namakkal(Uzhavar Sandhai ),Groundnut,Groundnut in shell,33,6891,4.4,1.16
+Tamil Nadu,Jalagandapuram(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,6514,4.3,1.17
+Uttar Pradesh,Babrala Apmc,Maize,Maize,33,2059,4.2,1.18
+Uttar Pradesh,Wazirganj Apmc,Maize,Maize,33,1980,4.1,1.2
+Uttar Pradesh,Jhijhank Apmc,Wheat,Wheat grain,32,2459,4.0,1.15
+Tamil Nadu,Mohanur(Uzhavar Sandhai ),Potato,Potato,38,3268,3.9,1.19
+Tamil Nadu,Perampet(Uzhavar Sandhai),Potato,Potato,38,3003,3.8,1.33
+Tamil Nadu,Thalavadi(Uzhavar Sandhai ),Potato,Potato,38,3618,3.8,1.15
+Tamil Nadu,Mannargudi Ii(Uzhavar Sandhai ),Potato,Potato,37,3065,3.8,1.21
+Tamil Nadu,Mannargudi I(Uzhavar Sandhai ),Potato,Potato,38,3068,3.8,1.21
+Tamil Nadu,Pennagaram(Uzhavar Sandhai ),Groundnut,Groundnut in shell,37,6504,3.7,1.09
+Uttar Pradesh,Khalilabad Apmc,Wheat,Wheat grain,32,2546,3.6,1.11
+Uttar Pradesh,Hardoi Apmc,Wheat,Wheat grain,34,2482,3.5,1.09
+Kerala,Palakkad Market,Arhar/Tur,Tur (whole),30,12533,3.5,1.18
+Uttar Pradesh,Agra Apmc,Potato,Potato,31,516,3.5,1.12
+Tamil Nadu,Dharmapuri(Uzhavar Sandhai ),Potato,Potato,38,2753,3.5,1.09
+Tamil Nadu,Karimangalam(Uzhavar Sandhai),Potato,Potato,37,2765,3.4,1.07
+Tamil Nadu,Rasipuram(Uzhavar Sandhai ),Groundnut,Groundnut in shell,39,6814,3.4,1.16
+Tamil Nadu,Palacode(Uzhavar Sandhai ),Potato,Potato,39,2792,3.3,1.09
+Andhra Pradesh,Atmakur (Nandyal District) Apmc,Rice,Paddy (common),32,2457,3.3,1.15
+Bihar,Raxaul Apmc,Potato,Potato,32,1452,3.3,1.07
+Tamil Nadu,Tiruchengode Apmc,Potato,Potato,39,2819,3.3,1.18
+Tamil Nadu,Ajattihalli(Uzhavar Sandhai ),Potato,Potato,39,2664,3.2,1.12
+Uttar Pradesh,Bisoli Apmc,Maize,Maize,36,1972,3.2,1.13
+Tamil Nadu,Guduvancheri(Uzhavar Sandhai ),Potato,Potato,34,2735,3.1,1.22
+Uttar Pradesh,Babrala Apmc,Potato,Potato,33,585,3.0,1.19
+Madhya Pradesh,Satna Apmc,Wheat,Wheat grain,35,2497,3.0,1.14
+Tamil Nadu,Natrampalli(Uzhavar Sandhai ),Potato,Potato,38,3211,2.9,1.08
+Tamil Nadu,Hasthampatti(Uzhavar Sandhai ),Groundnut,Groundnut in shell,32,7156,2.8,1.07
+Tamil Nadu,Krishnagiri(Uzhavar Sandhai ),Potato,Potato,38,2361,2.7,1.09
+Andhra Pradesh,Kakinada (Urban) Apmc,Rice,Paddy (common),34,2407,2.7,1.08
+Tamil Nadu,Tindivanam Apmc,Potato,Potato,36,3711,2.7,1.06
+Uttar Pradesh,Sultanpur Apmc,Wheat,Wheat grain,37,2472,2.6,1.1
+Tamil Nadu,Gudiyatham(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,7608,2.6,1.14
+Tamil Nadu,Harur(Uzhavar Sandhai ),Potato,Potato,37,2749,2.5,1.21
+Uttarakhand,Roorkee Apmc,Potato,Potato,39,996,2.4,1.18
+Uttar Pradesh,Azamgarh Apmc,Wheat,Wheat grain,33,2565,2.4,1.09
+Uttar Pradesh,Rura Apmc,Wheat,Wheat grain,36,2496,2.4,1.1
+Madhya Pradesh,Kukshi Apmc,Wheat,Wheat grain,33,2577,2.4,1.12
+Tamil Nadu,Namakkal(Uzhavar Sandhai ),Potato,Potato,39,2690,2.4,1.1
+Madhya Pradesh,Badwaha Apmc,Wheat,Wheat grain,30,2638,2.3,1.1
+Uttar Pradesh,Pukharayan Apmc,Wheat,Wheat grain,34,2529,2.3,1.1
+Uttar Pradesh,Kasganj Apmc,Wheat,Wheat grain,30,2570,2.2,1.07
+Tamil Nadu,Kumbakonam (Uzhavar Sandhai ),Potato,Potato,36,3300,2.2,1.2
+Andhra Pradesh,Karapa Apmc,Rice,Paddy (common),32,2374,2.2,1.14
+Tamil Nadu,Viruthachalam(Uzhavar Sandhai ),Potato,Potato,39,4019,2.2,1.12
+Madhya Pradesh,Sidhi Apmc,Wheat,Wheat grain,30,2383,2.1,1.06
+Uttar Pradesh,Barabanki Apmc,Wheat,Wheat grain,34,2494,2.0,1.07
+Uttar Pradesh,Safdarganj Apmc,Wheat,Wheat grain,39,2468,1.9,1.11
+Uttar Pradesh,Basti Apmc,Wheat,Wheat grain,34,2499,1.8,1.06
+Tamil Nadu,Thammampatti (Uzhavar Sandhai ),Potato,Potato,39,2906,1.8,1.13
+Tamil Nadu,Musiri(Uzhavar Sandhai ),Potato,Potato,39,2782,1.7,1.12
+Madhya Pradesh,Manawar Apmc,Wheat,Wheat grain,30,2663,1.6,1.06
+Uttar Pradesh,Dataganj Apmc,Wheat,Wheat grain,31,2522,1.5,1.06
+Andhra Pradesh,Koilkunta Apmc,Jowar,Jowar (mixed varieties),30,3183,1.4,1.06
+Tamil Nadu,Elampillai(Uzhavar Sandhai ),Groundnut,Groundnut in shell,32,6734,1.3,1.08
+Tamil Nadu,Rasipuram(Uzhavar Sandhai ),Potato,Potato,36,3275,1.3,1.03
+Tamil Nadu,Mayiladuthurai(Uzhavar Sandhai ),Potato,Potato,39,2994,1.3,1.09
+Tamil Nadu,Attayampatti(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,6993,1.3,1.12
+Telangana,Gangadhara Apmc,Rice,Paddy (common),32,2385,1.3,1.03
+Tamil Nadu,Villupuram(Uzhavar Sandhai ),Groundnut,Groundnut in shell,34,8971,1.3,1.06
+Uttar Pradesh,Akbarpur Apmc,Wheat,Wheat grain,31,2466,1.2,1.06
+West Bengal,Bishnupur(Bankura) Apmc,Wheat,Wheat grain,33,2712,1.2,1.04
+West Bengal,Karsiyang(Matigara) Apmc,Potato,Potato,37,1497,1.1,1.07
+West Bengal,Darjeeling Apmc,Potato,Potato,36,1497,1.1,1.07
+Andhra Pradesh,Podili Apmc,Arhar/Tur,Tur (whole),37,8172,1.0,1.04
+Andhra Pradesh,Addanki Apmc,Gram,Gram (whole),33,6014,1.0,1.04
+Andhra Pradesh,Kanigiri Apmc,Arhar/Tur,Tur (whole),32,8676,1.0,1.06
+Rajasthan,Surajgarh Apmc,Rapeseed & Mustard,Mustard seed,30,7568,0.8,1.05
+Tripura,Dasda Apmc,Rice,Milled rice,32,3284,0.8,1.03
+Telangana,Warangal Apmc,Potato,Potato,37,1754,0.8,1.03
+Andhra Pradesh,Santhamaguluru Apmc,Maize,Maize,31,2441,0.8,1.02
+Uttar Pradesh,Unnao Apmc,Wheat,Wheat grain,35,2568,0.7,1.01
+Tamil Nadu,Thathakapatti(Uzhavar Sandhai ),Groundnut,Groundnut in shell,39,7513,0.7,1.03
+Andhra Pradesh,Maddipadu Apmc,Gram,Gram (whole),30,5980,0.7,1.02
+West Bengal,Khatra Apmc,Rapeseed & Mustard,Mustard seed,30,6393,0.6,1.03
+Andhra Pradesh,Gudur Apmc,Rice,Paddy (common),32,2437,0.5,1.02
+West Bengal,Bishnupur(Bankura) Apmc,Rapeseed & Mustard,Mustard seed,33,6388,0.5,1.02
+Andhra Pradesh,Addanki Apmc,Rice,Paddy (common),31,2406,0.4,1.02
+Andhra Pradesh,Samalkot Apmc,Rice,Paddy (common),34,2366,0.4,1.02
+Andhra Pradesh,Peddapuram Apmc,Rice,Paddy (common),31,2375,0.4,1.01
+Andhra Pradesh,Addanki Apmc,Maize,Maize,31,2416,0.4,1.01
+Andhra Pradesh,Tiruvuru Apmc,Maize,Maize,30,2399,0.2,1.01
+Uttarakhand,Lakshar Apmc,Wheat,Wheat grain,35,2599,0.2,1.01
+Andhra Pradesh,Sampara (Kakinada Rural) Apmc,Rice,Paddy (common),30,2379,0.1,1.0
+Andhra Pradesh,Pithapuram Apmc,Rice,Paddy (common),34,2379,0.1,1.0
+Tamil Nadu,Paruthipattu(Uzhavar Sandhai ),Potato,Potato,30,4000,0.0,1.0
+Andhra Pradesh,Chirala Apmc,Rice,Paddy (common),30,2450,0.0,1.0
+Andhra Pradesh,Etcherla Apmc,Maize,Maize,33,2400,0.0,1.0
+Andhra Pradesh,Etcherla Apmc,Rice,Paddy (common),30,2369,0.0,1.0
+Andhra Pradesh,Jaggampet Apmc,Rice,Paddy (common),31,2369,0.0,1.0
+Tamil Nadu,Pallavaram(Uzhavar Sandhai ),Potato,Potato,34,2750,0.0,1.0
+Tamil Nadu,Palladam(Uzhavar Sandhai ),Potato,Potato,38,2750,0.0,1.0
+Tamil Nadu,Pattukottai(Uzhavar Sandhai ),Potato,Potato,39,3000,0.0,1.0
+Tamil Nadu,Perambalur(Uzhavar Sandhai ),Groundnut,Groundnut in shell,39,8500,0.0,1.0
+Tamil Nadu,Sirkali(Uzhavar Sandhai ),Potato,Potato,37,3800,0.0,1.0
+Tamil Nadu,Sirkali(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,5750,0.0,1.0
+Tamil Nadu,Jameenrayapettai(Uzhavar Sandhai ),Potato,Potato,34,2750,0.0,1.0
+Tamil Nadu,Sankarapuram(Uzhavar Sandhai ),Potato,Potato,39,3500,0.0,1.0
+Tamil Nadu,Kaveripattinam(Uzhavar Sandhai ),Potato,Potato,39,4000,0.0,1.0
+Tamil Nadu,Cuddalore(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,8000,0.0,1.0
+Tamil Nadu,Thirupathur Apmc,Groundnut,Groundnut in shell,33,6000,0.0,1.0
+Tamil Nadu,Chengam(Uzhavar Sandhai ),Groundnut,Groundnut in shell,38,7500,0.0,1.0
+Tamil Nadu,Tiruthuraipoondi(Uzhavar Sandhai ),Groundnut,Groundnut in shell,36,6000,0.0,1.0
+Tamil Nadu,Tindivanam Apmc,Groundnut,Groundnut in shell,37,7000,0.0,1.0
+Tamil Nadu,Chidambaram(Uzhavar Sandhai ),Potato,Potato,38,4000,0.0,1.0
+Tamil Nadu,Gingee(Uzhavar Sandhai ),Groundnut,Groundnut in shell,39,7000,0.0,1.0
+Tamil Nadu,Ulundurpettai Apmc,Potato,Potato,37,4000,0.0,1.0
+Andhra Pradesh,Narasannapet Apmc,Rice,Paddy (common),33,2369,0.0,1.0
+Andhra Pradesh,Vakadu Apmc,Rice,Paddy (common),30,2400,0.0,1.0
+West Bengal,Siliguri Apmc,Rice,Milled rice,37,5200,0.0,1.0

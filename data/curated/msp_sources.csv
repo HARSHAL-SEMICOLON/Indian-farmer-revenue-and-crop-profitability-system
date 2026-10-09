@@ -1,0 +1,21 @@
+source_id,title,url
+OGD_2002_12,"data.gov.in - Minimum Support Prices of crops (Rs/qtl), 2002-03 to 2012-13 (file crops_price_msp.csv, mirrored from github.com/nitinvbharti/Agriculture_Analysis)",https://www.data.gov.in/
+CMO_2012_16,"Maharashtra CMO dataset - MSP table CMO_MSP_Mandi.csv (OGD hackathon release), cross-checked against PIB 2013-14 column",https://www.data.gov.in/
+PIB_2013_vs_2024,PIB backgrounder 'A Consistent Increase in MSP' (Jun 2024),https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/jun/doc2024621343301.pdf
+DES_KH_2016,DES / DA&FW - MSP for Kharif crops 2016-17 (with bonus),https://desagri.gov.in/wp-content/uploads/2021/04/MSP-kharif-2016-17.pdf
+PIB_RB_2016,"PIB 15-Nov-2016 - Cabinet approves enhanced MSP for Rabi crops of 2016-17 (bonus for gram, masur, mustard, safflower)",https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=153642
+PIB_KH_2018,PIB Aug-2018 - MSP for Kharif crops (2017-18 and 2018-19 with CACP cost),https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=181467
+PIB_KH_2019,PIB 03-Jul-2019 - Cabinet approves MSP for Kharif crops 2019-20,https://www.pib.gov.in/PressReleasePage.aspx?PRID=1576844
+PIB_KH_2020,PIB 01-Jun-2020 - MSP for Kharif crops 2020-21,https://www.pib.gov.in/PressReleasePage.aspx?PRID=1628348
+PIB_RB_2018,PIB Oct-2018 - MSP for Rabi crops of 2018-19 (RMS 2019-20),https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=183926
+PIB_RB_2019,PIB Oct-2019 - MSP for Rabi crops of 2019-20 (RMS 2020-21),https://www.pib.gov.in/newsite/PrintRelease.aspx?relid=193961
+PIB_RB_2021,PIB Sep-2021 - MSP for Rabi crops RMS 2022-23,https://static.pib.gov.in/WriteReadData/specificdocs/documents/2021/sep/doc202191311.pdf
+PIB_ALL_2021_23,PIB - MSP table 2021-22 to 2023-24 (all mandated crops),https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2003184
+PIB_KH_2025,"PIB May-2025 - Cabinet approves MSP for Kharif crops, marketing season 2025-26",https://www.pib.gov.in/PressReleasePage.aspx?PRID=2131983
+PIB_RB_2026,"PIB Oct-2025 - Cabinet approves MSP for Rabi crops, RMS 2026-27 (also lists RMS 2025-26)",https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2173567
+PIB_KH_2026,"PIB 13-May-2026 - Cabinet approves MSP for Kharif crops, marketing season 2026-27",https://www.pib.gov.in/PressReleasePage.aspx?PRID=2260617
+NEWS_RB_2027,"Business Standard 30-Sep-2026 - Cabinet hikes MSP for rabi crops, RMS 2027-28 (secondary; matches Global Agriculture report)",https://www.business-standard.com/economy/news/cabinet-rabi-msp-2027-28-wheat-safflower-mustard-126093000756_1.html
+PIB_FRP_2018,PIB Jul-2018 - FRP of sugarcane for 2018-19 (Rs 275 at 10% recovery; 2017-18 Rs 255),https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1539078
+PIB_JUTE_2019,PIB Mar-2019 - MSP raw jute 2019-20 Rs 3950 (2018-19 Rs 3700),https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1564328
+NEWS_FRP_2019,Business Standard/PTI 24-Jul-2019 - Govt keeps sugarcane FRP unchanged at Rs 275/qtl for 2019-20 (secondary),https://www.business-standard.com/article/pti-stories/govt-keeps-sugarcane-price-unchanged-at-rs-275-qtl-for-2019-20-119072401159_1.html
+NEWS_JUTE_2018,"Business Standard 25-Apr-2018 - raw jute MSP raised by Rs 200 to Rs 3,700 for 2018-19 (secondary; 2017-18 derived)",https://www.business-standard.com/amp/article/markets/govt-hikes-raw-jute-msp-by-rs-200-to-rs-3-700-quintal-for-2018-19-118042500449_1.html

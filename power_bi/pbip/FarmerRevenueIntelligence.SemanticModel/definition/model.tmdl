@@ -1,0 +1,39 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["ExportFolder", "dim_crop", "dim_state", "dim_location", "dim_year", "dim_market", "dim_date", "fact_production", "fact_district_crop_year", "fact_state_crop_year", "fact_msp", "fact_market_price", "fact_cost_of_cultivation", "fact_weather_state", "dq_issues", "dq_validation", "dq_coverage", "ref_sources", "agg_q04b_value_growth_decomposition", "agg_q07a_rain_yield_association", "agg_q10a_market_volatility_mh", "agg_q05a_cross_market_dispersion_2024", "agg_q11b_msp_gap_by_month_2026", "agg_q11c_dispersion_2026", "agg_q11f_daily_median_price_2026", "agg_q11g_season_2026_outlook", "agg_q11h_msp_2026_27_vs_cost"]
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+ref table _Measures
+ref table dim_crop
+ref table dim_state
+ref table dim_location
+ref table dim_year
+ref table dim_market
+ref table dim_date
+ref table fact_production
+ref table fact_district_crop_year
+ref table fact_state_crop_year
+ref table fact_msp
+ref table fact_market_price
+ref table fact_cost_of_cultivation
+ref table fact_weather_state
+ref table dq_issues
+ref table dq_validation
+ref table dq_coverage
+ref table ref_sources
+ref table agg_q04b_value_growth_decomposition
+ref table agg_q07a_rain_yield_association
+ref table agg_q10a_market_volatility_mh
+ref table agg_q05a_cross_market_dispersion_2024
+ref table agg_q11b_msp_gap_by_month_2026
+ref table agg_q11c_dispersion_2026
+ref table agg_q11f_daily_median_price_2026
+ref table agg_q11g_season_2026_outlook
+ref table agg_q11h_msp_2026_27_vs_cost

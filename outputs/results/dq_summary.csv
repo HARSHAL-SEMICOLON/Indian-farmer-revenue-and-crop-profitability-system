@@ -1,0 +1,20 @@
+area,check,value,expected,status,note
+Integrity,Foreign-key violations,0,0,PASS,
+Integrity,Duplicate production keys (district x crop x year x season),0,0,PASS,
+Integrity,Duplicate district x crop x year rows,0,0,PASS,
+Integrity,Duplicate MSP crop x year,0,0,PASS,
+Integrity,Duplicate mandi quotes (dataset x market x crop x date x variety),0,0,PASS,exact duplicates are dropped at load
+Integrity,Missing crop_id in fact tables,0,0,PASS,
+Validity,Negative area or production,0,0,PASS,
+Validity,Non-positive modal prices left in analysis,0,0,PASS,
+Validity,Mandi quotes excluded (<=0 or >5x / <1/5 of median),310,documented,PASS,"0.29% of 106,885 quotes"
+Validity,Quotes flagged: min/modal/max inconsistent,464,documented,PASS,kept for modal; no spread
+Validity,MSP rows without a positive value or source URL,0,0,PASS,
+Provenance,MSP values from official releases,98.4%,>= 95%,PASS,"rest flagged 'secondary' (news reports), listed in dq_issues"
+Units,"Conversion factors: rice -> paddy, lint bale -> kapas, tonnes -> quintals","rice x14.93, cotton x5.0, others x10",as documented,PASS,
+Units,"MSP compared with a non-comparable price form (milled rice, lint, dal...)",0,0,PASS,
+Consistency,SQL q07_rain_yield_correlation vs pandas q07a_rain_yield_association (pearson_r),max diff 0.000 over 26,<= 0.002,PASS,
+Consistency,SQL q12_real_msp_vs_inflation vs pandas q09c_real_msp_by_crop (real_growth_pct),max diff 0.000 over 20,<= 0.11,PASS,
+Consistency,SQL q15_season_2026_outlook vs pandas q11g_season_2026_outlook (pct_below_next_msp),max diff 0.000 over 19,<= 0.11,PASS,
+Validation,District sums vs DES 3rd advance estimates 2019-20 (within 10%),4/8,documented,PASS,"rice +12%, wheat +14%, maize -29%: 2019-20 provisional, excluded from default window"
+Tests,Automated pipeline tests (pytest tests/),15,all pass,PASS,run: python -m pytest -q tests

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "kpi3",
+  "position": {
+    "x": 517,
+    "y": 80,
+    "z": 6000,
+    "width": 160,
+    "height": 90,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "card",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Area (M ha)"
+                }
+              },
+              "queryRef": "_Measures.Area (M ha)",
+              "nativeQueryRef": "Area (M ha)"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

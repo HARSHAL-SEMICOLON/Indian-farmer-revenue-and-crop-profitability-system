@@ -1,0 +1,134 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "decomp",
+  "position": {
+    "x": 784,
+    "y": 418,
+    "z": 8000,
+    "width": 480,
+    "height": 294,
+    "tabOrder": 8000
+  },
+  "visual": {
+    "visualType": "barChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_q04b_value_growth_decomposition"
+                    }
+                  },
+                  "Property": "crop_name"
+                }
+              },
+              "queryRef": "agg_q04b_value_growth_decomposition.crop_name",
+              "nativeQueryRef": "crop_name"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q04b_value_growth_decomposition"
+                        }
+                      },
+                      "Property": "area_contribution_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(agg_q04b_value_growth_decomposition.area_contribution_pct)",
+              "nativeQueryRef": "Sum of area_contribution_pct"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q04b_value_growth_decomposition"
+                        }
+                      },
+                      "Property": "yield_contribution_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(agg_q04b_value_growth_decomposition.yield_contribution_pct)",
+              "nativeQueryRef": "Sum of yield_contribution_pct"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q04b_value_growth_decomposition"
+                        }
+                      },
+                      "Property": "price_msp_contribution_pct"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(agg_q04b_value_growth_decomposition.price_msp_contribution_pct)",
+              "nativeQueryRef": "Sum of price_msp_contribution_pct"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Q4 Value growth 2004-06 to 2016-18: share from area / yield / MSP (%)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

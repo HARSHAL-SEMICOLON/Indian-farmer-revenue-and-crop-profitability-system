@@ -1,0 +1,58 @@
+source_dataset,crop_name,price_form,n_quotes,avg_msp,avg_modal,pct_quotes_below_msp,avg_modal_vs_msp_pct
+AGMARKNET daily Jul-Sep 2026,Safflower,Safflower,65,6540.0,5101.0,98.5,-22.0
+AGMARKNET daily Jul-Sep 2026,Bajra,Bajra,1137,2775.0,2409.0,89.4,-13.2
+AGMARKNET daily Jul-Sep 2026,Moong,Moong (whole),1686,8768.0,7641.0,76.3,-12.9
+AGMARKNET daily Jul-Sep 2026,Arhar/Tur,Tur (whole),1060,8000.0,7523.0,64.9,-6.0
+AGMARKNET daily Jul-Sep 2026,Ragi,Ragi,244,4886.0,4063.0,62.7,-16.8
+AGMARKNET daily Jul-Sep 2026,Groundnut,Groundnut in shell,3010,7263.0,7037.0,61.5,-3.1
+AGMARKNET daily Jul-Sep 2026,Maize,Maize,3460,2400.0,2292.0,60.4,-4.5
+AGMARKNET daily Jul-Sep 2026,Masoor,Masur (whole),518,7000.0,7118.0,54.1,1.7
+AGMARKNET daily Jul-Sep 2026,Wheat,Wheat grain,8759,2585.0,2594.0,53.3,0.4
+AGMARKNET daily Jul-Sep 2026,Nigerseed,Nigerseed,6,9537.0,8617.0,50.0,-9.7
+AGMARKNET daily Jul-Sep 2026,Jowar,Jowar (mixed varieties),851,3699.0,4072.0,46.3,10.1
+AGMARKNET daily Jul-Sep 2026,Sunflower,Sunflower seed,139,7721.0,7789.0,39.6,0.9
+AGMARKNET daily Jul-Sep 2026,Gram,Gram (whole),2213,5875.0,6105.0,35.4,3.9
+AGMARKNET daily Jul-Sep 2026,Urad,Urad (whole),911,7800.0,8547.0,31.0,9.6
+AGMARKNET daily Jul-Sep 2026,Rice,Paddy (common),5535,2369.0,2508.0,28.3,5.9
+AGMARKNET daily Jul-Sep 2026,Cotton,Kapas (seed cotton),909,7710.0,8553.0,17.8,10.9
+AGMARKNET daily Jul-Sep 2026,Barley,Barley,125,2150.0,2401.0,17.6,11.7
+AGMARKNET daily Jul-Sep 2026,Sesamum,Sesamum,795,9846.0,12021.0,9.6,22.1
+AGMARKNET daily Jul-Sep 2026,Soyabean,Soyabean,2528,5328.0,6702.0,8.0,25.8
+AGMARKNET daily Jul-Sep 2026,Rapeseed & Mustard,Mustard seed,1557,6200.0,7302.0,3.7,17.8
+AGMARKNET daily snapshot 30-Sep-2024,Sunflower,Sunflower seed,5,6760.0,4849.0,100.0,-28.3
+AGMARKNET daily snapshot 30-Sep-2024,Bajra,Bajra,85,2500.0,2338.0,85.9,-6.5
+AGMARKNET daily snapshot 30-Sep-2024,Soyabean,Soyabean,109,4600.0,4305.0,84.4,-6.4
+AGMARKNET daily snapshot 30-Sep-2024,Groundnut,Groundnut in shell,100,6377.0,5473.0,82.0,-14.2
+AGMARKNET daily snapshot 30-Sep-2024,Moong,Moong (whole),59,8558.0,7687.0,79.7,-10.2
+AGMARKNET daily snapshot 30-Sep-2024,Jowar,Jowar (mixed varieties),39,3180.0,2783.0,71.8,-12.5
+AGMARKNET daily snapshot 30-Sep-2024,Jute,Raw jute,5,5050.0,5194.0,40.0,2.9
+AGMARKNET daily snapshot 30-Sep-2024,Urad,Urad (whole),74,6950.0,7612.0,37.8,9.5
+AGMARKNET daily snapshot 30-Sep-2024,Rice,Paddy (common),163,2183.0,2202.0,36.2,0.9
+AGMARKNET daily snapshot 30-Sep-2024,Ragi,Ragi,6,3846.0,3832.0,33.3,-0.4
+AGMARKNET daily snapshot 30-Sep-2024,Masoor,Masur (whole),42,6425.0,6844.0,31.0,6.5
+AGMARKNET daily snapshot 30-Sep-2024,Cotton,Kapas (seed cotton),41,6620.0,6917.0,26.8,4.5
+AGMARKNET daily snapshot 30-Sep-2024,Maize,Maize,171,2090.0,2379.0,20.5,13.8
+AGMARKNET daily snapshot 30-Sep-2024,Rapeseed & Mustard,Mustard seed,108,5650.0,5895.0,17.6,4.3
+AGMARKNET daily snapshot 30-Sep-2024,Arhar/Tur,Tur (whole),33,7000.0,9308.0,6.1,33.0
+AGMARKNET daily snapshot 30-Sep-2024,Wheat,Wheat grain,346,2275.0,2661.0,2.9,17.0
+AGMARKNET daily snapshot 30-Sep-2024,Gram,Gram (whole),124,5440.0,7167.0,0.8,31.7
+AGMARKNET daily snapshot 30-Sep-2024,Barley,Barley,31,1850.0,2303.0,0.0,24.5
+AGMARKNET daily snapshot 30-Sep-2024,Sesamum,Sesamum,44,8635.0,12115.0,0.0,40.3
+MH APMC monthly (CMO) 2014-16,Safflower,Safflower,356,3116.0,2501.0,96.9,-19.7
+MH APMC monthly (CMO) 2014-16,Sunflower,Sunflower seed,503,3789.0,3213.0,90.3,-15.2
+MH APMC monthly (CMO) 2014-16,Jowar,Jowar (mixed varieties),3704,1557.0,1633.0,45.5,4.9
+MH APMC monthly (CMO) 2014-16,Maize,Maize,2545,1323.0,1356.0,42.4,2.5
+MH APMC monthly (CMO) 2014-16,Groundnut,Groundnut in shell,1062,4028.0,4360.0,36.8,8.3
+MH APMC monthly (CMO) 2014-16,Rapeseed & Mustard,Mustard seed,216,3153.0,3508.0,22.2,11.3
+MH APMC monthly (CMO) 2014-16,Moong,Moong (whole),2417,4692.0,6253.0,16.8,34.0
+MH APMC monthly (CMO) 2014-16,Gram,Gram (whole),4110,3263.0,4568.0,15.1,38.3
+MH APMC monthly (CMO) 2014-16,Wheat,Wheat grain,4095,1462.0,1699.0,11.5,16.1
+MH APMC monthly (CMO) 2014-16,Bajra,Bajra,2334,1269.0,1509.0,11.4,18.9
+MH APMC monthly (CMO) 2014-16,Rice,Paddy (unhusked),911,1392.0,1711.0,8.5,22.9
+MH APMC monthly (CMO) 2014-16,Arhar/Tur,Tur (whole),3474,4429.0,6765.0,7.5,52.9
+MH APMC monthly (CMO) 2014-16,Soyabean,Soyabean,3725,2600.0,3320.0,7.5,27.9
+MH APMC monthly (CMO) 2014-16,Nigerseed,Nigerseed,14,3630.0,5752.0,7.1,58.6
+MH APMC monthly (CMO) 2014-16,Sesamum,Sesamum,537,4679.0,7093.0,7.1,52.2
+MH APMC monthly (CMO) 2014-16,Urad,Urad (whole),1668,4483.0,6973.0,5.9,56.1
+MH APMC monthly (CMO) 2014-16,Cotton,Kapas (seed cotton),1062,3785.0,4207.0,3.8,11.1
+MH APMC monthly (CMO) 2014-16,Masoor,Masur (whole),113,3134.0,5977.0,0.9,90.4

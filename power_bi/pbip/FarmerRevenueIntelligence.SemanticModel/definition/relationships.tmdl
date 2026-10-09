@@ -1,0 +1,83 @@
+relationship d6db0ec7-0190-45ba-94c5-b946822e6950
+	fromColumn: fact_production.location_id
+	toColumn: dim_location.location_id
+
+relationship bd6485fd-e224-4525-a4cf-1243d67bfe4d
+	fromColumn: fact_production.crop_id
+	toColumn: dim_crop.crop_id
+
+relationship 43e3f0cc-5e57-43af-b163-7af67b243b6b
+	fromColumn: fact_production.crop_year
+	toColumn: dim_year.crop_year
+
+relationship 43c6e95f-fec5-428d-a108-ef89cef9dc52
+	fromColumn: fact_district_crop_year.location_id
+	toColumn: dim_location.location_id
+
+relationship dfac3cdd-59e1-4e39-9978-742fa277ae66
+	fromColumn: fact_district_crop_year.crop_id
+	toColumn: dim_crop.crop_id
+
+relationship 804d6bef-37d7-466e-844a-ed5515e8bfd0
+	fromColumn: fact_district_crop_year.crop_year
+	toColumn: dim_year.crop_year
+
+relationship b8971246-dfae-48d5-986c-4994124f5b44
+	fromColumn: dim_location.state_id
+	toColumn: dim_state.state_id
+
+relationship 07644835-57bf-4221-a5a9-a1bf33dae7ec
+	fromColumn: fact_state_crop_year.state_id
+	toColumn: dim_state.state_id
+
+relationship c8282802-382d-4c6d-8d96-54dba88734b0
+	fromColumn: fact_state_crop_year.crop_id
+	toColumn: dim_crop.crop_id
+
+relationship 7f2f0b0d-f40b-4db2-8d88-ba514f8f3d3a
+	fromColumn: fact_state_crop_year.crop_year
+	toColumn: dim_year.crop_year
+
+relationship 629f715b-b04d-477d-a1d0-fd984553b21b
+	fromColumn: fact_msp.crop_id
+	toColumn: dim_crop.crop_id
+
+relationship c9d111b0-aeb7-476b-bc76-5c71e9272178
+	fromColumn: fact_msp.crop_year
+	toColumn: dim_year.crop_year
+
+relationship e79fea3f-d63c-4280-a023-24c3b3db98b6
+	fromColumn: fact_market_price.market_id
+	toColumn: dim_market.market_id
+
+relationship 8f7e5b02-1dc6-486b-923d-3b15d3fcbfbb
+	fromColumn: fact_market_price.crop_id
+	toColumn: dim_crop.crop_id
+
+relationship 6185fb41-8581-41dd-9865-12826dce238b
+	fromColumn: fact_market_price.date_key
+	toColumn: dim_date.date_key
+
+relationship e59c105a-7081-467a-a524-c5130e721ec6
+	fromColumn: dim_market.state_id
+	toColumn: dim_state.state_id
+
+relationship 98db2620-6faf-4ed3-b323-4716ed8e46af
+	fromColumn: fact_cost_of_cultivation.crop_id
+	toColumn: dim_crop.crop_id
+
+relationship 367dc778-dbc0-46e3-8ff1-ab09bfe64d6f
+	fromColumn: fact_cost_of_cultivation.state_id
+	toColumn: dim_state.state_id
+
+relationship bcb2a545-76f9-4b8d-b904-4cacb785438a
+	fromColumn: fact_cost_of_cultivation.crop_year
+	toColumn: dim_year.crop_year
+
+relationship bdcf2c54-238a-4e6c-916b-310ede9aa46a
+	fromColumn: fact_weather_state.state_id
+	toColumn: dim_state.state_id
+
+relationship 7ec96fac-15a2-4443-b551-f66945a6bfea
+	fromColumn: fact_weather_state.crop_year
+	toColumn: dim_year.crop_year

@@ -1,0 +1,95 @@
+table dim_date
+	lineageTag: 2b6bec03-b5a8-443c-9662-70d70be9db68
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 25571f15-76b9-4dcd-ace4-f74f3d27e705
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_date
+		dataType: dateTime
+		formatString: dd-mmm-yyyy
+		lineageTag: ac04edab-0092-4ea2-9b7e-24cd5b2f7e41
+		summarizeBy: none
+		sourceColumn: price_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 6f55cf1e-40aa-490a-8555-808783052ccc
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: b9547a85-273f-4e73-aeb8-2a765ac593d0
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column month_name
+		dataType: string
+		lineageTag: f716e919-f4d2-4ad5-9630-772995e4adaf
+		summarizeBy: none
+		sourceColumn: month_name
+		sortByColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year_month
+		dataType: string
+		lineageTag: 07fb2f57-6dc8-4ad8-a1c6-7655bc1e28bf
+		summarizeBy: none
+		sourceColumn: year_month
+
+		annotation SummarizationSetBy = Automatic
+
+	column agri_year
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 19556a79-f6a6-4bf3-96fb-79ec4b333df9
+		summarizeBy: none
+		sourceColumn: agri_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column agri_year_label
+		dataType: string
+		lineageTag: ee88a28d-4213-4c2a-8d90-53275a8be39a
+		summarizeBy: none
+		sourceColumn: agri_year_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_window
+		dataType: string
+		lineageTag: 5740ffa5-26b0-4d1f-bf0b-b05f64c60c59
+		summarizeBy: none
+		sourceColumn: season_window
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_date = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dim_date.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"date_key", Int64.Type}, {"price_date", type date}, {"year", Int64.Type}, {"month", Int64.Type}, {"month_name", type text}, {"year_month", type text}, {"agri_year", Int64.Type}, {"agri_year_label", type text}, {"season_window", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

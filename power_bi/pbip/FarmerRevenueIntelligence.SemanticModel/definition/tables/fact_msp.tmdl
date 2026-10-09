@@ -1,0 +1,189 @@
+table fact_msp
+	lineageTag: 3a90cc93-0235-4ec1-a4c5-79ae452be26c
+
+	column msp_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 8f2bcbbf-51a2-4161-9e98-e6164cb670b7
+		summarizeBy: none
+		sourceColumn: msp_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: b94112ee-084a-4e6a-b86a-a66862654aca
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_key
+		dataType: string
+		isHidden
+		lineageTag: 266e5fe3-3f63-42b6-b43b-7c659bccc3c0
+		summarizeBy: none
+		sourceColumn: msp_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 34da563a-e913-4bc7-af76-0e84cc251302
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year_label
+		dataType: string
+		lineageTag: 52070f42-86f7-47d8-bb80-73afe65081fb
+		summarizeBy: none
+		sourceColumn: crop_year_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column marketing_season
+		dataType: string
+		lineageTag: a45cf227-89cb-408b-96ab-4a9a32ed21a2
+		summarizeBy: none
+		sourceColumn: marketing_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column season
+		dataType: string
+		lineageTag: 8b4294ec-3c78-4bc9-9eaa-2a26b1668c52
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column variety
+		dataType: string
+		lineageTag: b7bbcb38-cd7b-4c93-a52a-f16fc5f4a2c7
+		summarizeBy: none
+		sourceColumn: variety
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_base
+		dataType: double
+		formatString: #,0.00
+		lineageTag: cef5f6d1-2623-4c0e-a8e5-3b0e21f9889e
+		summarizeBy: sum
+		sourceColumn: msp_base
+
+		annotation SummarizationSetBy = Automatic
+
+	column bonus
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 97f36e2c-5bb6-41d9-820f-da46f7fce06e
+		summarizeBy: sum
+		sourceColumn: bonus
+
+		annotation SummarizationSetBy = Automatic
+
+	column bonus_verified
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ef3dbe5-bb61-47fb-ba5c-316fa80d5354
+		summarizeBy: none
+		sourceColumn: bonus_verified
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_effective
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 81b8d733-d10b-402c-afcc-f5b2b5b0ec4a
+		summarizeBy: sum
+		sourceColumn: msp_effective
+
+		annotation SummarizationSetBy = Automatic
+
+	column a2fl_cost
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 91aa835c-5492-44e2-8ae8-e2f64f28859d
+		summarizeBy: sum
+		sourceColumn: a2fl_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_over_a2fl_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1c32f823-6d77-4aec-aa3b-f34c79bdd40a
+		summarizeBy: sum
+		sourceColumn: msp_over_a2fl_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_real_2018
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7fdec875-c077-41c3-8c29-c79eebfd914f
+		summarizeBy: sum
+		sourceColumn: msp_real_2018
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_id
+		dataType: string
+		isHidden
+		lineageTag: a336d60e-0207-4948-a277-d2a5acb5e79d
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_title
+		dataType: string
+		lineageTag: 90e21f8c-3e90-40e7-8a32-55689189b361
+		summarizeBy: none
+		sourceColumn: source_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_url
+		dataType: string
+		lineageTag: 16f31d9b-19d3-4ce5-929e-f4c4a0f69316
+		summarizeBy: none
+		sourceColumn: source_url
+
+		annotation SummarizationSetBy = Automatic
+
+	column verification
+		dataType: string
+		lineageTag: e31130ef-1e26-4e5d-a167-d0d63fa8ff4a
+		summarizeBy: none
+		sourceColumn: verification
+
+		annotation SummarizationSetBy = Automatic
+
+	column note
+		dataType: string
+		lineageTag: d8c0f546-f1c4-4f82-9ccb-7f6a4d479c72
+		summarizeBy: none
+		sourceColumn: note
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_msp = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_msp.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"msp_id", Int64.Type}, {"crop_id", Int64.Type}, {"msp_key", type text}, {"crop_year", Int64.Type}, {"crop_year_label", type text}, {"marketing_season", type text}, {"season", type text}, {"variety", type text}, {"msp_base", type number}, {"bonus", type number}, {"bonus_verified", Int64.Type}, {"msp_effective", type number}, {"a2fl_cost", type number}, {"msp_over_a2fl_pct", type number}, {"msp_real_2018", type number}, {"source_id", type text}, {"source_title", type text}, {"source_url", type text}, {"verification", type text}, {"note", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

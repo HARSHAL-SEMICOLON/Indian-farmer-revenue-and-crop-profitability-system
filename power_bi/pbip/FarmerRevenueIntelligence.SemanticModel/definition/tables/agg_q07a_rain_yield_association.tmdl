@@ -1,0 +1,120 @@
+table agg_q07a_rain_yield_association
+	lineageTag: 8b232d73-47ad-483d-b2de-3eceed750fc7
+
+	column crop_name
+		dataType: string
+		lineageTag: b416cd3f-c877-43cc-a53b-51adff808229
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column rain_metric
+		dataType: string
+		lineageTag: ec54bda9-c4dd-41e6-9383-e0596d3b6438
+		summarizeBy: none
+		sourceColumn: rain_metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_state_years
+		dataType: int64
+		formatString: 0
+		lineageTag: a665f5f4-aaeb-4b95-a07f-e07b449793bf
+		summarizeBy: none
+		sourceColumn: n_state_years
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_states
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a546b89-f573-4166-9c7c-98c89e17710f
+		summarizeBy: none
+		sourceColumn: n_states
+
+		annotation SummarizationSetBy = Automatic
+
+	column pearson_r
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e9ba1f97-198c-4ce6-abe5-965b659528b4
+		summarizeBy: sum
+		sourceColumn: pearson_r
+
+		annotation SummarizationSetBy = Automatic
+
+	column pearson_p
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b1fd85e7-d815-4942-908b-2c947f05bbbd
+		summarizeBy: sum
+		sourceColumn: pearson_p
+
+		annotation SummarizationSetBy = Automatic
+
+	column spearman_rho
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d54b88f6-78f9-4242-a867-6f0265819540
+		summarizeBy: sum
+		sourceColumn: spearman_rho
+
+		annotation SummarizationSetBy = Automatic
+
+	column spearman_p
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e1549a9c-2b8f-48f6-8d04-3512012638a2
+		summarizeBy: sum
+		sourceColumn: spearman_p
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_anomaly_pp_per_10pct_rain
+		dataType: double
+		formatString: #,0.00
+		lineageTag: c74ce019-6a92-400e-9f16-80d871d54178
+		summarizeBy: sum
+		sourceColumn: yield_anomaly_pp_per_10pct_rain
+
+		annotation SummarizationSetBy = Automatic
+
+	column mean_anomaly_when_deficient_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 28073ade-743b-4bd2-beec-cb09213c2ff7
+		summarizeBy: sum
+		sourceColumn: mean_anomaly_when_deficient_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column mean_anomaly_when_normal_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5765cce9-5b5d-4d2a-8812-9b7215620669
+		summarizeBy: sum
+		sourceColumn: mean_anomaly_when_normal_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column significant_5pct
+		dataType: string
+		lineageTag: 63dfca3f-0c66-43fb-9e6c-7372fac7cea0
+		summarizeBy: none
+		sourceColumn: significant_5pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q07a_rain_yield_association = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q07a_rain_yield_association.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_name", type text}, {"rain_metric", type text}, {"n_state_years", Int64.Type}, {"n_states", Int64.Type}, {"pearson_r", type number}, {"pearson_p", type number}, {"spearman_rho", type number}, {"spearman_p", type number}, {"yield_anomaly_pp_per_10pct_rain", type number}, {"mean_anomaly_when_deficient_pct", type number}, {"mean_anomaly_when_normal_pct", type number}, {"significant_5pct", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

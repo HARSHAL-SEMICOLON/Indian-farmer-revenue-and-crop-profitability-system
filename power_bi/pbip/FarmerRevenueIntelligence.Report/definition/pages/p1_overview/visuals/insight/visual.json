@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "insight",
+  "position": {
+    "x": 1020,
+    "y": 450,
+    "z": 17000,
+    "width": 244,
+    "height": 262,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "2004-05 to 2018-19: nominal x4.5, real (CPI) x1.73, volume x1.41. Most growth reflects MSP increases, which outpaced inflation by ~23%. Gross value = production x MSP: not farmer income.",
+                    "textStyle": {
+                      "fontSize": "10pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

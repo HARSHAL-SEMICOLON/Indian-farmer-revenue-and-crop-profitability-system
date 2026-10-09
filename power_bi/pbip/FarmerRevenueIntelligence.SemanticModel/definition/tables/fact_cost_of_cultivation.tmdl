@@ -1,0 +1,122 @@
+table fact_cost_of_cultivation
+	lineageTag: 4dfc1764-7f1e-4cfa-a319-70a84839b481
+
+	column cost_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 25bd1d5f-8a2f-4cf6-ae5b-2331c9e65270
+		summarizeBy: none
+		sourceColumn: cost_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_name
+		dataType: string
+		lineageTag: 1288ac60-c5bf-4fa4-a810-7bdc7b84fedc
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: bcf9e9d9-1eac-46ad-aed0-3aa613ea9071
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 59d285ac-8d14-4cfb-9606-3fac89d938d4
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column a2fl_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9e3f3fa9-e1f2-4383-a494-84d46d84414d
+		summarizeBy: sum
+		sourceColumn: a2fl_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column c2_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2023986f-fb3f-415e-8f79-c3f8f64eaf25
+		summarizeBy: sum
+		sourceColumn: c2_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column c2_per_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 600b6d61-1b75-46a5-a46d-634cf6119f0c
+		summarizeBy: sum
+		sourceColumn: c2_per_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column implied_yield_qtl_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: cc5dd4b0-7458-4b57-bf7a-7dd7f38a9fac
+		summarizeBy: sum
+		sourceColumn: implied_yield_qtl_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year_label
+		dataType: string
+		lineageTag: eff38965-2a6f-4378-856d-852cbc7d22ef
+		summarizeBy: none
+		sourceColumn: crop_year_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: e23dc568-5cdb-4cac-831a-e749fd812c3d
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 1c7e4c94-e095-4306-b265-3ddd4fd1e355
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		lineageTag: 75970c67-54fa-4e2e-a53e-fbd4f730c48e
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_cost_of_cultivation = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_cost_of_cultivation.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"cost_id", Int64.Type}, {"crop_name", type text}, {"state_name", type text}, {"crop_year", Int64.Type}, {"a2fl_per_ha", type number}, {"c2_per_ha", type number}, {"c2_per_qtl", type number}, {"implied_yield_qtl_per_ha", type number}, {"crop_year_label", type text}, {"crop_id", Int64.Type}, {"state_id", Int64.Type}, {"source", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

@@ -1,0 +1,362 @@
+state_name,market_name,n_commodities,median_spread_pct
+Telangana,Suryapeta,4,63.17567454166915
+Karnataka,Laxmeshwar,10,43.44159746917458
+Gujarat,Mahuva(Station Road),9,43.30357142857143
+Andhra Pradesh,Adoni,3,42.95086356942027
+Telangana,Khammam,3,41.49808856323669
+Madhya Pradesh,Badwaha,3,38.958333333333336
+Gujarat,Bhesan,5,38.6
+Gujarat,Jasdan,12,38.59335839598997
+Madhya Pradesh,Indore,5,38.17777777777778
+Maharashtra,Dharashiv,3,38.1526717557252
+Maharashtra,Malegaon,7,38.0
+Madhya Pradesh,Badnawar,3,35.13392857142857
+Gujarat,Kodinar,4,34.12441734596947
+Maharashtra,Hingoli,4,31.88692292692069
+Madhya Pradesh,Khargone,4,30.927490322710714
+Rajasthan,Madanganj Kishangarh,3,30.58823529411765
+Madhya Pradesh,Harda,6,29.850746268656717
+Maharashtra,Dhule,6,29.55965909090909
+Gujarat,Vankaner,3,29.07407407407408
+Punjab,Khanna,3,28.57142857142857
+Gujarat,Jetpur(Dist.Rajkot),6,28.316082704506638
+Gujarat,Amreli,11,27.914032869785082
+Madhya Pradesh,Ujjain,4,26.86286787726988
+Gujarat,Rajula,8,25.833779204565722
+Gujarat,Gondal,13,25.62459961563101
+Tamil Nadu,Thathakapatti(Uzhavar Sandhai ),4,24.305555555555557
+Rajasthan,Nahargarh,6,24.247861717066442
+Gujarat,Rapar,3,23.750643997939207
+Tamil Nadu,Sooramangalam(Uzhavar Sandhai ),3,23.61111111111111
+Tamil Nadu,Rspuram(Uzhavar Sandhai ),3,23.33333333333333
+Tamil Nadu,Udumalpet,3,23.07692307692308
+Gujarat,Halvad,5,22.604347826086958
+Maharashtra,Sangli,7,22.448979591836736
+Karnataka,Shimoga,7,22.22222222222222
+Gujarat,Visnagar,5,21.90560997328584
+Rajasthan,Chhipabarod (Chhabra),6,21.791444961027118
+Gujarat,Bagasara,7,20.8955223880597
+Haryana,Ganaur,3,20.887728459530024
+Puducherry,Thattanchavady,3,20.66798941798942
+Tamil Nadu,Dharapuram(Uzhavar Sandhai ),3,20.634920634920636
+Madhya Pradesh,Dewas,4,20.21597081900963
+Uttar Pradesh,Fatehabad,3,20.0
+Tamil Nadu,Natrampalli(Uzhavar Sandhai ),3,20.0
+Tamil Nadu,Palani(Uzhavar Sandhai ),3,20.0
+Gujarat,Savarkundla,8,19.21544438833607
+Gujarat,Botad,7,18.73873873873874
+Maharashtra,Tuljapur,4,18.666666666666668
+Tamil Nadu,Tiruvannamalai(Uzhavar Sandhai ),4,18.333333333333332
+Gujarat,Junagadh,6,18.25747863247863
+Gujarat,Kapadvanj,3,18.181818181818183
+Gujarat,Taleja,8,18.181818181818183
+Madhya Pradesh,Pipariya,3,17.77777777777778
+Gujarat,Dhrol,6,17.66958929395478
+Telangana,Mahboob Manison,3,17.391304347826086
+Tamil Nadu,Polur(Uzhavar Sandhai ),4,17.083333333333332
+Gujarat,Morva Hafad,4,16.99346405228758
+Tamil Nadu,Pudukottai(Uzhavar Sandhai ),3,16.666666666666664
+Tamil Nadu,Thirupathur,4,16.666666666666664
+Tamil Nadu,Athur(Uzhavar Sandhai ),3,16.666666666666664
+Tamil Nadu,Dindigul(Uzhavar Sandhai ),3,16.666666666666664
+Tamil Nadu,Anaiyur(Uzhavar Sandhai ),4,16.666666666666664
+Tamil Nadu,Hosur(Uzhavar Sandhai ),4,16.666666666666664
+Gujarat,Bhanvad,3,16.666666666666664
+Tamil Nadu,Chokkikulam(Uzhavar Sandhai ),3,16.666666666666664
+Tamil Nadu,Kumarapalayam(Uzhavar Sandhai ),3,16.666666666666664
+Rajasthan,Atru,4,16.386187390478575
+Uttar Pradesh,Khair,4,16.29901960784314
+Gujarat,Dhoraji,7,16.09322974472808
+Gujarat,Rajkot,11,16.081626877958428
+Telangana,Warangal,3,16.003655239051135
+Tamil Nadu,Rasipuram(Uzhavar Sandhai ),3,16.0
+Tamil Nadu,Chengam(Uzhavar Sandhai ),4,16.0
+Maharashtra,Nilanga,4,15.698198198198197
+Gujarat,Morbi,6,15.423066782278735
+Gujarat,Khambhat(Grain Market),3,15.384615384615383
+Tamil Nadu,Vadavalli(Uzhavar Sandhai ),3,15.384615384615383
+Gujarat,Himatnagar,3,15.2753108348135
+Gujarat,Visavadar,6,15.222173339199296
+Gujarat,Zalod(Sanjeli),4,15.219907407407405
+Uttar Pradesh,Shahaswan,3,15.0
+Madhya Pradesh,Bina,5,14.899470899470899
+Tamil Nadu,Krishnagiri(Uzhavar Sandhai ),4,14.583333333333332
+Maharashtra,Devala,8,14.455990985351196
+Rajasthan,Kawai Salpura (Atru),6,14.388193548115854
+Gujarat,Bhavnagar,4,14.285714285714285
+Gujarat,Deesa,4,14.275628626692459
+Kerala,Palakkad,5,14.084507042253522
+Telangana,Tanduru,3,13.768666160465706
+Gujarat,Jamnagar,12,13.420078859569305
+Gujarat,Jambusar,7,13.333333333333334
+Madhya Pradesh,Timarni,4,12.873012415595731
+Rajasthan,Baran,9,12.816901408450704
+Uttar Pradesh,Anandnagar,4,12.807017543859649
+Maharashtra,Karjat,7,12.76595744680851
+Gujarat,Limkheda,3,12.76595744680851
+Madhya Pradesh,Sehore,3,12.70919801847637
+Rajasthan,Dooni,6,12.683551124882122
+Rajasthan,Chhabra,5,12.66028242168479
+Madhya Pradesh,Bichhiya,3,12.61904761904762
+Gujarat,Jambusar(Kaavi),6,12.549019607843137
+Maharashtra,Pune,10,12.549019607843137
+Tamil Nadu,Cuddalore(Uzhavar Sandhai ),3,12.5
+Tamil Nadu,Musiri(Uzhavar Sandhai ),3,12.5
+Madhya Pradesh,Badnagar,4,12.2349523707758
+Tamil Nadu,Tamarainagar(Uzhavar Sandhai ),4,12.142857142857142
+Telangana,Mahbubnagar,3,11.720226843100187
+Tamil Nadu,Hasthampatti(Uzhavar Sandhai ),4,11.688311688311689
+Rajasthan,Kota,8,11.638333333333334
+Madhya Pradesh,Paatan,3,11.529411764705882
+Madhya Pradesh,Ashta,3,11.406423034330013
+Uttar Pradesh,Sikarpur,4,11.350574712643677
+Rajasthan,Malpura(Todaraisingh),6,11.294702911241401
+West Bengal,Kalyani,3,11.267605633802818
+Tamil Nadu,Thalavadi(Uzhavar Sandhai ),3,11.11111111111111
+Tamil Nadu,Vellore,3,11.11111111111111
+Tamil Nadu,Sathiyamagalam(Uzhavar Sandhai ),3,11.11111111111111
+Gujarat,Viramgam,3,11.071428571428571
+Tamil Nadu,Mettupalayam(Uzhavar Sandhai ),4,10.882352941176471
+Maharashtra,Karanja,8,10.856560197943294
+Karnataka,Gundlupet,8,10.666666666666666
+Maharashtra,Buldhana(Dhad),4,10.533515731874145
+Tamil Nadu,Namakkal(Uzhavar Sandhai ),4,10.476190476190476
+Tamil Nadu,Jameenrayapettai(Uzhavar Sandhai ),4,10.416666666666666
+Tamil Nadu,Pallavaram(Uzhavar Sandhai ),4,10.416666666666666
+West Bengal,Karsiyang(Matigara),3,10.262725779967159
+Rajasthan,Mandawari,3,10.21113243761996
+Tamil Nadu,Nagapattinam(Uzhavar Sandhai ),3,10.0
+Tamil Nadu,Palacode(Uzhavar Sandhai ),3,10.0
+Tamil Nadu,Elampillai(Uzhavar Sandhai ),3,10.0
+Tamil Nadu,Sampath Nagar(Uzhavar Sandhai ),3,10.0
+Tamil Nadu,Tuticorin(Uzhavar Sandhai ),3,10.0
+Tamil Nadu,Tiruchengode,3,10.0
+Tamil Nadu,Sirkali(Uzhavar Sandhai ),3,10.0
+Gujarat,Siddhpur,4,9.961109825177964
+Madhya Pradesh,Vidisha,4,9.96042216358839
+Gujarat,Patan,5,9.913793103448276
+West Bengal,Medinipur(West),4,9.75609756097561
+Gujarat,Jam Khambalia,7,9.596928982725528
+Madhya Pradesh,Khurai,5,9.571428571428571
+Uttar Pradesh,Bewar,5,9.523809523809524
+Rajasthan,Bundi,8,9.371964135865568
+Tamil Nadu,Ajattihalli(Uzhavar Sandhai ),3,9.090909090909092
+Tamil Nadu,Gobichettipalayam(Uzhavar Sandhai ),3,9.090909090909092
+Uttar Pradesh,Divai,7,9.090909090909092
+Uttar Pradesh,Mehrauni,5,9.090909090909092
+Odisha,Keonjhar,3,9.090909090909092
+Tamil Nadu,Jalagandapuram(Uzhavar Sandhai ),3,9.090909090909092
+Madhya Pradesh,Ashoknagar,6,8.557427244639321
+Uttar Pradesh,Puwaha,4,8.45671601974123
+Uttar Pradesh,Nautnava,4,8.399444258590439
+Madhya Pradesh,Nasrullaganj,4,8.342234565263833
+Kerala,Thodupuzha,3,8.333333333333332
+Tamil Nadu,Tiruppur (North) (Uzhavar Sandhai ),3,8.333333333333332
+Uttar Pradesh,Panchpedwa,4,8.333333333333332
+Kerala,Kottayam,6,8.333333333333332
+Maharashtra,Sonpeth,5,8.21917808219178
+Tamil Nadu,Ammapet(Uzhavar Sandhai ),4,8.166666666666666
+Madhya Pradesh,Khandwa,4,8.11981234211476
+West Bengal,English Bazar,4,8.055555555555555
+Tamil Nadu,Dharmapuri(Uzhavar Sandhai ),3,8.0
+Tripura,Dasda,3,8.0
+Uttar Pradesh,Bhinga,7,7.6923076923076925
+Telangana,Tirumalagiri,4,7.62673844773441
+West Bengal,Garbeta(Medinipur),3,7.586382113821138
+Madhya Pradesh,Jaora,4,7.511535622000739
+West Bengal,Asansol,7,7.5
+West Bengal,Durgapur,6,7.424242424242425
+Gujarat,Vyra,3,7.4074074074074066
+Rajasthan,Lalsot,4,7.305064480314289
+Rajasthan,Suratgarh,7,7.167346938775509
+Tamil Nadu,Vadaseri,3,7.142857142857142
+Tamil Nadu,Ranipettai(Uzhavar Sandhai ),4,7.142857142857142
+West Bengal,Balarampur,4,7.045454545454546
+Uttar Pradesh,Pratapgarh,5,7.042253521126761
+Maharashtra,Amarawati,11,7.017543859649122
+West Bengal,Ghatal,5,6.984126984126984
+Maharashtra,Jalgaon,4,6.976744186046512
+Maharashtra,Yeotmal,5,6.583427922814983
+Uttar Pradesh,Vilthararoad,4,6.564102564102564
+Rajasthan,Malpura,9,6.490066225165562
+Uttar Pradesh,Atrauli,3,6.451612903225806
+Gujarat,Thara,3,6.451612903225806
+Maharashtra,Nagpur,5,6.401033512165869
+Gujarat,Palanpur,4,6.322811768356322
+Uttar Pradesh,Jhansi (Grain),3,6.276150627615063
+Uttar Pradesh,Mathura,8,6.25
+Tamil Nadu,Perundurai(Uzhavar Sandhai ),3,6.25
+Uttar Pradesh,Ghiraur,7,6.191950464396285
+Uttar Pradesh,Etawah,6,5.988372093023256
+Uttar Pradesh,Saharanpur,11,5.910267471958585
+Uttar Pradesh,Mainpuri,8,5.8881697231211785
+Gujarat,Mansa,4,5.866417902085364
+Uttar Pradesh,Baraut,5,5.769230769230769
+Madhya Pradesh,Guna,3,5.7591623036649215
+Gujarat,Dahod,10,5.757575757575758
+Uttar Pradesh,Achalda,8,5.749537144179588
+West Bengal,Bishnupur(Bankura),5,5.733695652173913
+Uttar Pradesh,Khurja,6,5.660377358490567
+Madhya Pradesh,Pachaur,3,5.595523581135091
+West Bengal,Ramkrishanpur(Howrah),3,5.572755417956656
+Uttar Pradesh,Siyana,5,5.555555555555555
+Uttar Pradesh,Partaval,4,5.555555555555555
+Tripura,Teliamura,3,5.263157894736842
+West Bengal,Kaliaganj,3,5.263157894736842
+Gujarat,Dhanera,4,5.230125523012552
+Uttar Pradesh,Farukhabad,6,5.154038477837105
+Tripura,Bishramganj,3,5.083655083655083
+Tripura,Bishalgarh,3,5.083655083655083
+Tamil Nadu,Mettur(Uzhavar Sandhai ),4,5.0
+Uttar Pradesh,Bharthna,7,5.0
+Madhya Pradesh,Lashkar,4,4.899971709170271
+Uttar Pradesh,Manjhanpur,4,4.88492678208233
+Uttar Pradesh,Sultanpur,4,4.825581395348838
+Kerala,Neeleswaram,4,4.803921568627451
+Uttar Pradesh,Mugrabaadshahpur,7,4.801920768307324
+Uttar Pradesh,Golagokarnath,8,4.761904761904762
+Uttar Pradesh,Firozabad,7,4.738760631834751
+Uttar Pradesh,Shahganj,4,4.7268868451427934
+Gujarat,Deesa(Bhildi),4,4.721242060691602
+Uttar Pradesh,Basti,5,4.610347826701834
+Uttar Pradesh,Mohamadabad,5,4.597701149425287
+Rajasthan,Fatehnagar,3,4.590218661325321
+West Bengal,Khatra,4,4.545454545454546
+Tripura,Barpathari,3,4.545454545454546
+Karnataka,Chikkamagalore,3,4.522840343735866
+Rajasthan,Samraniyan,4,4.510942760942761
+Uttar Pradesh,Khaga,4,4.447871311078858
+Uttar Pradesh,Jayas,3,4.444444444444445
+Uttar Pradesh,Chhibramau,6,4.40891472868217
+Uttar Pradesh,Faizabad,8,4.385964912280701
+Gujarat,Zalod(Zalod),5,4.301075268817205
+Uttar Pradesh,Choubepur,9,4.219409282700422
+Uttar Pradesh,Uttaripura,9,4.2105263157894735
+West Bengal,Bankura Sadar,4,4.201680672268908
+Uttar Pradesh,Akbarpur,6,4.1875
+West Bengal,Diamond Harbour(South 24-Pgs),3,4.127659574468085
+Uttar Pradesh,Jagnair,3,4.081632653061225
+Madhya Pradesh,Lavkush Nagar(Laundi),4,4.044786117579508
+Uttar Pradesh,Rasda,8,4.007609024833434
+Uttar Pradesh,Fatehpur,6,4.005767742843075
+Uttar Pradesh,Banda,4,3.9861772672083684
+Uttar Pradesh,Hapur,5,3.983679525222552
+Uttar Pradesh,Muzzafarnagar,5,3.9735099337748343
+Uttar Pradesh,Buland Shahr,6,3.92156862745098
+Uttar Pradesh,Bangarmau,6,3.90625
+Madhya Pradesh,Obedullaganj,3,3.8726635514018692
+Rajasthan,Dudu,7,3.8461538461538463
+Madhya Pradesh,Anjad,4,3.8461538461538463
+West Bengal,Siliguri,3,3.7735849056603774
+West Bengal,Kandi,4,3.75
+Uttar Pradesh,Badayoun,5,3.75
+Uttar Pradesh,Wazirganj,3,3.72093023255814
+West Bengal,Rampurhat,5,3.7037037037037033
+West Bengal,Birbhum,3,3.6445012787723785
+Uttar Pradesh,Mohammdi,5,3.6320815867940013
+Uttar Pradesh,Moth,4,3.5898316729646167
+Uttar Pradesh,Lakhimpur,8,3.587443946188341
+Uttar Pradesh,Kanpur(Grain),14,3.58739621034703
+Gujarat,Kadi,3,3.571428571428571
+Uttar Pradesh,Orai,6,3.556231003039514
+Uttar Pradesh,Azamgarh,8,3.542245300487059
+Uttar Pradesh,Sitapur,7,3.508771929824561
+West Bengal,Sainthia,4,3.4925373134328357
+Uttar Pradesh,Auraiya,7,3.4482758620689653
+Uttar Pradesh,Jahangirabad,5,3.4221352639510823
+Uttar Pradesh,Allahabad,7,3.289781100607455
+Uttar Pradesh,Haathras,9,3.278688524590164
+Rajasthan,Anta,4,3.259620338445686
+Uttar Pradesh,Sikandraraau,3,3.256704980842912
+Uttar Pradesh,Mahoba,10,3.2343403311145247
+Uttar Pradesh,Unnao,4,3.1746031746031744
+Uttar Pradesh,Varanasi,10,3.169016852166258
+West Bengal,Samsi,3,3.1578947368421053
+Madhya Pradesh,Jabalpur,3,3.1307550644567224
+Uttar Pradesh,Tilhar,4,3.129890453834116
+Uttar Pradesh,Vishalpur,4,3.1274452269170583
+West Bengal,Ranaghat,3,3.125
+Uttar Pradesh,Sandila,6,3.10077519379845
+Uttar Pradesh,Jafarganj,4,3.0837004405286343
+Gujarat,Dehgam,3,3.0303030303030303
+Uttar Pradesh,Bindki,5,3.0108499095840866
+Uttar Pradesh,Chitwadagaon,3,2.978056426332288
+Uttar Pradesh,Maigalganj,4,2.9771459145455936
+Uttar Pradesh,Safdarganj,7,2.869352869352869
+Uttar Pradesh,Naanpara,4,2.8410008071025024
+Uttar Pradesh,Puranpur,5,2.8169014084507045
+Uttar Pradesh,Pilibhit,5,2.8133791809940605
+Madhya Pradesh,Mandsaur,5,2.789298517375024
+Uttar Pradesh,Lucknow,6,2.780974299961642
+Uttar Pradesh,Purwa,4,2.771362586605081
+Uttar Pradesh,Doharighat,3,2.73972602739726
+Uttar Pradesh,Ajuha,4,2.6690325681120846
+Uttar Pradesh,Bareilly,5,2.624209247947217
+Uttar Pradesh,Sahiyapur,4,2.6099290780141846
+West Bengal,Indus(Bankura Sadar),3,2.6099290780141846
+Uttar Pradesh,Nawabganj,7,2.5521669341894064
+Uttar Pradesh,Lalganj,3,2.5316455696202533
+Uttar Pradesh,Konch,3,2.469135802469136
+Uttar Pradesh,Bachranwa,4,2.469135802469136
+Uttar Pradesh,Shamli,6,2.4670719351570414
+Uttar Pradesh,Rampur,5,2.4390243902439024
+Uttar Pradesh,Gopiganj,7,2.4271844660194173
+Uttar Pradesh,Amroha,4,2.4029126213592233
+Uttar Pradesh,Bharuasumerpur,5,2.3696682464454977
+Rajasthan,Uniyara,3,2.33674775928297
+West Bengal,Beldanga,4,2.3314014752370915
+Uttar Pradesh,Jasvantnagar,3,2.314814814814815
+Gujarat,Mangrol,4,2.310052600818235
+Madhya Pradesh,Agar,4,2.197998570407434
+Uttar Pradesh,Mirzapur,8,2.1978066053952467
+Uttar Pradesh,Aligarh,12,2.18978102189781
+Uttar Pradesh,Sandi,5,2.1105401863930155
+Gujarat,Dehgam(Rekhiyal),3,2.1052631578947367
+Uttar Pradesh,Bahedi,3,2.0866868980076525
+Kerala,Manjeri,6,1.9850628930817609
+Uttar Pradesh,Gonda,7,1.948051948051948
+Karnataka,Kustagi,4,1.937984496124031
+Uttar Pradesh,Ballia,7,1.875
+Uttar Pradesh,Gorakhpur,9,1.8573741160432822
+Uttar Pradesh,Tundla,9,1.829268292682927
+West Bengal,Purulia,3,1.7647058823529411
+Uttar Pradesh,Madhoganj,9,1.7621487346685298
+Madhya Pradesh,Morena,3,1.7584097859327217
+Madhya Pradesh,Bhopal,3,1.6943042537851478
+West Bengal,Jangipur,5,1.6911246254186496
+Uttar Pradesh,Ghaziabad,9,1.6695652173913045
+Uttar Pradesh,Kayamganj,7,1.6611295681063123
+Uttar Pradesh,Hardoi,8,1.5817223198594026
+Uttar Pradesh,Viswan,4,1.556420233463035
+Madhya Pradesh,Sironj,3,1.365923795830338
+Madhya Pradesh,Sagar,5,1.3182674199623352
+Uttar Pradesh,Jaunpur,8,1.2705830441846007
+Uttar Pradesh,Gazipur,8,1.2371134020618555
+Uttar Pradesh,Muradabad,4,1.2225011956001914
+Madhya Pradesh,Sanawad,4,1.21012101210121
+Uttar Pradesh,Raibareilly,7,1.0600990496586802
+Uttar Pradesh,Chandoli,6,0.7048544402158616
+Uttar Pradesh,Bhehjoi,3,0.6756756756756757
+Madhya Pradesh,Kasrawad,3,0.6711409395973155
+Madhya Pradesh,Katni,4,0.17444395987788924
+Maharashtra,Chopada,6,0.0204081632653061
+Tamil Nadu,Vaniyampadi(Uzhavar Sandhai ),4,0.0
+Tamil Nadu,Ulundurpettai,3,0.0
+Gujarat,Dhari,6,0.0
+Tamil Nadu,Tindivanam,4,0.0
+Tamil Nadu,Gudiyatham(Uzhavar Sandhai ),3,0.0
+Maharashtra,Raver,3,0.0
+Tamil Nadu,Kahithapattarai(Uzhavar Sandhai ),4,0.0
+Tamil Nadu,Sankarapuram(Uzhavar Sandhai ),4,0.0
+Uttar Pradesh,Charkhari,4,0.0
+Tamil Nadu,Katpadi (Uzhavar Sandhai ),3,0.0
+Tamil Nadu,Kallakurichi(Uzhavar Sandhai ),4,0.0
+Tamil Nadu,Perambalur(Uzhavar Sandhai ),3,0.0
+Tamil Nadu,Tiruthuraipoondi(Uzhavar Sandhai ),3,0.0
+Gujarat,Dhragradhra,5,0.0
+Maharashtra,Bhokar,6,0.0
+Madhya Pradesh,Shamgarh,5,0.0
+Gujarat,Porbandar,8,0.0
+Madhya Pradesh,Dindori,3,0.0
+Madhya Pradesh,Damoh,3,0.0
+Chhattisgarh,Jaspur,4,0.0

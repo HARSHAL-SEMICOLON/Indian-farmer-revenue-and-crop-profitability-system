@@ -1,0 +1,64 @@
+state_rank,state_name,state_value_per_ha,rank_in_state,district_name,district_value_per_ha,pct_above_state_avg
+1,Punjab,83126.0,1,Fatehgarh Sahib,91701.0,10.3
+1,Punjab,83126.0,2,Ludhiana,90809.0,9.2
+1,Punjab,83126.0,3,Sangrur,90522.0,8.9
+2,Tamil Nadu,68444.0,1,Erode,116253.0,69.8
+2,Tamil Nadu,68444.0,2,Villupuram,108562.0,58.6
+2,Tamil Nadu,68444.0,3,Kanchipuram,94995.0,38.8
+3,Haryana,68087.0,1,Yamunanagar,92612.0,36.0
+3,Haryana,68087.0,2,Kurukshetra,86300.0,26.7
+3,Haryana,68087.0,3,Ambala,81869.0,20.2
+4,Kerala,63598.0,1,Palakkad,60446.0,-5.0
+5,West Bengal,62927.0,1,Hooghly,70840.0,12.6
+5,West Bengal,62927.0,2,Purba Bardhaman,69645.0,10.7
+5,West Bengal,62927.0,3,Maldah,67573.0,7.4
+6,Tripura,61387.0,1,Sepahijala,69515.0,13.2
+7,Uttar Pradesh,60662.0,1,Muzaffarnagar,146125.0,140.9
+7,Uttar Pradesh,60662.0,2,Meerut,146115.0,140.9
+7,Uttar Pradesh,60662.0,3,Baghpat,135341.0,123.1
+8,Andhra Pradesh,55963.0,1,Spsr Nellore,85675.0,53.1
+8,Andhra Pradesh,55963.0,2,Krishna,80960.0,44.7
+8,Andhra Pradesh,55963.0,3,West Godavari,79907.0,42.8
+9,Telangana,55778.0,1,Peddapalli,84095.0,50.8
+9,Telangana,55778.0,2,Jagitial,75446.0,35.3
+9,Telangana,55778.0,3,Rajanna,74126.0,32.9
+10,Uttarakhand,54278.0,1,Haridwar,103639.0,90.9
+10,Uttarakhand,54278.0,2,Udam Singh Nagar,76264.0,40.5
+10,Uttarakhand,54278.0,3,Nainital,55349.0,2.0
+11,Gujarat,52790.0,1,Surat,106942.0,102.6
+11,Gujarat,52790.0,2,Gir Somnath,80657.0,52.8
+11,Gujarat,52790.0,3,Navsari,77989.0,47.7
+12,Bihar,50557.0,1,Pashchim Champaran,88733.0,75.5
+12,Bihar,50557.0,2,Rohtas,70229.0,38.9
+12,Bihar,50557.0,3,Arwal,65255.0,29.1
+13,Nagaland,45721.0,1,Dimapur,51840.0,13.4
+14,Assam,45606.0,1,Dhubri,54917.0,20.4
+14,Assam,45606.0,2,Nalbari,53546.0,17.4
+14,Assam,45606.0,3,Nagaon,52950.0,16.1
+15,Madhya Pradesh,43088.0,1,Narsinghpur,63080.0,46.4
+15,Madhya Pradesh,43088.0,2,Hoshangabad,55896.0,29.7
+15,Madhya Pradesh,43088.0,3,Chhindwara,54655.0,26.8
+16,Odisha,42641.0,1,Sonepur,65107.0,52.7
+16,Odisha,42641.0,2,Dhenkanal,55664.0,30.5
+16,Odisha,42641.0,3,Baleshwar,52718.0,23.6
+17,Karnataka,42425.0,1,Mandya,87118.0,105.3
+17,Karnataka,42425.0,2,Belagavi,69620.0,64.1
+17,Karnataka,42425.0,3,Udupi,60525.0,42.7
+18,Jharkhand,38167.0,1,Simdega,44929.0,17.7
+18,Jharkhand,38167.0,2,Ranchi,44623.0,16.9
+18,Jharkhand,38167.0,3,Lohardaga,44054.0,15.4
+19,Rajasthan,36603.0,1,Ganganagar,58515.0,59.9
+19,Rajasthan,36603.0,2,Hanumangarh,57913.0,58.2
+19,Rajasthan,36603.0,3,Bikaner,49706.0,35.8
+20,Chhattisgarh,35929.0,1,Janjgir-Champa,62516.0,74.0
+20,Chhattisgarh,35929.0,2,Dhamtari,56223.0,56.5
+20,Chhattisgarh,35929.0,3,Raipur,49218.0,37.0
+21,Maharashtra,34331.0,1,Kolhapur,121840.0,254.9
+21,Maharashtra,34331.0,2,Sindhudurg,69600.0,102.7
+21,Maharashtra,34331.0,3,Pune,62804.0,82.9
+22,Jammu and Kashmir,34117.0,1,Jammu,41672.0,22.1
+22,Jammu and Kashmir,34117.0,2,Kathua,37016.0,8.5
+22,Jammu and Kashmir,34117.0,3,Samba,31591.0,-7.4
+23,Himachal Pradesh,29445.0,1,Chamba,37626.0,27.8
+23,Himachal Pradesh,29445.0,2,Solan,33614.0,14.2
+23,Himachal Pradesh,29445.0,3,Kangra,31149.0,5.8

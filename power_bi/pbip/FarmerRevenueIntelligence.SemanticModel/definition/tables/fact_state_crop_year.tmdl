@@ -1,0 +1,382 @@
+table fact_state_crop_year
+	lineageTag: 379560b3-849b-452f-a14d-6b5ec1c630f7
+
+	column state_crop_year_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 73ee1cd7-c931-44ac-8b38-e093dfa7563d
+		summarizeBy: none
+		sourceColumn: state_crop_year_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: d3ee1652-f27b-4133-906e-0b76e0024603
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 8d0ee69d-cead-43ae-aa07-9848561353a3
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: c661ca33-8fe7-495f-98b5-c4f9f2013f40
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: fec61e55-19cf-44b2-a140-e3245826c014
+		summarizeBy: sum
+		sourceColumn: area_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_apy_unit
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 0b71d559-3503-49d0-b888-dd3a646ba115
+		summarizeBy: sum
+		sourceColumn: production_apy_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_price_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 3b88c007-2c1f-4d1d-b93f-0f7b9c3796bd
+		summarizeBy: sum
+		sourceColumn: production_price_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_msp_inr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 0d03c5b6-495e-42d1-9f44-e44fbeee0a2d
+		summarizeBy: sum
+		sourceColumn: gross_value_msp_inr
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_districts
+		dataType: int64
+		formatString: 0
+		lineageTag: 96129d23-c3b8-4bf3-b685-be5de270c87d
+		summarizeBy: none
+		sourceColumn: n_districts
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_name
+		dataType: string
+		lineageTag: d58c9d4e-5dae-4ff9-986d-a7758ccdd4a4
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: 3c33d395-a7cc-4449-b75c-64a8fe0ba94d
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_kg_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: fe9401e2-e8c3-4ed6-844c-a4c539e79bb3
+		summarizeBy: sum
+		sourceColumn: yield_kg_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_price_qtl_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b05f6a78-34d8-4561-b445-24276740e1f7
+		summarizeBy: sum
+		sourceColumn: yield_price_qtl_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_effective
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 6c3a927a-38d7-4898-ad2c-303d321dc2df
+		summarizeBy: sum
+		sourceColumn: msp_effective
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_msp_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 6be66024-d036-45d9-8f55-4f680b707024
+		summarizeBy: sum
+		sourceColumn: gross_value_msp_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column a2fl_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 0289d0aa-56ea-4760-9045-16cd74a4ef7e
+		summarizeBy: sum
+		sourceColumn: a2fl_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column c2_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f91db46e-f6ae-4ddf-9d65-435b5b0a62f3
+		summarizeBy: sum
+		sourceColumn: c2_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column c2_per_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 96bf61ea-48a1-4e8f-8f40-32c915228390
+		summarizeBy: sum
+		sourceColumn: c2_per_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column implied_yield_qtl_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 3dfd0793-d0e1-4a92-a5d8-af2d76aee13e
+		summarizeBy: sum
+		sourceColumn: implied_yield_qtl_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_official_cost
+		dataType: int64
+		formatString: 0
+		lineageTag: af933995-3c04-404a-b4f6-d9695dee2fa4
+		summarizeBy: none
+		sourceColumn: has_official_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column est_profit_a2fl_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 144ecb67-59fc-435e-ba78-130160438064
+		summarizeBy: sum
+		sourceColumn: est_profit_a2fl_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column est_profit_c2_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9910248f-1311-4550-9036-5de515c1a05c
+		summarizeBy: sum
+		sourceColumn: est_profit_c2_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column est_profit_c2_per_acre
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 58a78559-9e31-4d15-a1de-e62e5285248e
+		summarizeBy: sum
+		sourceColumn: est_profit_c2_per_acre
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_minus_c2_per_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f6112037-c192-4279-b815-2e1778002f60
+		summarizeBy: sum
+		sourceColumn: msp_minus_c2_per_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column est_margin_c2_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: f6d732b1-f2e0-4424-9fee-1b1806b13e43
+		summarizeBy: sum
+		sourceColumn: est_margin_c2_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column apy_vs_coc_yield_ratio
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 0f71056a-0311-4038-8624-0113911ad353
+		summarizeBy: sum
+		sourceColumn: apy_vs_coc_yield_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column mandi_awm_price
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 832fb516-a1e1-432b-b9cd-dc7b10d9a34d
+		summarizeBy: sum
+		sourceColumn: mandi_awm_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column months_observed
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 6d15a531-34d2-4363-a522-ea1e5598c51f
+		summarizeBy: sum
+		sourceColumn: months_observed
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_mandi_inr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9c3d4854-26fa-4c92-bd88-eb28cf9d848f
+		summarizeBy: sum
+		sourceColumn: gross_value_mandi_inr
+
+		annotation SummarizationSetBy = Automatic
+
+	column mandi_vs_msp_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: dcb2b518-c3f7-4396-9b24-fae44176ee17
+		summarizeBy: sum
+		sourceColumn: mandi_vs_msp_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 4a9241b8-5090-46ed-91f8-4188ba2c4dd1
+		summarizeBy: sum
+		sourceColumn: jjas_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_dep_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 73c37a74-f40e-42b1-ba41-8a15bb88df50
+		summarizeBy: sum
+		sourceColumn: jjas_dep_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column jjas_category
+		dataType: string
+		lineageTag: db344f1c-95a4-4e86-bbe6-4eee2e771577
+		summarizeBy: none
+		sourceColumn: jjas_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column rabi_rain_mm
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 71c45725-0389-4e1f-8bf4-bf3c925704fa
+		summarizeBy: sum
+		sourceColumn: rabi_rain_mm
+
+		annotation SummarizationSetBy = Automatic
+
+	column rabi_rain_dep_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 236feff9-5b74-4f86-9275-ec87aee547d3
+		summarizeBy: sum
+		sourceColumn: rabi_rain_dep_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column rainfall_basis
+		dataType: string
+		lineageTag: 2f5ab12f-55c0-4c37-ade3-ba3afea50d5e
+		summarizeBy: none
+		sourceColumn: rainfall_basis
+
+		annotation SummarizationSetBy = Automatic
+
+	column rain_metric
+		dataType: string
+		lineageTag: 5d6b5e2a-4cb0-4bb0-81e8-8fea76a362e2
+		summarizeBy: none
+		sourceColumn: rain_metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column season_rain_dep_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 75b3e572-53be-4cfe-bf31-7555bb7ebba5
+		summarizeBy: sum
+		sourceColumn: season_rain_dep_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_trend_kg_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 706d407b-efd5-4666-b494-4dbb16aed9ea
+		summarizeBy: sum
+		sourceColumn: yield_trend_kg_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_anomaly_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: e1990fd2-ba20-4aee-a1e1-6f641bbc1800
+		summarizeBy: sum
+		sourceColumn: yield_anomaly_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_provisional_year
+		dataType: int64
+		formatString: 0
+		lineageTag: ac9dc918-d55a-49a9-9522-b8075e3e8ef3
+		summarizeBy: none
+		sourceColumn: is_provisional_year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_state_crop_year = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_state_crop_year.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"state_crop_year_id", Int64.Type}, {"state_id", Int64.Type}, {"crop_id", Int64.Type}, {"crop_year", Int64.Type}, {"area_ha", type number}, {"production_apy_unit", type number}, {"production_price_qtl", type number}, {"gross_value_msp_inr", type number}, {"n_districts", Int64.Type}, {"crop_name", type text}, {"state_name", type text}, {"yield_kg_per_ha", type number}, {"yield_price_qtl_per_ha", type number}, {"msp_effective", type number}, {"gross_value_msp_per_ha", type number}, {"a2fl_per_ha", type number}, {"c2_per_ha", type number}, {"c2_per_qtl", type number}, {"implied_yield_qtl_per_ha", type number}, {"has_official_cost", Int64.Type}, {"est_profit_a2fl_per_ha", type number}, {"est_profit_c2_per_ha", type number}, {"est_profit_c2_per_acre", type number}, {"msp_minus_c2_per_qtl", type number}, {"est_margin_c2_pct", type number}, {"apy_vs_coc_yield_ratio", type number}, {"mandi_awm_price", type number}, {"months_observed", type number}, {"gross_value_mandi_inr", type number}, {"mandi_vs_msp_pct", type number}, {"jjas_mm", type number}, {"jjas_dep_pct", type number}, {"jjas_category", type text}, {"rabi_rain_mm", type number}, {"rabi_rain_dep_pct", type number}, {"rainfall_basis", type text}, {"rain_metric", type text}, {"season_rain_dep_pct", type number}, {"yield_trend_kg_per_ha", type number}, {"yield_anomaly_pct", type number}, {"is_provisional_year", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

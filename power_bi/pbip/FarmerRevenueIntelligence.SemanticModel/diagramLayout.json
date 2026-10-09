@@ -1,0 +1,308 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 1702.3577290833186,
+            "y": 619.08740028572424
+          },
+          "nodeIndex": "_Measures",
+          "nodeLineageTag": "4ba4258f-3acd-4555-8d8b-823ac19898ac",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1986.3577290833186,
+            "y": 621.08740028572424
+          },
+          "nodeIndex": "agg_q04b_value_growth_decomposition",
+          "nodeLineageTag": "c5b25b26-6a8a-418d-aed9-00273aa6115b",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2270.3577290833186,
+            "y": 619.08740028572424
+          },
+          "nodeIndex": "agg_q05a_cross_market_dispersion_2024",
+          "nodeLineageTag": "141f40cc-023d-4e38-9a1e-9eea8c5b13fe",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2554.3577290833186,
+            "y": 619.08740028572424
+          },
+          "nodeIndex": "agg_q07a_rain_yield_association",
+          "nodeLineageTag": "8967ca51-4d69-4a1a-ad00-590f708596d5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2838.3577290833186,
+            "y": 619.08740028572424
+          },
+          "nodeIndex": "agg_q10a_market_volatility_mh",
+          "nodeLineageTag": "05e5099d-9ae1-4281-84cb-19be1ec17d9c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 626.67936960302688,
+            "y": 883.83658538301063
+          },
+          "nodeIndex": "dim_crop",
+          "nodeLineageTag": "c7884be2-0155-4d31-a045-1f0731a26974",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 643.91517338512335
+          },
+          "nodeIndex": "dim_date",
+          "nodeLineageTag": "dd086a08-15a9-41cf-aded-22b6592575d8",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1359.2708118314763,
+            "y": 1240.1748005714489
+          },
+          "nodeIndex": "dim_location",
+          "nodeLineageTag": "e2d813c5-082e-4cd8-bb23-c342d347d633",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 525.68408480948779,
+            "y": 1240.3187015405006
+          },
+          "nodeIndex": "dim_market",
+          "nodeLineageTag": "7bca79d4-b36f-420a-ba75-4a7fba54c140",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 953.59133253777327,
+            "y": 879.239364094873
+          },
+          "nodeIndex": "dim_state",
+          "nodeLineageTag": "295102a0-f0cd-4690-b283-83fc2db1b55b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1049.1038682354251,
+            "y": 526.26451827214817
+          },
+          "nodeIndex": "dim_year",
+          "nodeLineageTag": "c62b7c38-73d0-4542-8609-333c01854888",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3122.3577290833186,
+            "y": 669.08740028572424
+          },
+          "nodeIndex": "dq_coverage",
+          "nodeLineageTag": "21532ac9-a946-4201-8ae6-1a1a65c4ed8c",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3406.3577290833186,
+            "y": 657.08740028572424
+          },
+          "nodeIndex": "dq_issues",
+          "nodeLineageTag": "138568dd-f876-41d1-945d-69300e16eced",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3690.3577290833186,
+            "y": 621.08740028572424
+          },
+          "nodeIndex": "dq_validation",
+          "nodeLineageTag": "86c4e820-b2ea-4f6a-bee3-2510f0a70fbb",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 522.300084606168,
+            "y": -50
+          },
+          "nodeIndex": "fact_cost_of_cultivation",
+          "nodeLineageTag": "3a3ade7f-1c53-4599-a428-de1645582b53",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 953.6636701581416,
+            "y": 1147.7794465205761
+          },
+          "nodeIndex": "fact_district_crop_year",
+          "nodeLineageTag": "f432c0e5-c916-4b08-8662-2ba2534a4003",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 337.56877192734589,
+            "y": 813.45685957117144
+          },
+          "nodeIndex": "fact_market_price",
+          "nodeLineageTag": "3421d3de-2bae-4945-b7e3-bb08f7bb149e",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 399.81225961010773,
+            "y": 306.620520197044
+          },
+          "nodeIndex": "fact_msp",
+          "nodeLineageTag": "ce3a5f5f-e428-475b-9567-314c68ed8873",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1243.4932503742448,
+            "y": 883.48000467888869
+          },
+          "nodeIndex": "fact_production",
+          "nodeLineageTag": "ac51016c-8901-427b-99f4-5a5c186e1225",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 687.37886149136887,
+            "y": 526.65178125389752
+          },
+          "nodeIndex": "fact_state_crop_year",
+          "nodeLineageTag": "2c6f7fa6-9742-45b4-9618-dd0f7b28bc1b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1468.3577290833189,
+            "y": 526.2509221572999
+          },
+          "nodeIndex": "fact_weather_state",
+          "nodeLineageTag": "8a75d355-fa22-49de-869a-b4a92bd031e6",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 3974.3577290833186,
+            "y": 621.08740028572424
+          },
+          "nodeIndex": "ref_sources",
+          "nodeLineageTag": "7047bd17-a0e7-4901-b665-d9c92806751d",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

@@ -1,0 +1,67 @@
+table agg_q11b_msp_gap_by_month_2026
+	lineageTag: e2f48ed3-20e4-4aa3-9401-c4333b4a8550
+
+	column crop_name
+		dataType: string
+		lineageTag: 39044a1f-f001-4eaf-857b-0d5116d63f03
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: string
+		lineageTag: 2bacc7c2-5950-4dd7-b1e7-6deac4e06cef
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column quotes
+		dataType: int64
+		formatString: 0
+		lineageTag: 421ab7ac-b83b-4c5c-9601-13cb47190c94
+		summarizeBy: none
+		sourceColumn: quotes
+
+		annotation SummarizationSetBy = Automatic
+
+	column pct_below_msp
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 12691bfc-dd86-4ada-b0fe-3cea0333931d
+		summarizeBy: sum
+		sourceColumn: pct_below_msp
+
+		annotation SummarizationSetBy = Automatic
+
+	column median_modal
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 0166356b-7fa5-4e0e-92d1-77cc3c7dc596
+		summarizeBy: sum
+		sourceColumn: median_modal
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ee296ca7-c9e4-417b-8d3b-b5fd9a5b6f0a
+		summarizeBy: sum
+		sourceColumn: msp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q11b_msp_gap_by_month_2026 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q11b_msp_gap_by_month_2026.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_name", type text}, {"month", type text}, {"quotes", Int64.Type}, {"pct_below_msp", type number}, {"median_modal", type number}, {"msp", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

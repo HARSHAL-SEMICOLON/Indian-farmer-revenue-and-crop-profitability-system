@@ -1,0 +1,56 @@
+table dq_coverage
+	lineageTag: 95baec39-290c-4c1e-bb4c-0b0f6bbb53c6
+
+	column domain
+		dataType: string
+		lineageTag: e650b9f7-fa21-42fd-b5ce-5981168d0354
+		summarizeBy: none
+		sourceColumn: domain
+
+		annotation SummarizationSetBy = Automatic
+
+	column dimension
+		dataType: string
+		lineageTag: 101f3694-55a8-48bd-a1e5-2e4fb62bcf65
+		summarizeBy: none
+		sourceColumn: dimension
+
+		annotation SummarizationSetBy = Automatic
+
+	column member
+		dataType: string
+		lineageTag: 0e008787-7a07-4419-a549-eac18b32646e
+		summarizeBy: none
+		sourceColumn: member
+
+		annotation SummarizationSetBy = Automatic
+
+	column metric
+		dataType: string
+		lineageTag: fc4244c5-83a0-4826-b6a8-89227c352722
+		summarizeBy: none
+		sourceColumn: metric
+
+		annotation SummarizationSetBy = Automatic
+
+	column value
+		dataType: double
+		formatString: #,0.00
+		lineageTag: d71524c5-df29-45b7-88c5-d6923debd9a1
+		summarizeBy: sum
+		sourceColumn: value
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dq_coverage = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dq_coverage.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"domain", type text}, {"dimension", type text}, {"member", type text}, {"metric", type text}, {"value", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

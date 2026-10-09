@@ -1,0 +1,292 @@
+crop_name,state_name,n_years,pearson_r,p_value,avg_area_ha
+Rice,Chhattisgarh,16,0.907,0.0,3888712
+Sunflower,Maharashtra,18,0.75,0.0003,247316
+Urad,Chhattisgarh,16,0.742,0.001,110286
+Gram,Rajasthan,18,0.739,0.0005,1292086
+Groundnut,Andhra Pradesh,19,0.738,0.0003,1522777
+Bajra,Maharashtra,19,0.733,0.0004,1258305
+Groundnut,Gujarat,19,0.725,0.0004,1706084
+Cotton,Gujarat,19,0.717,0.0005,2051943
+Dry Chillies,West Bengal,12,0.698,0.0116,46629
+Maize,Andhra Pradesh,19,0.677,0.0015,460060
+Barley,Uttarakhand,15,0.672,0.0061,23085
+Cotton,Maharashtra,18,0.661,0.0028,3422411
+Rice,Karnataka,19,0.661,0.0021,1364507
+Moong,Gujarat,19,0.631,0.0038,169298
+Maize,Maharashtra,19,0.626,0.0041,602172
+Cotton,Madhya Pradesh,19,0.614,0.0052,568552
+Bajra,Rajasthan,19,0.603,0.0062,4663800
+Moong,Maharashtra,19,0.603,0.0063,555911
+Urad,Maharashtra,19,0.602,0.0064,464974
+Wheat,Himachal Pradesh,17,0.598,0.0112,363129
+Rice,Madhya Pradesh,18,0.594,0.0094,2154148
+Turmeric,Tamil Nadu,15,0.593,0.0199,28765
+Nigerseed,Chhattisgarh,16,0.593,0.0156,69806
+Sugarcane,Tamil Nadu,18,0.591,0.0097,302523
+Dry Chillies,Andhra Pradesh,19,0.589,0.008,135621
+Soyabean,Maharashtra,18,0.589,0.0102,2275800
+Cotton,Karnataka,18,0.587,0.0104,521030
+Gram,Jharkhand,13,0.579,0.0383,18758
+Rapeseed & Mustard,Jharkhand,13,0.577,0.0388,12829
+Jowar,Rajasthan,19,0.577,0.0097,619227
+Moong,Rajasthan,18,0.575,0.0125,831801
+Bajra,Andhra Pradesh,19,0.575,0.01,78831
+Jowar,Maharashtra,19,0.567,0.0113,4284189
+Soyabean,Andhra Pradesh,12,0.565,0.0556,74524
+Maize,Karnataka,19,0.559,0.0129,959879
+Urad,Himachal Pradesh,16,0.555,0.0257,10942
+Rapeseed & Mustard,Chhattisgarh,15,0.552,0.033,50874
+Urad,Gujarat,19,0.544,0.0161,99696
+Jowar,Karnataka,19,0.54,0.0169,1488843
+Turmeric,Karnataka,19,0.534,0.0184,10883
+Sesamum,Maharashtra,18,0.529,0.0239,83993
+Rice,Jharkhand,13,0.528,0.0635,1167773
+Groundnut,Rajasthan,19,0.521,0.0222,333511
+Wheat,Jammu and Kashmir,14,0.501,0.0678,248137
+Arhar/Tur,Uttar Pradesh,16,0.495,0.0514,325122
+Arhar/Tur,Maharashtra,19,0.485,0.0354,1114053
+Cotton,Tamil Nadu,18,0.482,0.0428,137298
+Groundnut,Madhya Pradesh,19,0.481,0.0369,215704
+Rice,Odisha,18,0.478,0.0451,4759780
+Sugarcane,Karnataka,17,0.476,0.0532,364081
+Safflower,Karnataka,17,0.473,0.0549,72291
+Sesamum,Rajasthan,19,0.471,0.0418,359259
+Rapeseed & Mustard,Odisha,17,0.467,0.0588,20836
+Gram,Haryana,18,0.456,0.0572,126779
+Maize,Himachal Pradesh,18,0.443,0.0655,293816
+Rice,Gujarat,19,0.44,0.0593,701328
+Arhar/Tur,Haryana,18,0.434,0.0722,19801
+Rice,Rajasthan,19,0.425,0.0698,138897
+Onion,Gujarat,19,0.423,0.0712,38018
+Ragi,Karnataka,19,0.422,0.0722,825836
+Nigerseed,Maharashtra,18,0.422,0.0813,45359
+Onion,Karnataka,18,0.416,0.0856,141476
+Maize,Rajasthan,19,0.415,0.0773,1005809
+Wheat,Rajasthan,18,0.41,0.0915,2563106
+Bajra,Tamil Nadu,16,0.409,0.1154,97790
+Sugarcane,West Bengal,19,0.408,0.0827,18146
+Groundnut,Tamil Nadu,18,0.406,0.0943,485736
+Sugarcane,Madhya Pradesh,18,0.404,0.0959,58766
+Maize,Punjab,19,0.402,0.0878,145211
+Soyabean,Rajasthan,19,0.393,0.0959,756342
+Sugarcane,Andhra Pradesh,19,0.392,0.0969,202411
+Sesamum,Karnataka,18,0.39,0.1093,73204
+Urad,Rajasthan,18,0.389,0.111,175627
+Bajra,Karnataka,19,0.388,0.101,329068
+Sesamum,Gujarat,19,0.388,0.1003,284097
+Nigerseed,Karnataka,18,0.385,0.1149,26940
+Barley,Himachal Pradesh,17,0.384,0.1283,23308
+Moong,Karnataka,18,0.382,0.1177,359509
+Soyabean,Chhattisgarh,16,0.381,0.1451,64620
+Bajra,Haryana,19,0.379,0.1098,555639
+Arhar/Tur,Andhra Pradesh,18,0.378,0.1218,416473
+Arhar/Tur,Tamil Nadu,16,0.37,0.1582,50314
+Ragi,Uttarakhand,16,0.362,0.1682,120166
+Gram,Andhra Pradesh,18,0.359,0.1438,378390
+Rice,Maharashtra,19,0.357,0.1338,1515533
+Jowar,Tamil Nadu,16,0.355,0.1772,325430
+Bajra,Madhya Pradesh,19,0.354,0.1373,186014
+Jowar,Haryana,19,0.352,0.1389,88249
+Rice,Sikkim,19,0.352,0.139,12609
+Sugarcane,Gujarat,19,0.351,0.1403,192166
+Onion,Andhra Pradesh,17,0.351,0.1668,35267
+Barley,Madhya Pradesh,17,0.335,0.1886,78654
+Arhar/Tur,Rajasthan,19,0.334,0.1627,20314
+Arhar/Tur,Gujarat,19,0.331,0.1668,277340
+Potato,Karnataka,17,0.33,0.1952,46927
+Soyabean,Karnataka,18,0.326,0.187,139358
+Rice,Bihar,19,0.316,0.1875,3364038
+Maize,Tamil Nadu,16,0.313,0.2372,119426
+Dry Chillies,Rajasthan,18,0.309,0.2123,20047
+Rice,Tamil Nadu,18,0.309,0.2125,1790925
+Gram,Maharashtra,18,0.307,0.2159,1057156
+Urad,Karnataka,17,0.303,0.2378,124154
+Wheat,Madhya Pradesh,18,0.303,0.222,4475568
+Cotton,Rajasthan,19,0.294,0.2217,461464
+Rice,Uttar Pradesh,19,0.293,0.2239,5796983
+Ragi,Andhra Pradesh,19,0.291,0.2272,63364
+Sunflower,Andhra Pradesh,19,0.291,0.226,301651
+Rice,Andhra Pradesh,19,0.282,0.2423,3506737
+Urad,Jammu and Kashmir,13,0.282,0.3503,12622
+Groundnut,Karnataka,19,0.274,0.2567,858235
+Barley,Rajasthan,18,0.271,0.276,242620
+Dry Chillies,Uttar Pradesh,12,0.261,0.4119,14669
+Potato,Haryana,17,0.26,0.3141,13730
+Arhar/Tur,Karnataka,19,0.259,0.2851,614720
+Nigerseed,Madhya Pradesh,17,0.255,0.3239,98344
+Barley,Uttar Pradesh,18,0.252,0.3138,218233
+Moong,West Bengal,19,0.252,0.2973,17486
+Rice,Himachal Pradesh,18,0.243,0.3303,77922
+Groundnut,Odisha,19,0.24,0.3226,81721
+Potato,Himachal Pradesh,16,0.238,0.3749,11121
+Ragi,Gujarat,19,0.236,0.3306,19649
+Urad,Odisha,19,0.234,0.3342,140887
+Barley,Bihar,17,0.229,0.3766,18688
+Moong,Andhra Pradesh,19,0.228,0.3475,378667
+Safflower,Maharashtra,17,0.227,0.3816,219312
+Sesamum,Tamil Nadu,18,0.227,0.3648,79209
+Urad,Assam,15,0.225,0.4212,44090
+Masoor,Chhattisgarh,15,0.225,0.4203,16315
+Rice,Punjab,19,0.219,0.367,2653211
+Urad,Uttarakhand,16,0.219,0.4151,11372
+Maize,Assam,18,0.215,0.3922,20356
+Maize,Meghalaya,19,0.21,0.3872,17238
+Jowar,Uttar Pradesh,19,0.209,0.3895,247690
+Cotton,Haryana,19,0.207,0.3963,561717
+Rice,Dadra and Nagar Haveli,18,0.206,0.4122,13629
+Sugarcane,Punjab,15,0.204,0.4661,102800
+Gram,Chhattisgarh,15,0.2,0.4737,233577
+Cotton,Andhra Pradesh,19,0.198,0.4158,1189390
+Groundnut,Chhattisgarh,16,0.193,0.4748,31618
+Dry Chillies,Gujarat,19,0.191,0.4341,10026
+Ragi,Tamil Nadu,18,0.19,0.449,101258
+Rice,Nagaland,19,0.187,0.4429,164597
+Wheat,Bihar,18,0.186,0.4601,2110626
+Sugarcane,Maharashtra,19,0.185,0.4494,719163
+Groundnut,Maharashtra,18,0.185,0.4615,395367
+Potato,Uttar Pradesh,18,0.183,0.4668,480623
+Moong,Bihar,17,0.178,0.4941,160276
+Arhar/Tur,Chhattisgarh,16,0.177,0.5121,53102
+Gram,Gujarat,18,0.176,0.485,135607
+Onion,Uttar Pradesh,17,0.174,0.5031,21210
+Sunflower,Karnataka,18,0.173,0.4917,752891
+Jute,Bihar,19,0.172,0.4823,127914
+Sesamum,Andhra Pradesh,19,0.171,0.4848,116990
+Wheat,Uttarakhand,15,0.17,0.5453,369634
+Ragi,Jharkhand,13,0.169,0.5816,29619
+Moong,Haryana,18,0.166,0.5094,15062
+Wheat,Karnataka,18,0.166,0.5115,249471
+Jowar,Madhya Pradesh,19,0.165,0.4988,503546
+Rice,Kerala,18,0.158,0.5312,261655
+Soyabean,Nagaland,17,0.158,0.544,23374
+Rapeseed & Mustard,Gujarat,18,0.153,0.5435,264796
+Sesamum,Odisha,19,0.152,0.5356,54764
+Gram,Bihar,18,0.151,0.5485,69950
+Wheat,Gujarat,18,0.151,0.5505,906169
+Rice,Uttarakhand,16,0.148,0.5852,277092
+Moong,Chhattisgarh,16,0.146,0.5892,15956
+Maize,Uttarakhand,16,0.144,0.5945,27711
+Maize,Manipur,19,0.143,0.5598,12252
+Wheat,Chhattisgarh,15,0.143,0.6118,98879
+Moong,Punjab,19,0.137,0.5772,16526
+Dry Chillies,Karnataka,19,0.137,0.5764,124020
+Rapeseed & Mustard,Jammu and Kashmir,14,0.136,0.6419,52514
+Ragi,Odisha,19,0.133,0.5875,73493
+Onion,Tamil Nadu,15,0.131,0.6415,29909
+Masoor,Uttarakhand,15,0.127,0.6521,11963
+Potato,Jharkhand,13,0.123,0.6891,31873
+Soyabean,Madhya Pradesh,19,0.121,0.6226,5029541
+Bajra,Gujarat,19,0.118,0.6316,838449
+Masoor,Madhya Pradesh,12,0.118,0.716,498810
+Masoor,Bihar,16,0.118,0.6631,163194
+Rice,Arunachal Pradesh,19,0.117,0.6338,123060
+Soyabean,Uttar Pradesh,19,0.116,0.6362,19148
+Cotton,Punjab,19,0.115,0.6378,511526
+Bajra,Jammu and Kashmir,14,0.114,0.6976,15493
+Dry Chillies,Assam,19,0.112,0.6491,16434
+Gram,West Bengal,18,0.111,0.6604,31224
+Wheat,Jharkhand,13,0.109,0.7232,64874
+Maize,Madhya Pradesh,19,0.108,0.6588,869974
+Masoor,Assam,14,0.108,0.7145,22988
+Gram,Karnataka,17,0.101,0.6992,605813
+Potato,Uttarakhand,15,0.099,0.7254,14051
+Barley,Haryana,18,0.092,0.716,36408
+Moong,Uttar Pradesh,16,0.075,0.7815,81203
+Turmeric,Assam,19,0.073,0.7678,13210
+Jowar,Andhra Pradesh,19,0.073,0.7656,425268
+Turmeric,Madhya Pradesh,15,0.069,0.8061,37483
+Groundnut,Uttar Pradesh,18,0.066,0.7932,100983
+Arhar/Tur,Jharkhand,14,0.065,0.8241,17379
+Jowar,Gujarat,19,0.065,0.791,155822
+Arhar/Tur,Madhya Pradesh,19,0.063,0.7965,376977
+Maize,Jharkhand,13,0.053,0.8632,82663
+Rapeseed & Mustard,Haryana,16,0.051,0.8524,540870
+Rapeseed & Mustard,West Bengal,18,0.043,0.8651,414149
+Potato,Madhya Pradesh,14,0.04,0.8908,59336
+Onion,Rajasthan,19,0.039,0.8744,42198
+Rice,Tripura,18,0.039,0.8783,253238
+Nigerseed,Andhra Pradesh,16,0.038,0.8881,12655
+Rice,Assam,19,0.033,0.8947,2486129
+Maize,Nagaland,19,0.031,0.9013,54114
+Sesamum,Madhya Pradesh,19,0.023,0.9251,233964
+Arhar/Tur,Bihar,19,0.019,0.9393,30165
+Gram,Madhya Pradesh,17,0.017,0.9471,2645964
+Rice,Goa,19,0.012,0.9619,48228
+Dry Chillies,Tamil Nadu,15,0.011,0.9687,59271
+Sesamum,Assam,19,0.008,0.9728,13294
+Maize,West Bengal,19,0.007,0.9772,56404
+Rapeseed & Mustard,Uttarakhand,15,0.0,0.9993,12981
+Urad,Tamil Nadu,18,-0.001,0.9965,302616
+Rapeseed & Mustard,Nagaland,16,-0.002,0.9945,24560
+Maize,Gujarat,19,-0.007,0.9778,439473
+Maize,Uttar Pradesh,19,-0.026,0.917,831381
+Ragi,Bihar,19,-0.031,0.9,21800
+Safflower,Andhra Pradesh,15,-0.036,0.8985,12789
+Potato,Gujarat,18,-0.036,0.8876,51093
+Moong,Tamil Nadu,18,-0.043,0.8661,160135
+Maize,Bihar,19,-0.046,0.8521,614839
+Turmeric,West Bengal,12,-0.047,0.8852,13129
+Sesamum,Punjab,19,-0.054,0.8251,10063
+Potato,West Bengal,18,-0.055,0.8289,328050
+Urad,Uttar Pradesh,16,-0.057,0.835,484105
+Dry Chillies,Madhya Pradesh,12,-0.058,0.858,53605
+Ragi,Maharashtra,19,-0.058,0.8133,134758
+Nigerseed,West Bengal,19,-0.064,0.7937,2526726
+Onion,Madhya Pradesh,16,-0.073,0.7868,45752
+Rapeseed & Mustard,Rajasthan,18,-0.074,0.7718,2514292
+Moong,Odisha,18,-0.077,0.7605,261292
+Sesamum,Uttar Pradesh,18,-0.087,0.7299,212019
+Rice,Jammu and Kashmir,15,-0.088,0.7546,260442
+Potato,Chhattisgarh,15,-0.088,0.7549,11110
+Jute,Assam,19,-0.09,0.7127,67331
+Sunflower,Tamil Nadu,18,-0.092,0.7169,15602
+Masoor,Rajasthan,17,-0.092,0.7267,27623
+Groundnut,West Bengal,19,-0.092,0.7072,49535
+Wheat,Uttar Pradesh,18,-0.104,0.682,9431769
+Sugarcane,Uttarakhand,16,-0.106,0.6962,109445
+Sesamum,Chhattisgarh,16,-0.108,0.6911,21347
+Sunflower,Bihar,19,-0.11,0.6529,16933
+Rice,Manipur,19,-0.115,0.6379,168247
+Wheat,Delhi,17,-0.117,0.654,21572
+Maize,Arunachal Pradesh,19,-0.119,0.6266,42137
+Wheat,Maharashtra,18,-0.124,0.6251,949961
+Maize,Haryana,19,-0.139,0.5714,13704
+Wheat,Haryana,18,-0.143,0.5703,2310154
+Urad,Bihar,18,-0.145,0.5649,21963
+Urad,Andhra Pradesh,19,-0.154,0.5302,447440
+Sesamum,West Bengal,19,-0.157,0.5212,151241
+Rapeseed & Mustard,Bihar,18,-0.162,0.521,86619
+Sugarcane,Bihar,17,-0.163,0.5315,146523
+Maize,Odisha,19,-0.167,0.4943,76932
+Bajra,Uttar Pradesh,19,-0.169,0.4896,882374
+Sugarcane,Assam,19,-0.173,0.4791,27711
+Ragi,West Bengal,19,-0.174,0.4774,11924
+Rapeseed & Mustard,Manipur,17,-0.179,0.4923,13981
+Masoor,West Bengal,18,-0.187,0.4565,61510
+Maize,Jammu and Kashmir,15,-0.206,0.4616,315315
+Sugarcane,Odisha,19,-0.209,0.3897,15439
+Masoor,Uttar Pradesh,15,-0.216,0.4386,548354
+Rice,Puducherry,18,-0.217,0.387,22251
+Rice,Meghalaya,19,-0.246,0.3094,105152
+Potato,Assam,18,-0.254,0.3098,82236
+Rapeseed & Mustard,Assam,18,-0.274,0.272,259097
+Rapeseed & Mustard,Uttar Pradesh,18,-0.276,0.2668,621009
+Barley,Punjab,18,-0.3,0.2266,20389
+Sugarcane,Chhattisgarh,16,-0.301,0.2572,10914
+Maize,Chhattisgarh,16,-0.306,0.2497,105189
+Potato,Meghalaya,17,-0.308,0.2296,18338
+Rice,Mizoram,19,-0.321,0.1797,50643
+Wheat,Assam,18,-0.328,0.1834,58090
+Rice,Haryana,19,-0.349,0.1431,1118115
+Wheat,Punjab,18,-0.35,0.1546,3376611
+Urad,West Bengal,19,-0.355,0.1354,63606
+Urad,Madhya Pradesh,14,-0.356,0.212,598770
+Rice,West Bengal,19,-0.358,0.1328,5658811
+Gram,Uttar Pradesh,18,-0.434,0.0722,697350
+Maize,Sikkim,19,-0.454,0.0509,37018
+Rapeseed & Mustard,Madhya Pradesh,18,-0.457,0.0565,650424
+Wheat,West Bengal,18,-0.478,0.0446,361285
+Sugarcane,Haryana,19,-0.507,0.0266,123023
+Jute,West Bengal,19,-0.516,0.0238,584888
+Sugarcane,Uttar Pradesh,19,-0.563,0.012,2104173
+Rapeseed & Mustard,Punjab,17,-0.597,0.0113,41976

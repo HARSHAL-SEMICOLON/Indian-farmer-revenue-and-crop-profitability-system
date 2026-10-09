@@ -1,0 +1,220 @@
+table fact_market_price
+	lineageTag: d802fb66-9c75-4f80-ba9e-640d367629e9
+
+	column price_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 683b6701-ecd6-4746-b781-468bca9574aa
+		summarizeBy: none
+		sourceColumn: price_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: d065f0a1-d5e5-4a8b-8eb9-aeac1a96647a
+		summarizeBy: none
+		sourceColumn: market_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 6d0a899a-3a47-4cad-b271-39fbad276030
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column date_key
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: b31e4dc0-4f87-4593-87e9-16d72d3400b7
+		summarizeBy: none
+		sourceColumn: date_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_dataset
+		dataType: string
+		lineageTag: 99ad4759-d5aa-4a0b-a1e9-5b3b119a2920
+		summarizeBy: none
+		sourceColumn: source_dataset
+
+		annotation SummarizationSetBy = Automatic
+
+	column granularity
+		dataType: string
+		lineageTag: 56ac2a48-3ab5-4e43-9706-9e54acdff0d1
+		summarizeBy: none
+		sourceColumn: granularity
+
+		annotation SummarizationSetBy = Automatic
+
+	column commodity_raw
+		dataType: string
+		lineageTag: 94e1e05e-1190-4c94-9890-49af5a6affe0
+		summarizeBy: none
+		sourceColumn: commodity_raw
+
+		annotation SummarizationSetBy = Automatic
+
+	column variety
+		dataType: string
+		lineageTag: 68888454-da91-40ba-bb9b-f5ecd592537c
+		summarizeBy: none
+		sourceColumn: variety
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_form
+		dataType: string
+		lineageTag: 1b540678-df8e-4946-835a-d961e1b9d19c
+		summarizeBy: none
+		sourceColumn: price_form
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_comparable
+		dataType: int64
+		formatString: 0
+		lineageTag: 75ef223b-e05c-4739-8c44-5b202816f627
+		summarizeBy: none
+		sourceColumn: msp_comparable
+
+		annotation SummarizationSetBy = Automatic
+
+	column arrivals_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b80f9071-73e4-477d-8d05-1156e78dacbf
+		summarizeBy: sum
+		sourceColumn: arrivals_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column min_price
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a6e14aaf-1bf1-4885-949e-ffefdc030610
+		summarizeBy: sum
+		sourceColumn: min_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_price
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 4956ae70-e697-428b-a482-2aae5348a0a9
+		summarizeBy: sum
+		sourceColumn: max_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column modal_price
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2bbd691d-3420-460a-a707-845cccc36dcc
+		summarizeBy: sum
+		sourceColumn: modal_price
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_spread
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 9523c76c-5e14-45d5-88d5-e36252992080
+		summarizeBy: sum
+		sourceColumn: price_spread
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_spread_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 28e1b2c4-b771-4010-ba5b-80a731ed14d2
+		summarizeBy: sum
+		sourceColumn: price_spread_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_crop_year
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 3854cbd7-c8cb-4c1b-a148-a7db97352b10
+		summarizeBy: sum
+		sourceColumn: msp_crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_applicable
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a4afca00-c02b-4efc-9cc3-a093559a73f8
+		summarizeBy: sum
+		sourceColumn: msp_applicable
+
+		annotation SummarizationSetBy = Automatic
+
+	column modal_vs_msp_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 165b35c3-eb94-4c5b-a803-2e908415a799
+		summarizeBy: sum
+		sourceColumn: modal_vs_msp_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column modal_below_msp
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7be050b6-6f9b-40f0-ad19-de0ac3088252
+		summarizeBy: sum
+		sourceColumn: modal_below_msp
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_price_band
+		dataType: string
+		lineageTag: 9b5b1ed9-56fb-4205-b6b2-649f80621c1b
+		summarizeBy: none
+		sourceColumn: msp_price_band
+		sortByColumn: msp_price_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_price_band_order
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1e55aac9-07b3-432b-80a0-a9da0f6cad34
+		summarizeBy: sum
+		sourceColumn: msp_price_band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column dq_flag
+		dataType: string
+		lineageTag: ed85671b-8057-43b0-bb03-7c483d3cbfa5
+		summarizeBy: none
+		sourceColumn: dq_flag
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_market_price = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_market_price.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"price_id", Int64.Type}, {"market_id", Int64.Type}, {"crop_id", Int64.Type}, {"date_key", Int64.Type}, {"source_dataset", type text}, {"granularity", type text}, {"commodity_raw", type text}, {"variety", type text}, {"price_form", type text}, {"msp_comparable", Int64.Type}, {"arrivals_qtl", type number}, {"min_price", type number}, {"max_price", type number}, {"modal_price", type number}, {"price_spread", type number}, {"price_spread_pct", type number}, {"msp_crop_year", type number}, {"msp_applicable", type number}, {"modal_vs_msp_pct", type number}, {"modal_below_msp", type number}, {"msp_price_band", type text}, {"msp_price_band_order", type number}, {"dq_flag", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

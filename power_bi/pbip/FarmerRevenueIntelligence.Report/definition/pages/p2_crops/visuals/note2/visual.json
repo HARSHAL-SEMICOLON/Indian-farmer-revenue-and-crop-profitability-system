@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "note2",
+  "position": {
+    "x": 424,
+    "y": 8,
+    "z": 9000,
+    "width": 590,
+    "height": 70,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Profit = APY yield x MSP - DES cost/ha. Valuing at MSP understates crops sold above MSP (pulses, cotton). Not farmer income.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#3C4A42"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

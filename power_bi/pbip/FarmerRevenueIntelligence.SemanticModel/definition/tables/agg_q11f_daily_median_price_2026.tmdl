@@ -1,0 +1,59 @@
+table agg_q11f_daily_median_price_2026
+	lineageTag: e103457a-29b0-4eb5-be82-d4e925a9fda5
+
+	column crop_name
+		dataType: string
+		lineageTag: a5af3de0-b06e-4f88-b38e-114af82f8781
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_date
+		dataType: dateTime
+		formatString: dd-mmm-yyyy
+		lineageTag: e7d08b31-1988-4009-87a3-907230fb3afc
+		summarizeBy: none
+		sourceColumn: price_date
+
+		annotation SummarizationSetBy = Automatic
+
+	column median_modal
+		dataType: double
+		formatString: #,0.00
+		lineageTag: dab97217-8c04-44b4-9cc2-9585383b5f25
+		summarizeBy: sum
+		sourceColumn: median_modal
+
+		annotation SummarizationSetBy = Automatic
+
+	column quotes
+		dataType: int64
+		formatString: 0
+		lineageTag: 39ee3dc3-ad2b-41fb-bdb4-73e847eb9fa5
+		summarizeBy: none
+		sourceColumn: quotes
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 095230d5-6728-4422-9065-a218391b2f68
+		summarizeBy: sum
+		sourceColumn: msp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q11f_daily_median_price_2026 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q11f_daily_median_price_2026.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_name", type text}, {"price_date", type date}, {"median_modal", type number}, {"quotes", Int64.Type}, {"msp", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

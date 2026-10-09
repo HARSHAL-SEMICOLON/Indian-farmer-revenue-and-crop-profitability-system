@@ -1,0 +1,163 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "vol",
+  "position": {
+    "x": 852,
+    "y": 430,
+    "z": 14000,
+    "width": 412,
+    "height": 282,
+    "tabOrder": 14000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_q10a_market_volatility_mh"
+                    }
+                  },
+                  "Property": "market_name"
+                }
+              },
+              "queryRef": "agg_q10a_market_volatility_mh.market_name",
+              "nativeQueryRef": "market_name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_q10a_market_volatility_mh"
+                    }
+                  },
+                  "Property": "crop_name"
+                }
+              },
+              "queryRef": "agg_q10a_market_volatility_mh.crop_name",
+              "nativeQueryRef": "crop_name"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q10a_market_volatility_mh"
+                        }
+                      },
+                      "Property": "cv_pct"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(agg_q10a_market_volatility_mh.cv_pct)",
+              "nativeQueryRef": "Avg of cv_pct"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q10a_market_volatility_mh"
+                        }
+                      },
+                      "Property": "max_min_ratio"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(agg_q10a_market_volatility_mh.max_min_ratio)",
+              "nativeQueryRef": "Avg of max_min_ratio"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "agg_q10a_market_volatility_mh"
+                      }
+                    },
+                    "Property": "cv_pct"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Q10 Most volatile APMC-crop pairs (MH)'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

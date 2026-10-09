@@ -1,0 +1,23 @@
+value_rank,crop_name,crop_group,avg_gross_value_cr,avg_gross_value_real_2018_cr,share_pct,cumulative_share_pct,avg_area_mha,gross_value_per_ha
+1,Rice,Cereals,247632.0,266172.0,31.7,31.7,43.28,57220.0
+2,Wheat,Cereals,167355.0,179355.0,21.4,53.1,30.59,54708.0
+3,Sugarcane,Cash crops,89151.0,95873.0,11.4,64.5,4.87,183147.0
+4,Cotton,Fibres,53452.0,57450.0,6.8,71.4,11.98,44624.0
+5,Gram,Pulses,34999.0,37271.0,4.5,75.8,8.85,39530.0
+6,Soyabean,Oilseeds,31050.0,33194.0,4.0,79.8,10.95,28357.0
+7,Maize,Cereals,28860.0,30996.0,3.7,83.5,8.16,35359.0
+8,Groundnut,Oilseeds,25408.0,27314.0,3.3,86.8,4.41,57618.0
+9,Rapeseed & Mustard,Oilseeds,24437.0,26252.0,3.1,89.9,5.28,46305.0
+10,Arhar/Tur,Pulses,16112.0,17152.0,2.1,92.0,4.08,39508.0
+11,Bajra,Coarse cereals,12890.0,13836.0,1.6,93.6,7.32,17619.0
+12,Urad,Pulses,12204.0,12988.0,1.6,95.2,4.15,29381.0
+13,Moong,Pulses,10233.0,10867.0,1.3,96.5,4.0,25586.0
+14,Jowar,Coarse cereals,7397.0,7971.0,0.9,97.4,5.72,12928.0
+15,Jute,Fibres,5144.0,5540.0,0.7,98.1,0.68,75225.0
+16,Masoor,Pulses,4837.0,5170.0,0.6,98.7,1.37,35420.0
+17,Sesamum,Oilseeds,3588.0,3881.0,0.5,99.2,1.59,22543.0
+18,Ragi,Coarse cereals,2865.0,3093.0,0.4,99.5,1.05,27242.0
+19,Barley,Coarse cereals,2213.0,2380.0,0.3,99.8,0.6,36754.0
+20,Sunflower,Oilseeds,1001.0,1089.0,0.1,99.9,0.37,27190.0
+21,Nigerseed,Oilseeds,267.0,287.0,0.0,100.0,0.18,14626.0
+22,Safflower,Oilseeds,209.0,226.0,0.0,100.0,0.1,19955.0

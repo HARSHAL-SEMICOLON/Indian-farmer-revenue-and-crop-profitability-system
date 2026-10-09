@@ -1,0 +1,54 @@
+crop_name,price_form,rank_in_crop,state_name,market_name,trading_days,mean_modal,cv_pct,max_min_ratio
+Onion,Onion,1,Tamil Nadu,Keelpennathur(Uzhavar Sandhai ),32,4227.0,35.4,2.6
+Onion,Onion,2,Rajasthan,Sriganganagar (F&V) Apmc,30,3330.0,34.2,2.78
+Onion,Onion,3,Kerala,Chengannur Market,30,6055.0,32.8,3.33
+Onion,Onion,4,Kerala,Palakkad Market,30,6987.0,32.7,3.14
+Potato,Potato,1,Tamil Nadu,Chinnamanur(Uzhavar Sandhai ),38,3866.0,32.7,2.32
+Onion,Onion,5,Uttar Pradesh,Varanasi Apmc,31,2753.0,32.0,2.23
+Potato,Potato,2,Tamil Nadu,Theni(Uzhavar Sandhai ),35,3154.0,30.5,2.12
+Potato,Potato,3,Tamil Nadu,Athur(Uzhavar Sandhai ),38,3914.0,29.2,1.94
+Potato,Potato,4,Punjab,Quadian Apmc,35,697.0,28.4,1.8
+Potato,Potato,5,Tamil Nadu,Edapadi (Uzhavar Sandhai ),38,3272.0,26.7,2.15
+Maize,Maize,1,Madhya Pradesh,Dhamnod Apmc,30,2040.0,14.7,1.54
+Groundnut,Groundnut in shell,1,Tamil Nadu,Arcot(Uzhavar Sandhai ),34,6882.0,14.0,1.33
+Soyabean,Soyabean,1,Tamil Nadu,Palanganatham(Uzhavar Sandhai ),32,9595.0,13.8,3.18
+Rice,Milled rice,1,Uttarakhand,Gadarpur Apmc,34,3480.0,12.9,1.65
+Rice,Paddy (common),1,Andhra Pradesh,Kothabommali Apmc,30,2940.0,12.4,1.52
+Rice,Milled rice,2,West Bengal,Bishnupur(Bankura) Apmc,32,4263.0,12.1,1.33
+Groundnut,Groundnut in shell,2,Tamil Nadu,Hosur(Uzhavar Sandhai ),38,8487.0,10.2,1.27
+Groundnut,Groundnut in shell,3,Tamil Nadu,Ranipettai(Uzhavar Sandhai ),38,6500.0,10.0,1.36
+Groundnut,Groundnut in shell,4,Tamil Nadu,Tiruvannamalai(Uzhavar Sandhai ),36,8042.0,9.0,1.2
+Groundnut,Groundnut in shell,5,Tamil Nadu,Anna Nagar(Uzhavar Sandhai ),37,7324.0,8.3,1.23
+Soyabean,Soyabean,2,Tamil Nadu,Anaiyur(Uzhavar Sandhai ),32,9836.0,7.3,1.47
+Soyabean,Soyabean,3,Tamil Nadu,Chokkikulam(Uzhavar Sandhai ),31,9815.0,7.0,1.4
+Soyabean,Soyabean,4,Tamil Nadu,Andipatti(Uzhavar Sandhai ),34,9507.0,6.7,1.32
+Soyabean,Soyabean,5,Tamil Nadu,Paramakudi(Uzhavar Sandhai ),36,9535.0,6.7,1.24
+Maize,Maize,2,Uttar Pradesh,Sirsaganj Apmc,32,2186.0,6.6,1.23
+Rice,Paddy (common),2,Uttar Pradesh,Gangoh Apmc,30,3615.0,6.1,1.27
+Gram,Gram (whole),1,Andhra Pradesh,Kondapi Apmc,32,5584.0,5.6,1.23
+Rice,Paddy (common),3,Andhra Pradesh,Maddipadu Apmc,33,2682.0,5.5,1.14
+Wheat,Wheat grain,1,Madhya Pradesh,Umariya Apmc,30,2335.0,5.5,1.34
+Bajra,Bajra,1,Andhra Pradesh,Maddipadu Apmc,30,2685.0,5.4,1.18
+Gram,Gram (whole),2,Kerala,Palakkad Market,30,8933.0,5.3,1.16
+Urad,Urad (whole),1,Kerala,Palakkad Market,30,13283.0,5.1,1.26
+Wheat,Wheat grain,2,Madhya Pradesh,Indore Apmc,31,2769.0,4.9,1.21
+Wheat,Wheat grain,3,Uttar Pradesh,Kanpur(Grain) Apmc,35,2540.0,4.5,1.16
+Moong,Moong (whole),1,Kerala,Palakkad Market,30,12414.0,4.4,1.2
+Maize,Maize,3,Uttar Pradesh,Babrala Apmc,33,2059.0,4.1,1.18
+Maize,Maize,4,Uttar Pradesh,Wazirganj Apmc,33,1980.0,4.1,1.2
+Wheat,Wheat grain,4,Uttar Pradesh,Jhijhank Apmc,32,2459.0,4.0,1.15
+Wheat,Wheat grain,5,Uttar Pradesh,Khalilabad Apmc,32,2546.0,3.5,1.11
+Arhar/Tur,Tur (whole),1,Kerala,Palakkad Market,30,12533.0,3.4,1.18
+Maize,Maize,5,Uttar Pradesh,Bisoli Apmc,36,1972.0,3.2,1.13
+Rice,Paddy (common),4,Andhra Pradesh,Atmakur (Nandyal District) Apmc,32,2457.0,3.2,1.15
+Rice,Paddy (common),5,Andhra Pradesh,Kakinada (Urban) Apmc,34,2407.0,2.7,1.08
+Jowar,Jowar (mixed varieties),1,Andhra Pradesh,Koilkunta Apmc,30,3183.0,1.4,1.06
+Arhar/Tur,Tur (whole),2,Andhra Pradesh,Podili Apmc,37,8172.0,1.0,1.04
+Gram,Gram (whole),3,Andhra Pradesh,Addanki Apmc,33,6014.0,1.0,1.04
+Arhar/Tur,Tur (whole),3,Andhra Pradesh,Kanigiri Apmc,32,8676.0,0.9,1.06
+Rapeseed & Mustard,Mustard seed,1,Rajasthan,Surajgarh Apmc,30,7568.0,0.8,1.05
+Rice,Milled rice,3,Tripura,Dasda Apmc,32,3284.0,0.8,1.03
+Gram,Gram (whole),4,Andhra Pradesh,Maddipadu Apmc,30,5980.0,0.7,1.02
+Rapeseed & Mustard,Mustard seed,2,West Bengal,Khatra Apmc,30,6393.0,0.6,1.03
+Rapeseed & Mustard,Mustard seed,3,West Bengal,Bishnupur(Bankura) Apmc,33,6388.0,0.5,1.02
+Rice,Milled rice,4,West Bengal,Siliguri Apmc,37,5200.0,0.0,1.0

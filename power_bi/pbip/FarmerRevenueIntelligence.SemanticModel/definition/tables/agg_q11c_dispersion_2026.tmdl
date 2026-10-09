@@ -1,0 +1,119 @@
+table agg_q11c_dispersion_2026
+	lineageTag: fae72e0c-0a3f-4811-97b8-30df53f9fd97
+
+	column crop_name
+		dataType: string
+		lineageTag: 76982917-5edd-4a1d-af3b-efd24ff251f7
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_form
+		dataType: string
+		lineageTag: 7187a820-fa73-40df-adba-4a97bff22a08
+		summarizeBy: none
+		sourceColumn: price_form
+
+		annotation SummarizationSetBy = Automatic
+
+	column quotes
+		dataType: int64
+		formatString: 0
+		lineageTag: 4b2607a8-b0cf-46b5-8ee0-c0237394f177
+		summarizeBy: none
+		sourceColumn: quotes
+
+		annotation SummarizationSetBy = Automatic
+
+	column markets
+		dataType: int64
+		formatString: 0
+		lineageTag: fe6b09ce-86d9-4166-9179-21adb7c2a96a
+		summarizeBy: none
+		sourceColumn: markets
+
+		annotation SummarizationSetBy = Automatic
+
+	column median_daily_cross_market_cv_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: baf7ace3-19cc-42dc-84aa-c83042dcad0d
+		summarizeBy: sum
+		sourceColumn: median_daily_cross_market_cv_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column p25
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 3e56f11c-5e15-4cb4-8cee-501b06798991
+		summarizeBy: sum
+		sourceColumn: p25
+
+		annotation SummarizationSetBy = Automatic
+
+	column median
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ae341d7c-08b4-41fc-a0ad-91d18114621d
+		summarizeBy: sum
+		sourceColumn: median
+
+		annotation SummarizationSetBy = Automatic
+
+	column p75
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7108b818-2fef-4af3-827d-907cf8c44e55
+		summarizeBy: sum
+		sourceColumn: p75
+
+		annotation SummarizationSetBy = Automatic
+
+	column cheapest_state
+		dataType: string
+		lineageTag: ee19ea16-4ef0-4c92-8059-c2d456b033ce
+		summarizeBy: none
+		sourceColumn: cheapest_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column cheapest_state_median
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 694c256e-be1d-4ca2-916b-52eca6715ed1
+		summarizeBy: sum
+		sourceColumn: cheapest_state_median
+
+		annotation SummarizationSetBy = Automatic
+
+	column dearest_state
+		dataType: string
+		lineageTag: 0fd34aed-ea4b-4959-8dfa-03184dd85dd2
+		summarizeBy: none
+		sourceColumn: dearest_state
+
+		annotation SummarizationSetBy = Automatic
+
+	column dearest_state_median
+		dataType: double
+		formatString: #,0.00
+		lineageTag: b06e9d58-7350-426d-9951-ef4d3b7cb707
+		summarizeBy: sum
+		sourceColumn: dearest_state_median
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q11c_dispersion_2026 = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q11c_dispersion_2026.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_name", type text}, {"price_form", type text}, {"quotes", Int64.Type}, {"markets", Int64.Type}, {"median_daily_cross_market_cv_pct", type number}, {"p25", type number}, {"median", type number}, {"p75", type number}, {"cheapest_state", type text}, {"cheapest_state_median", type number}, {"dearest_state", type text}, {"dearest_state_median", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

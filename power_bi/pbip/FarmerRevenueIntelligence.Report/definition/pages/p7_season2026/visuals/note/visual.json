@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "note",
+  "position": {
+    "x": 16,
+    "y": 46,
+    "z": 2000,
+    "width": 1248,
+    "height": 26,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "AGMARKNET daily 21-Jul to 24-Sep-2026, ~2,700 markets. Current MSP = KMS 2025-26 / RMS 2026-27; new MSP = KMS 2026-27 (from Oct-2026) / RMS 2027-28 (from Apr-2027). Pre-harvest prices: a benchmark, not realised farm-gate prices.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#3C4A42"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

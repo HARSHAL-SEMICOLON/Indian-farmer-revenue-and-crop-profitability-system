@@ -1,0 +1,88 @@
+table ref_sources
+	lineageTag: d6d2b5ea-4b4c-4c25-ad21-e1293820923e
+
+	column source_id
+		dataType: string
+		isHidden
+		lineageTag: 5fa18d8e-8583-4cac-a990-b1092ebf8bf0
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column dataset
+		dataType: string
+		lineageTag: 4b80f8bc-e517-47e1-a010-8f72368a02f5
+		summarizeBy: none
+		sourceColumn: dataset
+
+		annotation SummarizationSetBy = Automatic
+
+	column publisher
+		dataType: string
+		lineageTag: 25f0953e-4593-41e0-8d32-f58a0f3191fe
+		summarizeBy: none
+		sourceColumn: publisher
+
+		annotation SummarizationSetBy = Automatic
+
+	column coverage
+		dataType: string
+		lineageTag: 70aed9f0-b19d-41cd-a028-22f4c97d9dc7
+		summarizeBy: none
+		sourceColumn: coverage
+
+		annotation SummarizationSetBy = Automatic
+
+	column grain
+		dataType: string
+		lineageTag: d027a947-43b7-408c-ae82-79f0b6b652b8
+		summarizeBy: none
+		sourceColumn: grain
+
+		annotation SummarizationSetBy = Automatic
+
+	column used_for
+		dataType: string
+		lineageTag: bf045758-cbef-4cab-a7e3-e19a4fea9e96
+		summarizeBy: none
+		sourceColumn: used_for
+
+		annotation SummarizationSetBy = Automatic
+
+	column access_route
+		dataType: string
+		lineageTag: 13cc0e92-2f78-4f1e-ab19-c5fbe2f1fdd5
+		summarizeBy: none
+		sourceColumn: access_route
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: 13632fe3-ec52-4063-bb25-b0b570210d6b
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column reliability_note
+		dataType: string
+		lineageTag: e14afdbf-b82b-4eff-90e4-20419d1827dd
+		summarizeBy: none
+		sourceColumn: reliability_note
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ref_sources = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "ref_sources.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"source_id", type text}, {"dataset", type text}, {"publisher", type text}, {"coverage", type text}, {"grain", type text}, {"used_for", type text}, {"access_route", type text}, {"url", type text}, {"reliability_note", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

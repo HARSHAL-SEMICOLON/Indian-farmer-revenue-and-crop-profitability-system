@@ -1,0 +1,101 @@
+table agg_q10a_market_volatility_mh
+	lineageTag: a4240b60-2d85-4aa9-93fc-65c073db17ee
+
+	column state_name
+		dataType: string
+		lineageTag: 61573a37-3a07-43c7-8fc8-0981437f40e4
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_name
+		dataType: string
+		lineageTag: 33b29bc7-5146-41ab-9914-f22c104b8a3a
+		summarizeBy: none
+		sourceColumn: market_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_name
+		dataType: string
+		lineageTag: ecac011a-e935-4734-a91b-125339ff024d
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_form
+		dataType: string
+		lineageTag: 53f9677a-5956-4999-acf2-2d028835a2e7
+		summarizeBy: none
+		sourceColumn: price_form
+
+		annotation SummarizationSetBy = Automatic
+
+	column months
+		dataType: int64
+		formatString: 0
+		lineageTag: 0b7567a2-e58a-443e-b63f-80e603ed9188
+		summarizeBy: none
+		sourceColumn: months
+
+		annotation SummarizationSetBy = Automatic
+
+	column mean_modal
+		dataType: int64
+		formatString: 0
+		lineageTag: 863bf29d-1af4-4b97-99f0-9b82e7f47ec0
+		summarizeBy: none
+		sourceColumn: mean_modal
+
+		annotation SummarizationSetBy = Automatic
+
+	column cv_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 93718969-4a24-4ecd-a346-57c4d1c0b70b
+		summarizeBy: sum
+		sourceColumn: cv_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column max_min_ratio
+		dataType: double
+		formatString: #,0.00
+		lineageTag: dbd12ad0-f887-4d09-9071-ce764c7cb826
+		summarizeBy: sum
+		sourceColumn: max_min_ratio
+
+		annotation SummarizationSetBy = Automatic
+
+	column median_intramonth_spread_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 86b47a72-7b18-40ef-9b8b-b00301ee4eb7
+		summarizeBy: sum
+		sourceColumn: median_intramonth_spread_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column mean_abs_mom_change_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 52494dd3-5f94-41a0-896c-eb01d18a2026
+		summarizeBy: sum
+		sourceColumn: mean_abs_mom_change_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q10a_market_volatility_mh = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q10a_market_volatility_mh.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"state_name", type text}, {"market_name", type text}, {"crop_name", type text}, {"price_form", type text}, {"months", Int64.Type}, {"mean_modal", Int64.Type}, {"cv_pct", type number}, {"max_min_ratio", type number}, {"median_intramonth_spread_pct", type number}, {"mean_abs_mom_change_pct", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

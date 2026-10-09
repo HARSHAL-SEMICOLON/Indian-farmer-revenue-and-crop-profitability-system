@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "FarmerRevenueIntelligence"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "510ab905-86c0-456d-93b0-131bf91d9dc3"
+  }
+}

@@ -1,0 +1,20 @@
+crop_name,price_form,quotes,markets,states,msp,median_modal,pct_quotes_below_msp,avg_modal_vs_msp_pct
+Safflower,Safflower,65,21,5,6540.0,5215.0,98.5,-22.0
+Bajra,Bajra,1137,199,9,2775.0,2337.0,89.4,-13.2
+Moong,Moong (whole),1686,309,12,8768.0,7230.0,76.3,-12.9
+Arhar/Tur,Tur (whole),1060,225,11,8000.0,7589.5,64.9,-6.0
+Ragi,Ragi,244,38,6,4886.0,3592.8,62.7,-16.8
+Groundnut,Groundnut in shell,3010,214,13,7263.0,7000.0,61.5,-3.1
+Maize,Maize,3460,470,19,2400.0,2300.0,60.4,-4.5
+Masoor,Masur (whole),518,75,6,7000.0,6755.5,54.1,1.7
+Wheat,Wheat grain,8759,819,12,2585.0,2570.0,53.3,0.4
+Jowar,Jowar (mixed varieties),851,166,10,3699.0,3728.0,46.3,10.1
+Sunflower,Sunflower seed,139,21,3,7721.0,7900.0,39.6,0.9
+Gram,Gram (whole),2213,363,13,5875.0,6000.0,35.4,3.9
+Urad,Urad (whole),911,169,11,7800.0,8300.0,31.0,9.6
+Rice,Paddy (common),5535,535,21,2369.0,2390.0,28.3,5.9
+Cotton,Kapas (seed cotton),909,100,11,7710.0,8500.0,17.8,10.9
+Barley,Barley,125,47,5,2150.0,2450.0,17.6,11.7
+Sesamum,Sesamum,795,89,9,9846.0,11505.0,9.6,22.1
+Soyabean,Soyabean,2528,310,10,5328.0,6500.0,8.0,25.8
+Rapeseed & Mustard,Mustard seed,1557,293,11,6200.0,7400.0,3.7,17.8

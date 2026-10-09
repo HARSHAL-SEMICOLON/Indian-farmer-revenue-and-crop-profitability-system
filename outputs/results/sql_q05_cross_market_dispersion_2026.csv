@@ -1,0 +1,19 @@
+crop_name,price_form,n_days,avg_markets_per_day,median_daily_cv_pct
+Potato,Potato,39,403.0,68.2
+Rice,Milled rice,39,75.0,38.1
+Jowar,Jowar (mixed varieties),33,29.0,37.1
+Onion,Onion,39,247.0,29.6
+Urad,Urad (whole),33,22.0,22.8
+Maize,Maize,39,82.0,22.7
+Moong,Moong (whole),34,43.0,20.7
+Masoor,Masur (whole),26,19.0,19.5
+Rice,Paddy (common),39,177.0,19.2
+Arhar/Tur,Tur (whole),33,28.0,18.3
+Bajra,Bajra,32,26.0,18.2
+Sesamum,Sesamum,29,26.0,17.9
+Soyabean,Soyabean,38,23.0,17.6
+Groundnut,Groundnut in shell,39,85.0,14.2
+Gram,Gram (whole),35,74.0,11.9
+Cotton,Kapas (seed cotton),32,26.0,9.2
+Wheat,Wheat grain,39,278.0,9.0
+Rapeseed & Mustard,Mustard seed,34,47.0,8.8

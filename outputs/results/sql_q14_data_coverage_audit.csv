@@ -1,0 +1,27 @@
+crop_name,crop_group,msp_years,first_msp,last_msp,mandi_quotes,msp_comparable_quotes,cost_state_years,analysis_scope
+Dry Chillies,Spices,0,,,717,0,0,no MSP: price analysis only
+Onion,Horticulture,0,,,16653,0,0,no MSP: price analysis only
+Potato,Horticulture,0,,,15111,0,0,no MSP: price analysis only
+Turmeric,Spices,0,,,520,0,0,no MSP: price analysis only
+Arhar/Tur,Pulses,24,2002.0,2026.0,4567,4567,30,valued and profit-estimated
+Cotton,Fibres,24,2002.0,2026.0,2119,2012,30,valued and profit-estimated
+Gram,Pulses,24,2002.0,2026.0,6642,6447,30,valued and profit-estimated
+Groundnut,Oilseeds,24,2002.0,2026.0,4184,4172,30,valued and profit-estimated
+Maize,Cereals,24,2002.0,2026.0,6177,6176,30,valued and profit-estimated
+Moong,Pulses,24,2002.0,2026.0,4167,4162,30,valued and profit-estimated
+Rapeseed & Mustard,Oilseeds,24,2002.0,2026.0,1882,1881,30,valued and profit-estimated
+Rice,Cereals,24,2002.0,2026.0,9753,6609,30,valued and profit-estimated
+Sugarcane,Cash crops,17,2002.0,2019.0,12,0,30,valued and profit-estimated
+Wheat,Cereals,24,2002.0,2026.0,13228,13200,30,valued and profit-estimated
+Bajra,Coarse cereals,24,2002.0,2026.0,3556,3556,0,"valued at MSP, no profit estimate"
+Barley,Coarse cereals,24,2002.0,2026.0,161,156,0,"valued at MSP, no profit estimate"
+Jowar,Coarse cereals,24,2002.0,2026.0,4594,4594,0,"valued at MSP, no profit estimate"
+Jute,Fibres,20,2002.0,2023.0,122,122,0,"valued at MSP, no profit estimate"
+Masoor,Pulses,23,2004.0,2026.0,674,673,0,"valued at MSP, no profit estimate"
+Nigerseed,Oilseeds,24,2002.0,2026.0,20,20,0,"valued at MSP, no profit estimate"
+Ragi,Coarse cereals,24,2002.0,2026.0,250,250,0,"valued at MSP, no profit estimate"
+Safflower,Oilseeds,24,2002.0,2026.0,421,421,0,"valued at MSP, no profit estimate"
+Sesamum,Oilseeds,24,2002.0,2026.0,1376,1376,0,"valued at MSP, no profit estimate"
+Soyabean,Oilseeds,24,2002.0,2026.0,6369,6362,0,"valued at MSP, no profit estimate"
+Sunflower,Oilseeds,24,2002.0,2026.0,647,647,0,"valued at MSP, no profit estimate"
+Urad,Pulses,24,2002.0,2026.0,2653,2653,0,"valued at MSP, no profit estimate"

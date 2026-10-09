@@ -1,0 +1,552 @@
+table _Measures
+	lineageTag: 710f4571-79e3-41ef-bd53-c2cecd630f6c
+
+	measure 'Area (ha)' =
+			SUM ( fact_district_crop_year[area_ha] )
+		formatString: #,0
+		displayFolder: 1 Production
+		lineageTag: b6f3dac6-c8ec-4e44-bdaf-46b49125a250
+
+	measure 'Area (M ha)' =
+			DIVIDE ( [Area (ha)], 1e6 )
+		formatString: #,0.00
+		displayFolder: 1 Production
+		lineageTag: 848d1018-eb8a-40e6-85e7-54b67cd7ba63
+
+	measure 'Production (APY unit)' =
+			IF (
+			    HASONEVALUE ( dim_crop[crop_name] ),
+			    SUM ( fact_district_crop_year[production_apy_unit] )
+			)
+		formatString: #,0
+		displayFolder: 1 Production
+		lineageTag: 356932be-4dca-48cb-87f8-1991a24763ee
+
+	measure 'Production Unit' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), VALUES ( dim_crop[apy_unit] ), "select one crop" )
+		displayFolder: 1 Production
+		lineageTag: 008508fa-78ab-400c-ade0-44de125e2a8d
+
+	measure 'Production (M t or M bales)' =
+			DIVIDE ( [Production (APY unit)], 1e6 )
+		formatString: #,0.00
+		displayFolder: 1 Production
+		lineageTag: 8c64f744-451e-406b-9b7c-1e36ff82584d
+
+	measure 'Yield (kg/ha)' =
+			IF (
+			    HASONEVALUE ( dim_crop[crop_name] ),
+			    DIVIDE (
+			        SUMX ( fact_district_crop_year, fact_district_crop_year[yield_kg_per_ha] * fact_district_crop_year[area_ha] ),
+			        [Area (ha)]
+			    )
+			)
+		formatString: #,0
+		displayFolder: 1 Production
+		lineageTag: 59dc91ab-f5f7-431a-91c6-462454a41701
+
+	measure 'Gross Value @ MSP (Rs cr)' =
+			DIVIDE ( SUM ( fact_district_crop_year[gross_value_msp_inr] ), 1e7 )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 17cf0933-147b-4ae6-a696-7e153037ca52
+
+	measure 'MSP-valued Area (ha)' =
+			CALCULATE ( [Area (ha)], NOT ISBLANK ( fact_district_crop_year[gross_value_msp_inr] ) )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 6ecc1979-71f9-44c8-9985-4eab2a72f35f
+
+	measure 'Gross Value @ MSP per ha (Rs)' =
+			DIVIDE ( SUM ( fact_district_crop_year[gross_value_msp_inr] ), [MSP-valued Area (ha)] )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 75a8a048-e732-423c-8d8f-727da774e18d
+
+	measure 'Gross Value @ MSP per acre (Rs)' =
+			DIVIDE ( [Gross Value @ MSP per ha (Rs)], 2.47105 )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 6c3409a0-ed53-4d60-b0e1-74644cb2d357
+
+	measure 'Valuation Coverage %' =
+			DIVIDE ( [MSP-valued Area (ha)], [Area (ha)] )
+		formatString: 0.0%
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: a99f60cc-cf42-4ba2-a3ff-d23acb4fb609
+
+	measure 'Share of Gross Value %' =
+			DIVIDE (
+			    [Gross Value @ MSP (Rs cr)],
+			    CALCULATE ( [Gross Value @ MSP (Rs cr)], ALL ( dim_crop ) )
+			)
+		formatString: 0.0%
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 4a18bfbc-b988-4f4a-9cfa-5a3dda958f09
+
+	measure 'Gross Value @ MSP PY (Rs cr)' =
+			CALCULATE ( [Gross Value @ MSP (Rs cr)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: c037500b-5f10-4cc4-a880-8e6f7802bd29
+
+	measure 'Gross Value YoY %' =
+			DIVIDE ( [Gross Value @ MSP (Rs cr)] - [Gross Value @ MSP PY (Rs cr)], [Gross Value @ MSP PY (Rs cr)] )
+		formatString: 0.0%
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: e487dced-22fa-4eef-9f8c-1a5b8a0ed167
+
+	measure 'First Year' =
+			MIN ( dim_year[crop_year] )
+		formatString: 0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: acf0bde2-52fd-4281-a464-2b156612cb8b
+
+	measure 'Last Year' =
+			MAX ( dim_year[crop_year] )
+		formatString: 0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: aa8b00f1-79e8-4883-8d56-9182367c59ad
+
+	measure 'Gross Value CAGR %' =
+			VAR y0 = [First Year]
+			VAR y1 = [Last Year]
+			VAR v0 = CALCULATE ( [Gross Value @ MSP (Rs cr)], dim_year[crop_year] = y0 )
+			VAR v1 = CALCULATE ( [Gross Value @ MSP (Rs cr)], dim_year[crop_year] = y1 )
+			RETURN IF ( y1 > y0 && v0 > 0, ( v1 / v0 ) ^ ( 1 / ( y1 - y0 ) ) - 1 )
+		formatString: 0.0%
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: d9126cf1-8494-479b-9ac7-4a7bdab52b16
+
+	measure 'Production CAGR %' =
+			VAR y0 = [First Year]
+			VAR y1 = [Last Year]
+			VAR p0 = CALCULATE ( [Production (APY unit)], dim_year[crop_year] = y0 )
+			VAR p1 = CALCULATE ( [Production (APY unit)], dim_year[crop_year] = y1 )
+			RETURN IF ( y1 > y0 && p0 > 0, ( p1 / p0 ) ^ ( 1 / ( y1 - y0 ) ) - 1 )
+		formatString: 0.0%
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 8fdbaf0e-2d1d-4384-addc-35ad97e379f4
+
+	measure 'Yield CAGR %' =
+			VAR y0 = [First Year]
+			VAR y1 = [Last Year]
+			VAR k0 = CALCULATE ( [Yield (kg/ha)], dim_year[crop_year] = y0 )
+			VAR k1 = CALCULATE ( [Yield (kg/ha)], dim_year[crop_year] = y1 )
+			RETURN IF ( y1 > y0 && k0 > 0, ( k1 / k0 ) ^ ( 1 / ( y1 - y0 ) ) - 1 )
+		formatString: 0.0%
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 50d843e3-d600-4f5a-8436-c37914572b3b
+
+	measure 'Gross Value @ 2018 MSP (Rs cr)' =
+			DIVIDE ( SUM ( fact_district_crop_year[gross_value_at_2018_msp_inr] ), 1e7 )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 4bf04939-8cef-4e5d-ac12-b84fb59d0828
+
+	measure 'Gross Value Real 2018-19 (Rs cr)' =
+			DIVIDE ( SUM ( fact_district_crop_year[gross_value_real_2018_inr] ), 1e7 )
+		formatString: #,0
+		displayFolder: 2 Gross value (MSP-valued)
+		lineageTag: 4cff49c3-77ef-4403-a8fb-51e3e64cc302
+
+	measure 'MSP (Rs/qtl)' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), AVERAGE ( fact_msp[msp_effective] ) )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: 1635f7f4-c405-4ef2-98d2-b15ba5ec7c4f
+
+	measure 'CACP A2+FL Cost (Rs/qtl)' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), AVERAGE ( fact_msp[a2fl_cost] ) )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: cb2ce821-c004-4fb6-bdcf-cc4e40ec5c85
+
+	measure 'MSP over A2+FL %' =
+			DIVIDE ( [MSP (Rs/qtl)] - [CACP A2+FL Cost (Rs/qtl)], [CACP A2+FL Cost (Rs/qtl)] )
+		formatString: 0.0%
+		displayFolder: 3 MSP & cost
+		lineageTag: df79f023-feac-4ea3-a41f-b1cbf8e427fd
+
+	measure 'Cost Area (ha)' =
+			CALCULATE ( SUM ( fact_state_crop_year[area_ha] ), fact_state_crop_year[has_official_cost] = 1,
+			                             NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: d31e4daa-04b1-4f45-b6d4-c4bd1ec9a637
+
+	measure 'C2 Cost per ha (Rs)' =
+			DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ),
+			                fact_state_crop_year[c2_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: 9c424cd5-834c-48b1-8032-d703af522bc3
+
+	measure 'A2+FL Cost per ha (Rs)' =
+			DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ),
+			                fact_state_crop_year[a2fl_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: c740ce09-c607-49cc-8e91-f4e2e569d3c4
+
+	measure 'Est. Profit over C2 per ha (Rs)' =
+			DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ),
+			                fact_state_crop_year[est_profit_c2_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: 30e9a51f-ee1f-4e71-b60d-44c312e6d976
+
+	measure 'Est. Profit over A2+FL per ha (Rs)' =
+			DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_a2fl_per_ha] ) ),
+			                fact_state_crop_year[est_profit_a2fl_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: e60a43dc-ae0e-4a22-a68a-d184b5cbaa9f
+
+	measure 'Est. Profit over C2 per acre (Rs)' =
+			DIVIDE ( [Est. Profit over C2 per ha (Rs)], 2.47105 )
+		formatString: #,0
+		displayFolder: 3 MSP & cost
+		lineageTag: f8bb6302-1e08-4eb7-8042-20369f1f346b
+
+	measure 'State-years with C2 Loss %' =
+			DIVIDE (
+			    COUNTROWS ( FILTER ( fact_state_crop_year, fact_state_crop_year[est_profit_c2_per_ha] < 0 ) ),
+			    COUNTROWS ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ) )
+			)
+		formatString: 0.0%
+		displayFolder: 3 MSP & cost
+		lineageTag: ebf48df4-2623-4b70-a3b1-926736ba4d70
+
+	measure 'Profit Data Available' =
+			IF ( ISBLANK ( [Cost Area (ha)] ), "No official cost data for this selection", "DES cost data available" )
+		displayFolder: 3 MSP & cost
+		lineageTag: ab1830ab-fac4-408f-a2a7-6b11d5ca0cee
+
+	measure 'Valid Quotes' =
+			CALCULATE ( COUNTROWS ( fact_market_price ), NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: 0273f517-0e93-4dd1-a6ca-ed00c41f5c37
+
+	measure 'Avg Modal Price (Rs/qtl)' =
+			CALCULATE ( AVERAGE ( fact_market_price[modal_price] ), NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: db56c0f0-4dfe-44a7-b5bd-ef70d43acd8e
+
+	measure 'Arrival-wtd Modal Price (Rs/qtl)' =
+			VAR t = FILTER ( fact_market_price, fact_market_price[arrivals_qtl] > 0 && NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+			RETURN DIVIDE ( SUMX ( t, fact_market_price[modal_price] * fact_market_price[arrivals_qtl] ), SUMX ( t, fact_market_price[arrivals_qtl] ) )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: f95f8d7f-853d-4a74-b658-10c2a27b6736
+
+	measure 'Arrivals (lakh qtl)' =
+			DIVIDE ( SUM ( fact_market_price[arrivals_qtl] ), 1e5 )
+		formatString: #,0.00
+		displayFolder: 4 Mandi prices
+		lineageTag: c55d254a-6ff4-4258-bc3b-5522bc85d5d3
+
+	measure 'Modal Price CV %' =
+			VAR t = FILTER ( fact_market_price, NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+			RETURN DIVIDE ( STDEVX.P ( t, fact_market_price[modal_price] ), AVERAGEX ( t, fact_market_price[modal_price] ) )
+		formatString: 0.0%
+		displayFolder: 4 Mandi prices
+		lineageTag: 199f16ce-6b6b-4bc6-ae57-385ad10638e1
+
+	measure 'Avg Min-Max Spread %' =
+			DIVIDE ( AVERAGE ( fact_market_price[price_spread_pct] ), 100 )
+		formatString: 0.0%
+		displayFolder: 4 Mandi prices
+		lineageTag: d59056c1-fdb5-47e8-bf65-823232754754
+
+	measure 'Max/Min Modal Ratio' =
+			VAR t = FILTER ( fact_market_price, NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+			RETURN DIVIDE ( MAXX ( t, fact_market_price[modal_price] ), MINX ( t, fact_market_price[modal_price] ) )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: 183ad778-5162-4245-9f38-19134676c9c9
+
+	measure 'MSP-comparable Quotes' =
+			CALCULATE ( COUNTROWS ( fact_market_price ), NOT ISBLANK ( fact_market_price[msp_applicable] ) )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: d392aedf-32d5-477d-9004-ac0f56d193b8
+
+	measure 'Applicable MSP (Rs/qtl)' =
+			AVERAGE ( fact_market_price[msp_applicable] )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: 82fc3160-cd02-4b6a-b6b1-7eaf9ebc253a
+
+	measure 'Quotes below MSP %' =
+			DIVIDE ( CALCULATE ( COUNTROWS ( fact_market_price ), fact_market_price[modal_below_msp] = 1 ), [MSP-comparable Quotes] )
+		formatString: 0.0%
+		displayFolder: 4 Mandi prices
+		lineageTag: b83e71aa-72e9-4875-b7e7-3e8defd2dc21
+
+	measure 'Avg Modal vs MSP %' =
+			DIVIDE ( AVERAGE ( fact_market_price[modal_vs_msp_pct] ), 100 )
+		formatString: 0.0%
+		displayFolder: 4 Mandi prices
+		lineageTag: a3d10ad9-7989-45ad-8262-0fe34f641c25
+
+	measure 'Arrivals below MSP %' =
+			DIVIDE (
+			    CALCULATE ( SUM ( fact_market_price[arrivals_qtl] ), fact_market_price[modal_below_msp] = 1 ),
+			    CALCULATE ( SUM ( fact_market_price[arrivals_qtl] ), NOT ISBLANK ( fact_market_price[msp_applicable] ) )
+			)
+		formatString: 0.0%
+		displayFolder: 4 Mandi prices
+		lineageTag: 6486bc17-def9-4e75-9066-dd9057a824b3
+
+	measure 'Markets Reporting' =
+			DISTINCTCOUNT ( fact_market_price[market_id] )
+		formatString: #,0
+		displayFolder: 4 Mandi prices
+		lineageTag: 1d15bfbf-915b-4496-8a62-180dc83f8399
+
+	measure 'Monsoon Rain (mm)' =
+			AVERAGE ( fact_weather_state[jjas_mm] )
+		formatString: #,0
+		displayFolder: 5 Weather & yield
+		lineageTag: cef2c686-759e-4344-be51-0d2b0f6470d6
+
+	measure 'Monsoon Departure %' =
+			DIVIDE ( AVERAGE ( fact_weather_state[jjas_dep_pct] ), 100 )
+		formatString: 0.0%
+		displayFolder: 5 Weather & yield
+		lineageTag: 4b1cc223-3575-492e-8ea3-4c60bce863e7
+
+	measure 'Season Rain Departure %' =
+			DIVIDE ( AVERAGE ( fact_state_crop_year[season_rain_dep_pct] ), 100 )
+		formatString: 0.0%
+		displayFolder: 5 Weather & yield
+		lineageTag: 901c588d-cb3d-4099-a0ae-7801b3a8804b
+
+	measure 'Yield Anomaly %' =
+			DIVIDE ( AVERAGE ( fact_state_crop_year[yield_anomaly_pct] ), 100 )
+		formatString: 0.0%
+		displayFolder: 5 Weather & yield
+		lineageTag: d94c1d4e-a0fb-4657-935f-5c8548fab6b0
+
+	measure 'Rain-Yield Correlation (r)' =
+			VAR t = FILTER ( fact_state_crop_year,
+			                 NOT ISBLANK ( fact_state_crop_year[yield_anomaly_pct] ) && NOT ISBLANK ( fact_state_crop_year[season_rain_dep_pct] ) )
+			VAR n = COUNTROWS ( t )
+			VAR mx = AVERAGEX ( t, fact_state_crop_year[season_rain_dep_pct] )
+			VAR my = AVERAGEX ( t, fact_state_crop_year[yield_anomaly_pct] )
+			VAR sxy = SUMX ( t, ( fact_state_crop_year[season_rain_dep_pct] - mx ) * ( fact_state_crop_year[yield_anomaly_pct] - my ) )
+			VAR sxx = SUMX ( t, ( fact_state_crop_year[season_rain_dep_pct] - mx ) ^ 2 )
+			VAR syy = SUMX ( t, ( fact_state_crop_year[yield_anomaly_pct] - my ) ^ 2 )
+			RETURN IF ( n >= 10, DIVIDE ( sxy, SQRT ( sxx * syy ) ) )
+		formatString: 0.00
+		displayFolder: 5 Weather & yield
+		lineageTag: c5e4380f-6d63-4b65-bb14-231d28a253cf
+
+	measure 'Rain-Yield Pairs (n)' =
+			COUNTROWS ( FILTER ( fact_state_crop_year,
+			    NOT ISBLANK ( fact_state_crop_year[yield_anomaly_pct] ) && NOT ISBLANK ( fact_state_crop_year[season_rain_dep_pct] ) ) )
+		formatString: #,0
+		displayFolder: 5 Weather & yield
+		lineageTag: b48949a9-d02f-419d-8a62-a7f1f7889dca
+
+	measure 'Deficient-Rain Years' =
+			CALCULATE ( DISTINCTCOUNT ( fact_weather_state[crop_year] ), fact_weather_state[jjas_dep_pct] <= -20 )
+		formatString: #,0
+		displayFolder: 5 Weather & yield
+		lineageTag: 19aff585-0178-464c-a7f3-b8d3e9145844
+
+	measure 'Rows Excluded/Flagged' =
+			SUM ( dq_issues[n_rows] )
+		displayFolder: 6 Data quality
+		lineageTag: b9b63b3b-c0c7-4cb9-807e-3b32794e8126
+
+	measure 'Validation Checks Divergent' =
+			CALCULATE ( COUNTROWS ( dq_validation ), CONTAINSSTRING ( dq_validation[status], "divergent" ) )
+		formatString: #,0
+		displayFolder: 6 Data quality
+		lineageTag: 33a095dd-9232-45a3-91fc-28de4f039e59
+
+	measure 'Production Rows' =
+			COUNTROWS ( fact_production )
+		formatString: #,0
+		displayFolder: 6 Data quality
+		lineageTag: 0dcfbcc0-6629-4ebd-b738-0aa52e79b2f8
+
+	measure 'Districts Covered' =
+			DISTINCTCOUNT ( fact_district_crop_year[location_id] )
+		formatString: #,0
+		displayFolder: 6 Data quality
+		lineageTag: b0e4f17b-82ec-43d8-8e18-5b7884a42a34
+
+	measure 'MSP Values Official %' =
+			DIVIDE ( CALCULATE ( COUNTROWS ( fact_msp ), fact_msp[verification] = "official" ), COUNTROWS ( fact_msp ) )
+		formatString: 0.0%
+		displayFolder: 6 Data quality
+		lineageTag: e4070351-c294-4d9f-a28f-d50617c48078
+
+	measure 'Provisional Year Flag' =
+			IF ( MAX ( dim_year[is_provisional] ) = 1, "⚠ 2019-20 is provisional: district totals diverge from DES estimates", "" )
+		displayFolder: 6 Data quality
+		lineageTag: 5ebf9d9d-b466-450e-80fb-555186a0b7fc
+
+	measure 'Selected Crop Label' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), VALUES ( dim_crop[crop_name] ), "All MSP crops" )
+		displayFolder: 7 Dynamic labels
+		lineageTag: ac683f2e-fe49-49f8-b370-20ed3f32c34a
+
+	measure 'Year Range Label' =
+			[First Year] & "-" & RIGHT ( [Last Year] + 1, 2 )
+		displayFolder: 7 Dynamic labels
+		lineageTag: 1f616dc7-69c6-4a13-972d-534184e1f6b8
+
+	measure 'Value Disclaimer' =
+			"Gross value = production x MSP (estimate). Not realised price, not farmer income."
+		displayFolder: 7 Dynamic labels
+		lineageTag: 713383d4-7cdb-4f9d-874e-9783ee5f85e9
+
+	measure 'Production PY (M t or M bales)' =
+			CALCULATE ( [Production (M t or M bales)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+		formatString: #,0.00
+		displayFolder: 8 Growth & inflation
+		lineageTag: 3e52d4fa-b52b-4f16-978b-e33b9a65fb3f
+
+	measure 'Production YoY %' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), DIVIDE ( [Production (M t or M bales)] - [Production PY (M t or M bales)], [Production PY (M t or M bales)] ) )
+		formatString: 0.0%
+		displayFolder: 8 Growth & inflation
+		lineageTag: f805c09d-fe36-4e71-ac7f-3791d9f6fa49
+
+	measure 'Yield PY (kg/ha)' =
+			CALCULATE ( [Yield (kg/ha)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+		formatString: #,0
+		displayFolder: 8 Growth & inflation
+		lineageTag: 8f105875-1d5f-4a88-b32d-12f0e8b6bf78
+
+	measure 'Yield YoY %' =
+			DIVIDE ( [Yield (kg/ha)] - [Yield PY (kg/ha)], [Yield PY (kg/ha)] )
+		formatString: 0.0%
+		displayFolder: 8 Growth & inflation
+		lineageTag: dfe04fba-153f-4731-9fc4-9942f124ac18
+
+	measure 'Crops Covered' =
+			DISTINCTCOUNT ( fact_district_crop_year[crop_id] )
+		formatString: #,0
+		displayFolder: 8 Growth & inflation
+		lineageTag: 3276ed45-444b-4196-8e5a-9a5097f7e87c
+
+	measure 'MSP Real 2018-19 (Rs/qtl)' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), AVERAGE ( fact_msp[msp_real_2018] ) )
+		formatString: #,0
+		displayFolder: 8 Growth & inflation
+		lineageTag: 7fc3e229-1b5a-4386-b444-13b397ca7044
+
+	measure 'MSP PY (Rs/qtl)' =
+			CALCULATE ( [MSP (Rs/qtl)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+		formatString: #,0
+		displayFolder: 8 Growth & inflation
+		lineageTag: bdd0a5ae-ac67-40b0-8aef-570e334d6dca
+
+	measure 'MSP YoY %' =
+			DIVIDE ( [MSP (Rs/qtl)] - [MSP PY (Rs/qtl)], [MSP PY (Rs/qtl)] )
+		formatString: 0.0%
+		displayFolder: 8 Growth & inflation
+		lineageTag: 6cad2554-86a7-4925-9844-ecd7f8e9037c
+
+	measure 'Real MSP Change %' =
+			VAR y0 = CALCULATE ( MIN ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+			VAR y1 = CALCULATE ( MAX ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+			VAR a = CALCULATE ( [MSP Real 2018-19 (Rs/qtl)], dim_year[crop_year] = y0 )
+			VAR b = CALCULATE ( [MSP Real 2018-19 (Rs/qtl)], dim_year[crop_year] = y1 )
+			RETURN DIVIDE ( b - a, a )
+		formatString: 0.0%
+		displayFolder: 8 Growth & inflation
+		lineageTag: 325c96e9-1e83-4a4d-91d4-2aa279a3d25a
+
+	measure 'Nominal MSP Change %' =
+			VAR y0 = CALCULATE ( MIN ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+			VAR y1 = CALCULATE ( MAX ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+			VAR a = CALCULATE ( [MSP (Rs/qtl)], dim_year[crop_year] = y0 )
+			VAR b = CALCULATE ( [MSP (Rs/qtl)], dim_year[crop_year] = y1 )
+			RETURN DIVIDE ( b - a, a )
+		formatString: 0.0%
+		displayFolder: 8 Growth & inflation
+		lineageTag: d90b29ca-99c3-4efe-b6e9-573473f2aa49
+
+	measure 'Median Modal Price (Rs/qtl)' =
+			CALCULATE ( MEDIAN ( fact_market_price[modal_price] ), NOT ISBLANK ( fact_market_price[msp_applicable] ),
+			            NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+		formatString: #,0
+		displayFolder: 9 MSP vs mandi
+		lineageTag: fe9e17de-9a7d-4e95-9e44-598d227c22b5
+
+	measure 'Median Mandi minus MSP (Rs/qtl)' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), [Median Modal Price (Rs/qtl)] - [Applicable MSP (Rs/qtl)] )
+		formatString: #,0
+		displayFolder: 9 MSP vs mandi
+		lineageTag: 54366c14-09d0-4ce1-a5c7-0460c28863e6
+
+	measure 'Quotes at/above MSP %' =
+			IF ( [MSP-comparable Quotes] > 0, 1 - [Quotes below MSP %] )
+		formatString: 0.0%
+		displayFolder: 9 MSP vs mandi
+		lineageTag: 981ba661-9b96-4cf3-97e2-56869fab3a31
+
+	measure 'Next MSP 2026-27 (Rs/qtl)' =
+			IF ( HASONEVALUE ( dim_crop[crop_name] ), CALCULATE ( AVERAGE ( fact_msp[msp_effective] ), fact_msp[crop_year] = 2026 ) )
+		formatString: #,0
+		displayFolder: 9 MSP vs mandi
+		lineageTag: 84d83d08-b3f7-42e0-bdfe-53a7e4f5f2c9
+
+	measure 'Next MSP Hike %' =
+			DIVIDE ( [Next MSP 2026-27 (Rs/qtl)] - [Applicable MSP (Rs/qtl)], [Applicable MSP (Rs/qtl)] )
+		formatString: 0.0%
+		displayFolder: 9 MSP vs mandi
+		lineageTag: a94f3101-5ebc-44c1-9049-ffade0a70c29
+
+	measure 'Quotes below Next MSP %' =
+			VAR nxt = [Next MSP 2026-27 (Rs/qtl)]
+			RETURN IF ( NOT ISBLANK ( nxt ),
+			    DIVIDE ( COUNTROWS ( FILTER ( fact_market_price, NOT ISBLANK ( fact_market_price[msp_applicable] ) && fact_market_price[modal_price] < nxt ) ),
+			             [MSP-comparable Quotes] ) )
+		formatString: 0.0%
+		displayFolder: 9 MSP vs mandi
+		lineageTag: 731c6900-96f9-44cc-a56f-6480c16e5074
+
+	measure 'Production YoY Color' =
+			SWITCH ( TRUE (), ISBLANK ( [Production YoY %] ), BLANK (), [Production YoY %] >= 0, "#285943", "#D98E04" )
+		displayFolder: 10 Formatting
+		lineageTag: 8d6d3043-cef9-402e-aea6-195cac6136df
+
+	measure 'Yield YoY Color' =
+			SWITCH ( TRUE (), ISBLANK ( [Yield YoY %] ), BLANK (), [Yield YoY %] >= 0, "#285943", "#D98E04" )
+		displayFolder: 10 Formatting
+		lineageTag: b5be282e-c3e3-4733-8f7c-57a87704c48c
+
+	measure 'Gross Value YoY Color' =
+			SWITCH ( TRUE (), ISBLANK ( [Gross Value YoY %] ), BLANK (), [Gross Value YoY %] >= 0, "#285943", "#D98E04" )
+		displayFolder: 10 Formatting
+		lineageTag: a7c2694b-de52-4044-94cf-3b273efc76bc
+
+	measure 'Mandi vs MSP Color' =
+			SWITCH ( TRUE (), ISBLANK ( [Median Mandi minus MSP (Rs/qtl)] ), BLANK (), [Median Mandi minus MSP (Rs/qtl)] >= 0, "#285943", "#D98E04" )
+		displayFolder: 10 Formatting
+		lineageTag: f8aabe80-951b-47c7-9680-30ba78236500
+
+	column Value
+		dataType: string
+		isHidden
+		lineageTag: be957df3-bf00-4432-a995-490d157e5a74
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = ROW("Value", "measures")
+
+	annotation PBI_Id = e9ac3784859a4a42a7e4b286ea661a66

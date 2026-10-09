@@ -1,0 +1,94 @@
+table agg_q11h_msp_2026_27_vs_cost
+	lineageTag: f091fb75-1497-4e02-9cf3-1a56016d4076
+
+	column msp_key
+		dataType: string
+		isHidden
+		lineageTag: 21a342c0-fd51-475b-866f-de4022cd5dd2
+		summarizeBy: none
+		sourceColumn: msp_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column season
+		dataType: string
+		lineageTag: f49c8d4a-912c-49f4-9b41-b1393d47ba8d
+		summarizeBy: none
+		sourceColumn: season
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year_label
+		dataType: string
+		lineageTag: 73a01c0f-2193-43bd-afbd-37a595930f0a
+		summarizeBy: none
+		sourceColumn: crop_year_label
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_effective
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 96baa65d-32d5-4c62-acfd-249312517804
+		summarizeBy: sum
+		sourceColumn: msp_effective
+
+		annotation SummarizationSetBy = Automatic
+
+	column a2fl_cost
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5d036133-bf2c-4eae-b0ed-1d1d2b5ab1be
+		summarizeBy: sum
+		sourceColumn: a2fl_cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_over_a2fl_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ceb11757-aa7a-4419-aa27-0f4473ef5ff2
+		summarizeBy: sum
+		sourceColumn: msp_over_a2fl_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_id
+		dataType: string
+		isHidden
+		lineageTag: 85107dfe-994f-4320-810e-a84ef0a6e47c
+		summarizeBy: none
+		sourceColumn: source_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_prev
+		dataType: double
+		formatString: #,0.00
+		lineageTag: a4fb9f62-0204-4854-9966-e5e20bff2b54
+		summarizeBy: sum
+		sourceColumn: msp_prev
+
+		annotation SummarizationSetBy = Automatic
+
+	column hike_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: cdd513ae-aca5-4259-a2ee-8b61deaf47db
+		summarizeBy: sum
+		sourceColumn: hike_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	partition agg_q11h_msp_2026_27_vs_cost = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "agg_q11h_msp_2026_27_vs_cost.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"msp_key", type text}, {"season", type text}, {"crop_year_label", type text}, {"msp_effective", type number}, {"a2fl_cost", type number}, {"msp_over_a2fl_pct", type number}, {"source_id", type text}, {"msp_prev", type number}, {"hike_pct", type number}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

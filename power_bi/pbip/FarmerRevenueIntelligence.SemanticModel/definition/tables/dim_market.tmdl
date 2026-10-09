@@ -1,0 +1,67 @@
+table dim_market
+	lineageTag: 6939ddb4-1610-482a-92fc-1fb06bca17c4
+
+	column market_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 64162421-e2a0-409a-b375-49381be96882
+		summarizeBy: none
+		sourceColumn: market_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column market_name
+		dataType: string
+		lineageTag: e16f96ab-838d-467e-8cd7-f09f7f0dbef5
+		summarizeBy: none
+		sourceColumn: market_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		lineageTag: de8cf3d6-1269-4ca0-a568-5aea48e52a1e
+		summarizeBy: none
+		sourceColumn: district_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: 6577ca10-c25d-48fb-b731-6ea6d5d05ee4
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_seen_in
+		dataType: string
+		lineageTag: 034a8ea4-6308-4311-972f-8f2bee07f90f
+		summarizeBy: none
+		sourceColumn: first_seen_in
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: b64daebe-8f0d-4dd5-aea7-7c83c997b72d
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_market = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dim_market.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"market_id", Int64.Type}, {"market_name", type text}, {"district_name", type text}, {"state_name", type text}, {"first_seen_in", type text}, {"state_id", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

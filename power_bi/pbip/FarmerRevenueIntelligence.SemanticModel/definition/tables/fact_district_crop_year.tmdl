@@ -1,0 +1,188 @@
+table fact_district_crop_year
+	lineageTag: 9025c9e6-fa65-4c96-812c-5429e2bdaa38
+
+	column district_crop_year_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: a5692e3b-4f03-4d7d-8581-751ad72ee39c
+		summarizeBy: none
+		sourceColumn: district_crop_year_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 6977ad38-7cab-49b6-9564-0776a3fd7a6d
+		summarizeBy: none
+		sourceColumn: location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: f298586a-28e3-40e8-9b82-e8b2a9848849
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: f9770d79-6626-4dfe-81a5-f84092216820
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_name
+		dataType: string
+		lineageTag: 9414da47-a684-4ba8-8e6a-20273423f7b4
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 7dbb0645-7ec7-4a2c-86a1-3a1850264bf6
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column area_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 4bd7b60c-34ad-490a-a177-be78ee491b40
+		summarizeBy: sum
+		sourceColumn: area_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_apy_unit
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 08074c24-f44d-46fc-a92a-505c07eeb063
+		summarizeBy: sum
+		sourceColumn: production_apy_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column production_price_qtl
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 943fb53b-2493-4cfb-b375-a5f5341216fa
+		summarizeBy: sum
+		sourceColumn: production_price_qtl
+
+		annotation SummarizationSetBy = Automatic
+
+	column n_seasons
+		dataType: int64
+		formatString: 0
+		lineageTag: e06f28fe-46b7-4157-9742-3804c066c3eb
+		summarizeBy: none
+		sourceColumn: n_seasons
+
+		annotation SummarizationSetBy = Automatic
+
+	column yield_kg_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: ea9a8eec-2a43-49d3-8e56-a37327d41508
+		summarizeBy: sum
+		sourceColumn: yield_kg_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_effective
+		dataType: double
+		formatString: #,0.00
+		lineageTag: eeddb18a-279e-4456-9024-5c84804c0411
+		summarizeBy: sum
+		sourceColumn: msp_effective
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_msp_inr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 7a7dda02-cf42-443d-9735-fef7c7fdc8d2
+		summarizeBy: sum
+		sourceColumn: gross_value_msp_inr
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_msp_per_ha
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 76aa9dad-2361-4697-b918-c3b557514b01
+		summarizeBy: sum
+		sourceColumn: gross_value_msp_per_ha
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_at_2018_msp_inr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 5bf19770-2a5d-48fe-ae05-fbe741847555
+		summarizeBy: sum
+		sourceColumn: gross_value_at_2018_msp_inr
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpi_deflator_2018_100
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 2e9af625-2bda-4772-9c23-7777fffe38ad
+		summarizeBy: sum
+		sourceColumn: cpi_deflator_2018_100
+
+		annotation SummarizationSetBy = Automatic
+
+	column gross_value_real_2018_inr
+		dataType: double
+		formatString: #,0.00
+		lineageTag: df3ec98e-e152-45c5-9f92-1972bced8d1a
+		summarizeBy: sum
+		sourceColumn: gross_value_real_2018_inr
+
+		annotation SummarizationSetBy = Automatic
+
+	column valuation_basis
+		dataType: string
+		lineageTag: 533da403-adeb-4a25-883c-6f75cff1d9e4
+		summarizeBy: none
+		sourceColumn: valuation_basis
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_provisional_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e4cdadc-c5c4-49ec-9adc-5a524200cc32
+		summarizeBy: none
+		sourceColumn: is_provisional_year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition fact_district_crop_year = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "fact_district_crop_year.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"district_crop_year_id", Int64.Type}, {"location_id", Int64.Type}, {"state_id", Int64.Type}, {"crop_id", Int64.Type}, {"crop_name", type text}, {"crop_year", Int64.Type}, {"area_ha", type number}, {"production_apy_unit", type number}, {"production_price_qtl", type number}, {"n_seasons", Int64.Type}, {"yield_kg_per_ha", type number}, {"msp_effective", type number}, {"gross_value_msp_inr", type number}, {"gross_value_msp_per_ha", type number}, {"gross_value_at_2018_msp_inr", type number}, {"cpi_deflator_2018_100", type number}, {"gross_value_real_2018_inr", type number}, {"valuation_basis", type text}, {"is_provisional_year", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

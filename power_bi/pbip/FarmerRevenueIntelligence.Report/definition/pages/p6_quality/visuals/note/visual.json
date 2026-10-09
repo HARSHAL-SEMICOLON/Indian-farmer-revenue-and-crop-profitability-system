@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "note",
+  "position": {
+    "x": 16,
+    "y": 46,
+    "z": 2000,
+    "width": 1248,
+    "height": 26,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "2019-20 provisional: district sums diverge from DES estimates. 342 APY rows and 150 price rows excluded; 460 price rows flagged.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#3C4A42"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

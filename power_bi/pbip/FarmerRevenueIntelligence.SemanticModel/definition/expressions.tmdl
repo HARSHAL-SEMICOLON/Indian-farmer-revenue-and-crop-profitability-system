@@ -1,0 +1,6 @@
+expression ExportFolder = "E:\DA PROJECTS\Indian Farmer Revenue Intelligence\power_bi\data\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: 4b6f536b-7a2f-4135-b87d-96f132132f56
+
+	annotation PBI_ResultType = Text
+
+	annotation PBI_NavigationStepName = Navigation

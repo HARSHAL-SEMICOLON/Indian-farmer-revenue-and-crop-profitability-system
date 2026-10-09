@@ -1,0 +1,38 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "kpi0",
+  "position": {
+    "x": 16,
+    "y": 80,
+    "z": 3000,
+    "width": 160,
+    "height": 90,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "card",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Gross Value @ MSP (Rs cr)"
+                }
+              },
+              "queryRef": "_Measures.Gross Value @ MSP (Rs cr)",
+              "nativeQueryRef": "Gross Value @ MSP (Rs cr)"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "msp26",
+  "position": {
+    "x": 644,
+    "y": 440,
+    "z": 13000,
+    "width": 620,
+    "height": 272,
+    "tabOrder": 13000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                    }
+                  },
+                  "Property": "msp_key"
+                }
+              },
+              "queryRef": "agg_q11h_msp_2026_27_vs_cost.msp_key",
+              "nativeQueryRef": "msp_key"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                    }
+                  },
+                  "Property": "season"
+                }
+              },
+              "queryRef": "agg_q11h_msp_2026_27_vs_cost.season",
+              "nativeQueryRef": "season"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                        }
+                      },
+                      "Property": "msp_prev"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(agg_q11h_msp_2026_27_vs_cost.msp_prev)",
+              "nativeQueryRef": "Sum of msp_prev"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                        }
+                      },
+                      "Property": "msp_effective"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(agg_q11h_msp_2026_27_vs_cost.msp_effective)",
+              "nativeQueryRef": "Sum of msp_effective"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                        }
+                      },
+                      "Property": "hike_pct"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(agg_q11h_msp_2026_27_vs_cost.hike_pct)",
+              "nativeQueryRef": "Avg of hike_pct"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                        }
+                      },
+                      "Property": "a2fl_cost"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(agg_q11h_msp_2026_27_vs_cost.a2fl_cost)",
+              "nativeQueryRef": "Sum of a2fl_cost"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                        }
+                      },
+                      "Property": "msp_over_a2fl_pct"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Avg(agg_q11h_msp_2026_27_vs_cost.msp_over_a2fl_pct)",
+              "nativeQueryRef": "Avg of msp_over_a2fl_pct"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                    }
+                  },
+                  "Property": "source_id"
+                }
+              },
+              "queryRef": "agg_q11h_msp_2026_27_vs_cost.source_id",
+              "nativeQueryRef": "source_id"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "agg_q11h_msp_2026_27_vs_cost"
+                      }
+                    },
+                    "Property": "hike_pct"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'New MSPs (Rs/qtl): previous, new, hike %, CACP A2+FL cost, margin %'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

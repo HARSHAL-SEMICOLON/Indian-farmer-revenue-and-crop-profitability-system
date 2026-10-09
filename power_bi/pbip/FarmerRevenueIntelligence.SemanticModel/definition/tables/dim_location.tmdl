@@ -1,0 +1,78 @@
+table dim_location
+	lineageTag: dd34fc8d-0191-4b1b-a55e-856cf3e5d7b2
+
+	column location_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 72dab245-d53a-46a7-a643-f1c3800c686c
+		summarizeBy: none
+		sourceColumn: location_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		lineageTag: 4f857609-3084-4dce-9502-281d77bf338d
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_name
+		dataType: string
+		lineageTag: fc3434b2-4f09-45de-9ca0-9916a9334d2f
+		summarizeBy: none
+		sourceColumn: district_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 7a3247ff-4b62-4511-b86f-af532dd1cae8
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column district_key
+		dataType: string
+		isHidden
+		lineageTag: 5be01982-18a6-4f8f-b499-9f11b79ceb17
+		summarizeBy: none
+		sourceColumn: district_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_year
+		dataType: int64
+		formatString: 0
+		lineageTag: e99a86ef-2b8e-48ad-b529-6e9868def36f
+		summarizeBy: none
+		sourceColumn: first_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column last_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 94382211-8369-49b8-8d11-cb8c662154aa
+		summarizeBy: none
+		sourceColumn: last_year
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_location = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dim_location.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"location_id", Int64.Type}, {"state_name", type text}, {"district_name", type text}, {"state_id", Int64.Type}, {"district_key", type text}, {"first_year", Int64.Type}, {"last_year", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

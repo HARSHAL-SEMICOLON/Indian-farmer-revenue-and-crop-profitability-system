@@ -1,0 +1,111 @@
+table dim_year
+	lineageTag: 438d59d9-0ce3-4281-a981-83a785c8791c
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 7686b044-c2be-45ed-b082-23f6d75a5d95
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year_label
+		dataType: string
+		lineageTag: ddd5b059-a63b-40aa-a68c-0e27481573bd
+		summarizeBy: none
+		sourceColumn: crop_year_label
+		sortByColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column kharif_marketing_season
+		dataType: string
+		lineageTag: 1bf7893c-370c-4227-9625-9952072899d3
+		summarizeBy: none
+		sourceColumn: kharif_marketing_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column rabi_marketing_season
+		dataType: string
+		lineageTag: 4f4c67f0-014a-47b7-8f62-9129d47b6d27
+		summarizeBy: none
+		sourceColumn: rabi_marketing_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_production_data
+		dataType: int64
+		formatString: 0
+		lineageTag: f82b79d5-495e-426d-b913-978d99cf6659
+		summarizeBy: none
+		sourceColumn: has_production_data
+
+		annotation SummarizationSetBy = Automatic
+
+	column in_msp_valuation_window
+		dataType: int64
+		formatString: 0
+		lineageTag: fffa5306-8b40-4979-accb-6645e7675eef
+		summarizeBy: none
+		sourceColumn: in_msp_valuation_window
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_provisional
+		dataType: int64
+		formatString: 0
+		lineageTag: df063fcc-c8e0-40cd-a34c-cd4103572709
+		summarizeBy: none
+		sourceColumn: is_provisional
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_cost_data
+		dataType: int64
+		formatString: 0
+		lineageTag: 67b3ebed-f09d-4fa8-a322-5e20391d9f7a
+		summarizeBy: none
+		sourceColumn: has_cost_data
+
+		annotation SummarizationSetBy = Automatic
+
+	column has_rainfall_data
+		dataType: int64
+		formatString: 0
+		lineageTag: be6eab35-2394-4076-af05-ce38663fb22e
+		summarizeBy: none
+		sourceColumn: has_rainfall_data
+
+		annotation SummarizationSetBy = Automatic
+
+	column cpi_deflator_2018_100
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1fe3b9ae-e339-4890-a30c-28af0e53365a
+		summarizeBy: sum
+		sourceColumn: cpi_deflator_2018_100
+
+		annotation SummarizationSetBy = Automatic
+
+	column decade
+		dataType: string
+		lineageTag: 543ac20d-87db-4f70-8df8-3a32d9087f40
+		summarizeBy: none
+		sourceColumn: decade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_year = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dim_year.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_year", Int64.Type}, {"crop_year_label", type text}, {"kharif_marketing_season", type text}, {"rabi_marketing_season", type text}, {"has_production_data", Int64.Type}, {"in_msp_valuation_window", Int64.Type}, {"is_provisional", Int64.Type}, {"has_cost_data", Int64.Type}, {"has_rainfall_data", Int64.Type}, {"cpi_deflator_2018_100", type number}, {"decade", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

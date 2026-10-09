@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "note",
+  "position": {
+    "x": 16,
+    "y": 46,
+    "z": 2000,
+    "width": 1248,
+    "height": 26,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "drillFilterOtherVisuals": true,
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Correlation of detrended yield with seasonal rainfall departure (1997-2015). Association only - not causal. State rain = mean of IMD subdivisions.",
+                    "textStyle": {
+                      "fontSize": "9pt",
+                      "color": "#3C4A42"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

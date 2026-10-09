@@ -1,0 +1,27 @@
+state_name,region,avg_annual_gross_value_crore,avg_valued_area_mha,gross_value_per_ha,n_crops
+Punjab,North,52481.0,6.31,83126.0,16
+Tamil Nadu,South,22531.0,3.29,68444.0,16
+Haryana,North,37672.0,5.53,68087.0,17
+Kerala,South,1232.0,0.19,63598.0,12
+West Bengal,East,46710.0,7.42,62927.0,22
+Tripura,North-East,1925.0,0.31,61387.0,16
+Uttar Pradesh,North,138603.0,22.85,60662.0,18
+Andhra Pradesh,South,27570.0,4.93,55963.0,19
+Telangana,South,27068.0,4.85,55778.0,19
+Uttarakhand,North,4814.0,0.89,54278.0,18
+Gujarat,West,41132.0,7.79,52790.0,16
+Manipur,North-East,1609.0,0.31,51723.0,12
+Bihar,East,33895.0,6.7,50557.0,19
+Meghalaya,North-East,729.0,0.15,49156.0,12
+Nagaland,North-East,1698.0,0.37,45721.0,21
+Assam,North-East,13754.0,3.02,45606.0,14
+Madhya Pradesh,Central,99628.0,23.12,43088.0,21
+Odisha,East,19130.0,4.49,42641.0,12
+Karnataka,South,40115.0,9.46,42425.0,19
+Jharkhand,East,8230.0,2.16,38167.0,19
+Rajasthan,West,64715.0,17.68,36603.0,17
+Chhattisgarh,Central,18068.0,5.03,35929.0,21
+Maharashtra,West,71022.0,20.69,34331.0,19
+Arunachal Pradesh,North-East,716.0,0.21,34265.0,13
+Jammu and Kashmir,North,2999.0,0.88,34117.0,15
+Himachal Pradesh,North,2146.0,0.73,29445.0,17

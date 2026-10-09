@@ -1,0 +1,20 @@
+crop_name,price_form,quotes,markets,msp_current,msp_next,a2fl_cost_next,median_modal,pct_below_current_msp,pct_below_next_msp,msp_next_source,msp_hike_pct,median_modal_vs_next_msp_pct
+Safflower,Safflower,65,21,6540.0,7215.0,,5215.0,98.5,100.0,NEWS_RB_2027,10.3,-27.7
+Sunflower,Sunflower seed,139,21,7721.0,8343.0,5562.0,7900.0,39.6,92.1,PIB_KH_2026,8.1,-5.3
+Bajra,Bajra,1137,199,2775.0,2900.0,1858.0,2337.0,89.4,91.1,PIB_KH_2026,4.5,-19.4
+Arhar/Tur,Tur (whole),1060,225,8000.0,8450.0,5496.0,7589.5,64.9,86.0,PIB_KH_2026,5.6,-10.2
+Ragi,Ragi,244,38,4886.0,5205.0,3470.0,3592.8,62.7,84.8,PIB_KH_2026,6.5,-31.0
+Moong,Moong (whole),1686,309,8768.0,8780.0,5438.0,7230.0,76.3,84.7,PIB_KH_2026,0.1,-17.7
+Groundnut,Groundnut in shell,3010,214,7263.0,7517.0,5011.0,7000.0,61.5,78.8,PIB_KH_2026,3.5,-6.9
+Maize,Maize,3460,470,2400.0,2410.0,1544.0,2300.0,60.4,71.4,PIB_KH_2026,0.4,-4.6
+Masoor,Masur (whole),518,75,7000.0,7390.0,,6755.5,54.1,68.7,NEWS_RB_2027,5.6,-8.6
+Wheat,Wheat grain,8759,819,2585.0,2610.0,,2570.0,53.3,65.0,NEWS_RB_2027,1.0,-1.5
+Rice,Paddy (common),5535,535,2369.0,2441.0,1627.0,2390.0,28.3,62.5,PIB_KH_2026,3.0,-2.1
+Jowar,Jowar (mixed varieties),851,166,3699.0,4023.0,2682.0,3728.0,46.3,54.9,PIB_KH_2026,8.8,-7.3
+Gram,Gram (whole),2213,363,5875.0,5958.0,,6000.0,35.4,44.6,NEWS_RB_2027,1.4,0.7
+Cotton,Kapas (seed cotton),909,100,7710.0,8267.0,5511.0,8500.0,17.8,43.1,PIB_KH_2026,7.2,2.8
+Urad,Urad (whole),911,169,7800.0,8200.0,5418.0,8300.0,31.0,41.4,PIB_KH_2026,5.1,1.2
+Barley,Barley,125,47,2150.0,2286.0,,2450.0,17.6,29.6,NEWS_RB_2027,6.3,7.2
+Soyabean,Soyabean,2528,310,5328.0,5708.0,3805.0,6500.0,8.0,19.5,PIB_KH_2026,7.1,13.9
+Sesamum,Sesamum,795,89,9846.0,10346.0,6897.0,11505.0,9.6,18.1,PIB_KH_2026,5.1,11.2
+Rapeseed & Mustard,Mustard seed,1557,293,6200.0,6613.0,,7400.0,3.7,16.4,NEWS_RB_2027,6.7,11.9

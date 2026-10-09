@@ -1,0 +1,14 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/pagesMetadata/1.1.0/schema.json",
+  "pageOrder": [
+    "p1_overview",
+    "p2_crops",
+    "p3_states",
+    "p4_mandi",
+    "p5_weather",
+    "p6_quality",
+    "p7_season2026",
+    "p8_explorer"
+  ],
+  "activePageName": "p1_overview"
+}

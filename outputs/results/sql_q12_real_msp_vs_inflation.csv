@@ -1,0 +1,21 @@
+msp_key,season,msp_2004,msp_2024,nominal_growth_pct,real_growth_pct,verdict
+Ragi,Kharif,515.0,4290.0,733.0,134.0,far ahead of inflation (>50% real)
+Nigerseed,Kharif,1180.0,8717.0,638.7,107.5,far ahead of inflation (>50% real)
+Jowar,Kharif,515.0,3371.0,554.6,83.9,far ahead of inflation (>50% real)
+Sesamum,Kharif,1500.0,9267.0,517.8,73.5,far ahead of inflation (>50% real)
+Moong,Kharif,1410.0,8682.0,515.7,73.0,far ahead of inflation (>50% real)
+Sunflower,Kharif,1340.0,7280.0,443.3,52.6,far ahead of inflation (>50% real)
+Tur,Kharif,1390.0,7550.0,443.2,52.6,far ahead of inflation (>50% real)
+Urad,Kharif,1410.0,7400.0,424.8,47.4,ahead of inflation
+Bajra,Kharif,515.0,2625.0,409.7,43.2,ahead of inflation
+Soyabean,Kharif,1000.0,4892.0,389.2,37.4,ahead of inflation
+Groundnut,Kharif,1500.0,6783.0,352.2,27.0,ahead of inflation
+Masur,Rabi,1525.0,6700.0,339.3,23.4,ahead of inflation
+Maize,Kharif,525.0,2225.0,323.8,19.0,ahead of inflation
+Paddy,Kharif,560.0,2300.0,310.7,15.4,ahead of inflation
+Cotton,Kharif,1760.0,7121.0,304.6,13.6,ahead of inflation
+Gram,Rabi,1425.0,5650.0,296.5,11.4,ahead of inflation
+Safflower,Rabi,1550.0,5940.0,283.2,7.6,ahead of inflation
+Wheat,Rabi,640.0,2425.0,278.9,6.4,ahead of inflation
+Barley,Rabi,540.0,1980.0,266.7,3.0,ahead of inflation
+Mustard,Rabi,1700.0,5950.0,250.0,-1.7,lagged inflation

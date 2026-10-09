@@ -1,0 +1,23 @@
+crop_name,crop_group,avg_annual_gross_value_crore,share_of_msp_valued_pct,avg_area_mha,gross_value_per_ha
+Rice,Cereals,247632.0,31.7,43.28,57220.0
+Wheat,Cereals,167355.0,21.4,30.59,54708.0
+Sugarcane,Cash crops,89151.0,11.4,4.87,183147.0
+Cotton,Fibres,53452.0,6.8,11.98,44624.0
+Gram,Pulses,34999.0,4.5,8.85,39530.0
+Soyabean,Oilseeds,31050.0,4.0,10.95,28357.0
+Maize,Cereals,28860.0,3.7,8.16,35359.0
+Groundnut,Oilseeds,25408.0,3.3,4.41,57618.0
+Rapeseed & Mustard,Oilseeds,24437.0,3.1,5.28,46305.0
+Arhar/Tur,Pulses,16112.0,2.1,4.08,39508.0
+Bajra,Coarse cereals,12890.0,1.6,7.32,17619.0
+Urad,Pulses,12204.0,1.6,4.15,29381.0
+Moong,Pulses,10233.0,1.3,4.0,25586.0
+Jowar,Coarse cereals,7397.0,0.9,5.72,12928.0
+Jute,Fibres,5144.0,0.7,0.68,75225.0
+Masoor,Pulses,4837.0,0.6,1.37,35420.0
+Sesamum,Oilseeds,3588.0,0.5,1.59,22543.0
+Ragi,Coarse cereals,2865.0,0.4,1.05,27242.0
+Barley,Coarse cereals,2213.0,0.3,0.6,36754.0
+Sunflower,Oilseeds,1001.0,0.1,0.37,27190.0
+Nigerseed,Oilseeds,267.0,0.0,0.18,14626.0
+Safflower,Oilseeds,209.0,0.0,0.1,19955.0

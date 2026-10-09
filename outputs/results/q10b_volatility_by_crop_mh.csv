@@ -1,0 +1,22 @@
+crop_name,markets,median_cv_pct,median_intramonth_spread_pct
+Onion,64,66.6,90.6
+Potato,21,36.3,31.4
+Gram,133,34.9,9.8
+Dry Chillies,13,27.1,39.4
+Urad,32,26.4,9.1
+Arhar/Tur,100,23.8,8.2
+Sesamum,9,22.9,4.0
+Moong,53,17.4,7.7
+Groundnut,21,17.0,12.0
+Turmeric,10,15.5,15.4
+Masoor,3,14.6,19.2
+Maize,80,13.0,6.8
+Bajra,71,11.7,14.8
+Jowar,118,10.0,14.5
+Rice,38,9.7,6.8
+Soyabean,120,9.1,7.4
+Rapeseed & Mustard,2,9.0,0.6
+Wheat,141,8.7,14.0
+Cotton,9,8.0,5.2
+Sunflower,9,7.2,5.3
+Safflower,5,4.9,2.0

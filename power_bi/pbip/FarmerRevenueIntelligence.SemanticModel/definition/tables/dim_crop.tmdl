@@ -1,0 +1,100 @@
+table dim_crop
+	lineageTag: 49302cc7-e063-4653-9c7b-2d3876a6e14b
+
+	column crop_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: a9b9e413-8cde-4b99-922b-52c71d99aed8
+		summarizeBy: none
+		sourceColumn: crop_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_name
+		dataType: string
+		lineageTag: 332ca811-aa0d-461f-9e76-d2e5b56421bf
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column apy_name
+		dataType: string
+		lineageTag: 4eb09795-2f65-4131-b5c9-b42ab05d9869
+		summarizeBy: none
+		sourceColumn: apy_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_group
+		dataType: string
+		lineageTag: 53cc66b1-87b2-4f1a-8f0e-62d241f3404c
+		summarizeBy: none
+		sourceColumn: crop_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_season
+		dataType: string
+		lineageTag: f04500b4-2989-4497-b71c-03c2a089f91e
+		summarizeBy: none
+		sourceColumn: primary_season
+
+		annotation SummarizationSetBy = Automatic
+
+	column apy_unit
+		dataType: string
+		lineageTag: 204ff00a-f91a-4e8f-96e3-441cda11c3ae
+		summarizeBy: none
+		sourceColumn: apy_unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column price_form
+		dataType: string
+		lineageTag: f3a2f86b-b21e-42fe-bfd0-a3f934b2a49d
+		summarizeBy: none
+		sourceColumn: price_form
+
+		annotation SummarizationSetBy = Automatic
+
+	column to_price_qtl_factor
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 90802e13-352a-420d-b37a-ebc35e8ac98f
+		summarizeBy: sum
+		sourceColumn: to_price_qtl_factor
+
+		annotation SummarizationSetBy = Automatic
+
+	column msp_key
+		dataType: string
+		isHidden
+		lineageTag: f5ec7ed5-9cb3-44f3-8db8-9cb0683794cf
+		summarizeBy: none
+		sourceColumn: msp_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_msp_crop
+		dataType: int64
+		formatString: 0
+		lineageTag: edebdffa-bc7b-481a-be80-ce9079e80cf6
+		summarizeBy: none
+		sourceColumn: is_msp_crop
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_crop = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dim_crop.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"crop_id", Int64.Type}, {"crop_name", type text}, {"apy_name", type text}, {"crop_group", type text}, {"primary_season", type text}, {"apy_unit", type text}, {"price_form", type text}, {"to_price_qtl_factor", type number}, {"msp_key", type text}, {"is_msp_crop", Int64.Type}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

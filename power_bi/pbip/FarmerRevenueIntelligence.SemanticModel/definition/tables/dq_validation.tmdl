@@ -1,0 +1,91 @@
+table dq_validation
+	lineageTag: 938289e9-0c16-493d-861e-67a688a87964
+
+	column check_name
+		dataType: string
+		lineageTag: 5470a096-8e64-4fd8-a3a1-d72dc0d43230
+		summarizeBy: none
+		sourceColumn: check_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_name
+		dataType: string
+		lineageTag: 6c81bda2-de2c-4ee2-b73d-5e6d5b3bff86
+		summarizeBy: none
+		sourceColumn: crop_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column crop_year
+		dataType: int64
+		formatString: 0
+		lineageTag: 75f2a6a3-6cef-4a51-adff-fbb1f6ce8ee1
+		summarizeBy: none
+		sourceColumn: crop_year
+
+		annotation SummarizationSetBy = Automatic
+
+	column dataset_value
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 165ee7a8-bbdf-4540-9b48-d2055eeb87bf
+		summarizeBy: sum
+		sourceColumn: dataset_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column official_value
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 1b504a07-1d2c-435b-929b-7d0925336fda
+		summarizeBy: sum
+		sourceColumn: official_value
+
+		annotation SummarizationSetBy = Automatic
+
+	column unit
+		dataType: string
+		lineageTag: c276fdef-e8f1-4383-a7ab-e09ca24e7fd9
+		summarizeBy: none
+		sourceColumn: unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column diff_pct
+		dataType: double
+		formatString: #,0.00
+		lineageTag: 40b0499d-a10b-4619-b3a0-d2599a4243d2
+		summarizeBy: sum
+		sourceColumn: diff_pct
+
+		annotation SummarizationSetBy = Automatic
+
+	column official_source
+		dataType: string
+		lineageTag: 97ff406c-c3f5-40c8-b00d-596e291cc91b
+		summarizeBy: none
+		sourceColumn: official_source
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 8638e451-b1d1-4220-9320-a61520cc3741
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dq_validation = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dq_validation.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"check_name", type text}, {"crop_name", type text}, {"crop_year", Int64.Type}, {"dataset_value", type number}, {"official_value", type number}, {"unit", type text}, {"diff_pct", type number}, {"official_source", type text}, {"status", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

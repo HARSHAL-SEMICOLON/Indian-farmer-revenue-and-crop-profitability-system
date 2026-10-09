@@ -1,0 +1,58 @@
+table dim_state
+	lineageTag: 2cfb9258-9d66-4edb-8aab-43b75085bb6d
+
+	column state_id
+		dataType: int64
+		formatString: 0
+		isHidden
+		lineageTag: 6bc46c2f-ddbf-4803-84cd-09246bd50c08
+		summarizeBy: none
+		sourceColumn: state_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_name
+		dataType: string
+		dataCategory: StateOrProvince
+		lineageTag: bed321f4-7ae9-4895-ae33-6681c444abe3
+		summarizeBy: none
+		sourceColumn: state_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: eb004ef9-9440-4a51-bd52-f67be6080ba1
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column state_group
+		dataType: string
+		lineageTag: 2c9d37c2-4838-4467-a076-e0b9d5779e8f
+		summarizeBy: none
+		sourceColumn: state_group
+
+		annotation SummarizationSetBy = Automatic
+
+	column imd_subdivisions
+		dataType: string
+		lineageTag: 19584f89-74e4-49e1-a6d0-59e940471309
+		summarizeBy: none
+		sourceColumn: imd_subdivisions
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_state = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents(ExportFolder & "dim_state.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Nulls = Table.TransformColumns(Promoted, List.Transform(Table.ColumnNames(Promoted), (c) => {c, each if _ = "" then null else _})),
+				    Typed = Table.TransformColumnTypes(Nulls, {{"state_id", Int64.Type}, {"state_name", type text}, {"region", type text}, {"state_group", type text}, {"imd_subdivisions", type text}}, "en-US")
+				in
+				    Typed
+
+	annotation PBI_ResultType = Table

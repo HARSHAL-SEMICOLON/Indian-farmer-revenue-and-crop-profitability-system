@@ -1,0 +1,23 @@
+crop_name,avg_area_mha,value_per_ha,est_profit_c2_per_ha,segment
+Rice,43.28,57220.0,-5087.0,"Large footprint, loss over C2 at MSP"
+Wheat,30.59,54708.0,2170.0,"Large footprint, healthy"
+Cotton,11.98,44624.0,-20693.0,"Large footprint, loss over C2 at MSP"
+Soyabean,10.95,28357.0,,"Large footprint, low value/ha"
+Gram,8.85,39530.0,-2255.0,"Large footprint, low value/ha"
+Maize,8.16,35359.0,-7079.0,"Large footprint, low value/ha"
+Bajra,7.32,17619.0,,"Large footprint, low value/ha"
+Jowar,5.72,12928.0,,Smaller footprint
+Rapeseed & Mustard,5.28,46305.0,3474.0,Smaller footprint
+Sugarcane,4.87,183147.0,13165.0,Smaller footprint
+Groundnut,4.41,57618.0,-14917.0,Smaller footprint
+Urad,4.15,29381.0,,Smaller footprint
+Arhar/Tur,4.08,39508.0,-12403.0,Smaller footprint
+Moong,4.0,25586.0,-3046.0,Smaller footprint
+Sesamum,1.59,22543.0,,Smaller footprint
+Masoor,1.37,35420.0,,Smaller footprint
+Ragi,1.05,27242.0,,Smaller footprint
+Jute,0.68,75225.0,,Smaller footprint
+Barley,0.6,36754.0,,Smaller footprint
+Sunflower,0.37,27190.0,,Smaller footprint
+Nigerseed,0.18,14626.0,,Smaller footprint
+Safflower,0.1,19955.0,,Smaller footprint

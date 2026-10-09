@@ -1,0 +1,119 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "trend",
+  "position": {
+    "x": 16,
+    "y": 180,
+    "z": 12000,
+    "width": 620,
+    "height": 300,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "lineChart",
+    "drillFilterOtherVisuals": true,
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_year"
+                    }
+                  },
+                  "Property": "crop_year"
+                }
+              },
+              "queryRef": "dim_year.crop_year",
+              "nativeQueryRef": "crop_year"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Gross Value @ MSP (Rs cr)"
+                }
+              },
+              "queryRef": "_Measures.Gross Value @ MSP (Rs cr)",
+              "nativeQueryRef": "Gross Value @ MSP (Rs cr)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Gross Value Real 2018-19 (Rs cr)"
+                }
+              },
+              "queryRef": "_Measures.Gross Value Real 2018-19 (Rs cr)",
+              "nativeQueryRef": "Gross Value Real 2018-19 (Rs cr)"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Gross Value @ 2018 MSP (Rs cr)"
+                }
+              },
+              "queryRef": "_Measures.Gross Value @ 2018 MSP (Rs cr)",
+              "nativeQueryRef": "Gross Value @ 2018 MSP (Rs cr)"
+            }
+          ]
+        }
+      }
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Q9 Gross value: nominal vs real (CPI, 2018-19 Rs) vs volume (2018-19 MSP), Rs cr'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTitle": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

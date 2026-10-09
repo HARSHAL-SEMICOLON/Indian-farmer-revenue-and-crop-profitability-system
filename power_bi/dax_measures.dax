@@ -1,0 +1,265 @@
+// =====================================================================================
+// Indian Farmer Revenue, Crop Profitability & Market Intelligence - DAX measures
+// Create a blank table named  _Measures  (Enter data -> 1 empty column, then hide it)
+// and add each measure below to it. Folder names are suggested in comments.
+//
+// NAMING RULE: nothing here is called "income". "Gross Value @ MSP" = production x MSP,
+// an ESTIMATE of gross output value at the support price. It is not realised price and
+// not farmer income.
+// =====================================================================================
+
+// ---------- Folder: 1 Production -------------------------------------------------------
+Area (ha) = SUM ( fact_district_crop_year[area_ha] )
+
+Area (M ha) = DIVIDE ( [Area (ha)], 1e6 )
+
+// Physical production is only additive within ONE crop (units differ: t, bales).
+Production (APY unit) =
+IF (
+    HASONEVALUE ( dim_crop[crop_name] ),
+    SUM ( fact_district_crop_year[production_apy_unit] )
+)
+
+Production Unit = IF ( HASONEVALUE ( dim_crop[crop_name] ), VALUES ( dim_crop[apy_unit] ), "select one crop" )
+
+Production (M t or M bales) = DIVIDE ( [Production (APY unit)], 1e6 )
+
+Yield (kg/ha) =
+IF (
+    HASONEVALUE ( dim_crop[crop_name] ),
+    DIVIDE (
+        SUMX ( fact_district_crop_year, fact_district_crop_year[yield_kg_per_ha] * fact_district_crop_year[area_ha] ),
+        [Area (ha)]
+    )
+)
+
+// ---------- Folder: 2 Gross value (MSP-valued) ----------------------------------------------
+Gross Value @ MSP (Rs cr) = DIVIDE ( SUM ( fact_district_crop_year[gross_value_msp_inr] ), 1e7 )
+
+MSP-valued Area (ha) =
+CALCULATE ( [Area (ha)], NOT ISBLANK ( fact_district_crop_year[gross_value_msp_inr] ) )
+
+Gross Value @ MSP per ha (Rs) =
+DIVIDE ( SUM ( fact_district_crop_year[gross_value_msp_inr] ), [MSP-valued Area (ha)] )
+
+Gross Value @ MSP per acre (Rs) = DIVIDE ( [Gross Value @ MSP per ha (Rs)], 2.47105 )
+
+Valuation Coverage % =
+DIVIDE ( [MSP-valued Area (ha)], [Area (ha)] )
+
+Share of Gross Value % =
+DIVIDE (
+    [Gross Value @ MSP (Rs cr)],
+    CALCULATE ( [Gross Value @ MSP (Rs cr)], ALL ( dim_crop ) )
+)
+
+Gross Value @ MSP PY (Rs cr) =
+CALCULATE ( [Gross Value @ MSP (Rs cr)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+
+Gross Value YoY % = DIVIDE ( [Gross Value @ MSP (Rs cr)] - [Gross Value @ MSP PY (Rs cr)], [Gross Value @ MSP PY (Rs cr)] )
+
+// CAGR between first and last crop year in the current filter context
+First Year = MIN ( dim_year[crop_year] )
+Last Year  = MAX ( dim_year[crop_year] )
+
+Gross Value CAGR % =
+VAR y0 = [First Year]
+VAR y1 = [Last Year]
+VAR v0 = CALCULATE ( [Gross Value @ MSP (Rs cr)], dim_year[crop_year] = y0 )
+VAR v1 = CALCULATE ( [Gross Value @ MSP (Rs cr)], dim_year[crop_year] = y1 )
+RETURN IF ( y1 > y0 && v0 > 0, ( v1 / v0 ) ^ ( 1 / ( y1 - y0 ) ) - 1 )
+
+Production CAGR % =
+VAR y0 = [First Year]
+VAR y1 = [Last Year]
+VAR p0 = CALCULATE ( [Production (APY unit)], dim_year[crop_year] = y0 )
+VAR p1 = CALCULATE ( [Production (APY unit)], dim_year[crop_year] = y1 )
+RETURN IF ( y1 > y0 && p0 > 0, ( p1 / p0 ) ^ ( 1 / ( y1 - y0 ) ) - 1 )
+
+Yield CAGR % =
+VAR y0 = [First Year]
+VAR y1 = [Last Year]
+VAR k0 = CALCULATE ( [Yield (kg/ha)], dim_year[crop_year] = y0 )
+VAR k1 = CALCULATE ( [Yield (kg/ha)], dim_year[crop_year] = y1 )
+RETURN IF ( y1 > y0 && k0 > 0, ( k1 / k0 ) ^ ( 1 / ( y1 - y0 ) ) - 1 )
+
+// Volume-only view: value every year's production at the selected base-year MSP (default 2018-19)
+Gross Value @ 2018 MSP (Rs cr) = DIVIDE ( SUM ( fact_district_crop_year[gross_value_at_2018_msp_inr] ), 1e7 )
+
+// Real terms: CPI-deflated (World Bank FP.CPI.TOTL), constant 2018-19 rupees
+Gross Value Real 2018-19 (Rs cr) = DIVIDE ( SUM ( fact_district_crop_year[gross_value_real_2018_inr] ), 1e7 )
+
+// ---------- Folder: 3 MSP & cost ---------------------------------------------------------
+MSP (Rs/qtl) = IF ( HASONEVALUE ( dim_crop[crop_name] ), AVERAGE ( fact_msp[msp_effective] ) )
+
+CACP A2+FL Cost (Rs/qtl) = IF ( HASONEVALUE ( dim_crop[crop_name] ), AVERAGE ( fact_msp[a2fl_cost] ) )
+
+MSP over A2+FL % = DIVIDE ( [MSP (Rs/qtl)] - [CACP A2+FL Cost (Rs/qtl)], [CACP A2+FL Cost (Rs/qtl)] )
+
+// Profit measures use fact_state_crop_year and ONLY rows with official DES cost (2008-09..2013-14)
+Cost Area (ha) = CALCULATE ( SUM ( fact_state_crop_year[area_ha] ), fact_state_crop_year[has_official_cost] = 1,
+                             NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) )
+
+C2 Cost per ha (Rs) =
+DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ),
+                fact_state_crop_year[c2_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+
+A2+FL Cost per ha (Rs) =
+DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ),
+                fact_state_crop_year[a2fl_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+
+Est. Profit over C2 per ha (Rs) =
+DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ),
+                fact_state_crop_year[est_profit_c2_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+
+Est. Profit over A2+FL per ha (Rs) =
+DIVIDE ( SUMX ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_a2fl_per_ha] ) ),
+                fact_state_crop_year[est_profit_a2fl_per_ha] * fact_state_crop_year[area_ha] ), [Cost Area (ha)] )
+
+Est. Profit over C2 per acre (Rs) = DIVIDE ( [Est. Profit over C2 per ha (Rs)], 2.47105 )
+
+State-years with C2 Loss % =
+DIVIDE (
+    COUNTROWS ( FILTER ( fact_state_crop_year, fact_state_crop_year[est_profit_c2_per_ha] < 0 ) ),
+    COUNTROWS ( FILTER ( fact_state_crop_year, NOT ISBLANK ( fact_state_crop_year[est_profit_c2_per_ha] ) ) )
+)
+
+Profit Data Available = IF ( ISBLANK ( [Cost Area (ha)] ), "No official cost data for this selection", "DES cost data available" )
+
+// ---------- Folder: 4 Mandi prices ---------------------------------------------------------
+Valid Quotes = CALCULATE ( COUNTROWS ( fact_market_price ), NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+
+Avg Modal Price (Rs/qtl) =
+CALCULATE ( AVERAGE ( fact_market_price[modal_price] ), NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+
+Arrival-wtd Modal Price (Rs/qtl) =
+VAR t = FILTER ( fact_market_price, fact_market_price[arrivals_qtl] > 0 && NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+RETURN DIVIDE ( SUMX ( t, fact_market_price[modal_price] * fact_market_price[arrivals_qtl] ), SUMX ( t, fact_market_price[arrivals_qtl] ) )
+
+Arrivals (lakh qtl) = DIVIDE ( SUM ( fact_market_price[arrivals_qtl] ), 1e5 )
+
+Modal Price CV % =
+VAR t = FILTER ( fact_market_price, NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+RETURN DIVIDE ( STDEVX.P ( t, fact_market_price[modal_price] ), AVERAGEX ( t, fact_market_price[modal_price] ) )
+
+Avg Min-Max Spread % = DIVIDE ( AVERAGE ( fact_market_price[price_spread_pct] ), 100 )
+
+Max/Min Modal Ratio =
+VAR t = FILTER ( fact_market_price, NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+RETURN DIVIDE ( MAXX ( t, fact_market_price[modal_price] ), MINX ( t, fact_market_price[modal_price] ) )
+
+// MSP comparison - only rows where commodity form is MSP-comparable and MSP applies on that date
+MSP-comparable Quotes = CALCULATE ( COUNTROWS ( fact_market_price ), NOT ISBLANK ( fact_market_price[msp_applicable] ) )
+
+Applicable MSP (Rs/qtl) = AVERAGE ( fact_market_price[msp_applicable] )
+
+Quotes below MSP % =
+DIVIDE ( CALCULATE ( COUNTROWS ( fact_market_price ), fact_market_price[modal_below_msp] = 1 ), [MSP-comparable Quotes] )
+
+Avg Modal vs MSP % = DIVIDE ( AVERAGE ( fact_market_price[modal_vs_msp_pct] ), 100 )
+
+Arrivals below MSP % =
+DIVIDE (
+    CALCULATE ( SUM ( fact_market_price[arrivals_qtl] ), fact_market_price[modal_below_msp] = 1 ),
+    CALCULATE ( SUM ( fact_market_price[arrivals_qtl] ), NOT ISBLANK ( fact_market_price[msp_applicable] ) )
+)
+
+Markets Reporting = DISTINCTCOUNT ( fact_market_price[market_id] )
+
+// ---------- Folder: 5 Weather & yield -------------------------------------------------------
+Monsoon Rain (mm) = AVERAGE ( fact_weather_state[jjas_mm] )
+Monsoon Departure % = DIVIDE ( AVERAGE ( fact_weather_state[jjas_dep_pct] ), 100 )
+Season Rain Departure % = DIVIDE ( AVERAGE ( fact_state_crop_year[season_rain_dep_pct] ), 100 )
+Yield Anomaly % = DIVIDE ( AVERAGE ( fact_state_crop_year[yield_anomaly_pct] ), 100 )
+
+// Pearson correlation between season rain departure and detrended yield anomaly (state-years in context)
+Rain-Yield Correlation (r) =
+VAR t = FILTER ( fact_state_crop_year,
+                 NOT ISBLANK ( fact_state_crop_year[yield_anomaly_pct] ) && NOT ISBLANK ( fact_state_crop_year[season_rain_dep_pct] ) )
+VAR n = COUNTROWS ( t )
+VAR mx = AVERAGEX ( t, fact_state_crop_year[season_rain_dep_pct] )
+VAR my = AVERAGEX ( t, fact_state_crop_year[yield_anomaly_pct] )
+VAR sxy = SUMX ( t, ( fact_state_crop_year[season_rain_dep_pct] - mx ) * ( fact_state_crop_year[yield_anomaly_pct] - my ) )
+VAR sxx = SUMX ( t, ( fact_state_crop_year[season_rain_dep_pct] - mx ) ^ 2 )
+VAR syy = SUMX ( t, ( fact_state_crop_year[yield_anomaly_pct] - my ) ^ 2 )
+RETURN IF ( n >= 10, DIVIDE ( sxy, SQRT ( sxx * syy ) ) )
+
+Rain-Yield Pairs (n) =
+COUNTROWS ( FILTER ( fact_state_crop_year,
+    NOT ISBLANK ( fact_state_crop_year[yield_anomaly_pct] ) && NOT ISBLANK ( fact_state_crop_year[season_rain_dep_pct] ) ) )
+
+Deficient-Rain Years = CALCULATE ( DISTINCTCOUNT ( fact_weather_state[crop_year] ), fact_weather_state[jjas_dep_pct] <= -20 )
+
+// ---------- Folder: 6 Data quality -------------------------------------------------------------
+Rows Excluded/Flagged = SUM ( dq_issues[n_rows] )
+Validation Checks Divergent = CALCULATE ( COUNTROWS ( dq_validation ), CONTAINSSTRING ( dq_validation[status], "divergent" ) )
+Production Rows = COUNTROWS ( fact_production )
+Districts Covered = DISTINCTCOUNT ( fact_district_crop_year[location_id] )
+MSP Values Official % = DIVIDE ( CALCULATE ( COUNTROWS ( fact_msp ), fact_msp[verification] = "official" ), COUNTROWS ( fact_msp ) )
+Provisional Year Flag = IF ( MAX ( dim_year[is_provisional] ) = 1, "⚠ 2019-20 is provisional: district totals diverge from DES estimates", "" )
+
+// ---------- Folder: 7 Dynamic labels -------------------------------------------------------
+Selected Crop Label = IF ( HASONEVALUE ( dim_crop[crop_name] ), VALUES ( dim_crop[crop_name] ), "All MSP crops" )
+Year Range Label = [First Year] & "-" & RIGHT ( [Last Year] + 1, 2 )
+Value Disclaimer = "Gross value = production x MSP (estimate). Not realised price, not farmer income."
+
+// ---------- Folder: 8 Growth & inflation -------------------------------------------------------
+// YoY: compares the latest crop year in context with the year before it
+Production PY (M t or M bales) =
+CALCULATE ( [Production (M t or M bales)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+
+Production YoY % = IF ( HASONEVALUE ( dim_crop[crop_name] ), DIVIDE ( [Production (M t or M bales)] - [Production PY (M t or M bales)], [Production PY (M t or M bales)] ) )
+
+Yield PY (kg/ha) = CALCULATE ( [Yield (kg/ha)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+
+Yield YoY % = DIVIDE ( [Yield (kg/ha)] - [Yield PY (kg/ha)], [Yield PY (kg/ha)] )
+
+Crops Covered = DISTINCTCOUNT ( fact_district_crop_year[crop_id] )
+
+MSP Real 2018-19 (Rs/qtl) = IF ( HASONEVALUE ( dim_crop[crop_name] ), AVERAGE ( fact_msp[msp_real_2018] ) )
+
+MSP PY (Rs/qtl) = CALCULATE ( [MSP (Rs/qtl)], dim_year[crop_year] = MAX ( dim_year[crop_year] ) - 1, ALL ( dim_year ) )
+
+MSP YoY % = DIVIDE ( [MSP (Rs/qtl)] - [MSP PY (Rs/qtl)], [MSP PY (Rs/qtl)] )
+
+// first -> last crop year with a CPI deflator inside the current filter context
+Real MSP Change % =
+VAR y0 = CALCULATE ( MIN ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+VAR y1 = CALCULATE ( MAX ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+VAR a = CALCULATE ( [MSP Real 2018-19 (Rs/qtl)], dim_year[crop_year] = y0 )
+VAR b = CALCULATE ( [MSP Real 2018-19 (Rs/qtl)], dim_year[crop_year] = y1 )
+RETURN DIVIDE ( b - a, a )
+
+Nominal MSP Change % =
+VAR y0 = CALCULATE ( MIN ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+VAR y1 = CALCULATE ( MAX ( fact_msp[crop_year] ), NOT ISBLANK ( fact_msp[msp_real_2018] ) )
+VAR a = CALCULATE ( [MSP (Rs/qtl)], dim_year[crop_year] = y0 )
+VAR b = CALCULATE ( [MSP (Rs/qtl)], dim_year[crop_year] = y1 )
+RETURN DIVIDE ( b - a, a )
+
+// ---------- Folder: 9 MSP vs mandi -------------------------------------------------------------
+Median Modal Price (Rs/qtl) =
+CALCULATE ( MEDIAN ( fact_market_price[modal_price] ), NOT ISBLANK ( fact_market_price[msp_applicable] ),
+            NOT CONTAINSSTRING ( fact_market_price[dq_flag], "excluded" ) )
+
+Median Mandi minus MSP (Rs/qtl) = IF ( HASONEVALUE ( dim_crop[crop_name] ), [Median Modal Price (Rs/qtl)] - [Applicable MSP (Rs/qtl)] )
+
+Quotes at/above MSP % = IF ( [MSP-comparable Quotes] > 0, 1 - [Quotes below MSP %] )
+
+Next MSP 2026-27 (Rs/qtl) =
+IF ( HASONEVALUE ( dim_crop[crop_name] ), CALCULATE ( AVERAGE ( fact_msp[msp_effective] ), fact_msp[crop_year] = 2026 ) )
+
+Next MSP Hike % = DIVIDE ( [Next MSP 2026-27 (Rs/qtl)] - [Applicable MSP (Rs/qtl)], [Applicable MSP (Rs/qtl)] )
+
+Quotes below Next MSP % =
+VAR nxt = [Next MSP 2026-27 (Rs/qtl)]
+RETURN IF ( NOT ISBLANK ( nxt ),
+    DIVIDE ( COUNTROWS ( FILTER ( fact_market_price, NOT ISBLANK ( fact_market_price[msp_applicable] ) && fact_market_price[modal_price] < nxt ) ),
+             [MSP-comparable Quotes] ) )
+
+// ---------- Folder: 10 Formatting -------------------------------------------------------------
+// colour measures used for conditional formatting (field value) in tables
+Production YoY Color = SWITCH ( TRUE (), ISBLANK ( [Production YoY %] ), BLANK (), [Production YoY %] >= 0, "#285943", "#D98E04" )
+Yield YoY Color = SWITCH ( TRUE (), ISBLANK ( [Yield YoY %] ), BLANK (), [Yield YoY %] >= 0, "#285943", "#D98E04" )
+Gross Value YoY Color = SWITCH ( TRUE (), ISBLANK ( [Gross Value YoY %] ), BLANK (), [Gross Value YoY %] >= 0, "#285943", "#D98E04" )
+Mandi vs MSP Color = SWITCH ( TRUE (), ISBLANK ( [Median Mandi minus MSP (Rs/qtl)] ), BLANK (), [Median Mandi minus MSP (Rs/qtl)] >= 0, "#285943", "#D98E04" )
